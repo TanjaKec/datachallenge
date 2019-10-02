@@ -1,0 +1,40 @@
+baseURL = "https://datachallengewithr.netlify.com/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Show me youR Data"
+theme = "hugo-theme-learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  description = "Show me youR Data"
+  author = "Tatjana Kecojevic"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "pink"
+
+[params.logo]
+url = "logo.jpg"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+#home = [ "HTML"]
+
+[Languages]
+[Languages.en]
+title = "Show me youR Data"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/TanjaKec"
+weight = 10
+
+
