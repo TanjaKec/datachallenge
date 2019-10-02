@@ -32,7 +32,7 @@ In this module you will learn some of the fundamental techniques for data explor
 * to chain data manipulation operations using the pipe operator
 * to specify ggplot2 building blocks and combine them to create graphical display
 * about the philosophy that guides ggplot2: grammatical elements (layers) and aesthetic mappings.
-* visualizing data with maps
+* visualising data with maps
 
 ### Day 3
 ## Automated Reporting and Introduction to Shiny
