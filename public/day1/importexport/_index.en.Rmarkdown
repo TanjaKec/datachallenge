@@ -1,0 +1,71 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Import Data inot R
+output: 
+  learnr::tutorial
+weight: 8
+---
+
+It’s the first big hurdle to dealing with data in R. 
+
+You are most likelly to have looked at, organised and examined your data files in Excel.
+
+Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You'll guess that it is possible to use **File | Import Dataset** menu option in RStudio to import your data, however we’re going to do it the proper way with a command.
+
+There are many packages that let R import all types of data, but with the restriction of time in this bootcamp we will focus on `CSV` files and you can try to explore the rest for yourself.
+
+Comma separated files are the most common way to save spreadsheets that don’t require a licenced, usually not free program to open. Importing `CSV` is part of base R and you can use `read.csv()` function to do so. 
+
+
+##### `read.csv()`
+
+Let us go to <https://data.gov.rs/> Serbian open data portal. In particular, let us try to access ["Подаци из Огласа јавних набавки са Портала јавних набавки"](https://data.gov.rs/sr/datasets/podatsi-iz-oglasa-javnikh-nabavki-sa-portala-javnikh-nabavki/) and import this data to R.
+
+We are not going to download it onto our local computers, but rather we will import it to R directly from the web using the link.
+
+```{r}
+df_csv <- read.csv("http://portal.ujn.gov.rs/OpenD/Tekuci_Mesec.csv", stringsAsFactors = FALSE)
+head(df_csv, 10)
+```
+
+The other way is to download it and to save it to your working directory.
+
+Let us download ["Регистар повлачћених произвођача електричне енергије"](https://data.gov.rs/s/resources/registar-povlashtshenikh-proizvodjacha-elektrichne-energije/20170221-142908/povlasceni.csv) and save it on your computers.
+
+Make sure you save the file into your R-Project working directory before you ask R to execute the following
+
+```
+df_csv <- read.csv("poslodavci.csv", stringsAsFactors = FALSE)
+```
+
+What do you think about this dataset?
+
+##### readr::read_csv()
+
+Just so you can see how easy it is to use other packages for importing data into R the code below illustrates the use of read_csv().
+
+```
+## If you don't have readr installed yet, uncomment and run the line below
+#install.packages("readr")
+library(readr)
+df_csv <- read_csv("poslodavci.csv")
+df_csv
+```
+
+You can use R with appropriate packages to access other data formats. For example `jsonlite` package for `json` files or `foreign` package for `SPSS` data files. Try to look through the help of the packages you've been introduced to and discover other options.
+
+
+## YOUR TURN 👇
+
+1)	Open source software such as R and Git are extensively used in data science. Can you research the tools that are available for data science, both open and closed source. Write a short brief about the pros and cons for both types of software.
+
+2)	Investigate the importance of open source data and identify where open source data can readily be found on the Internet. 
+
+3) Write an explanation of the benefits of open source models for policy makings by local authorities and governments in general.
+
+##### useful resource
+
+`R osnove` by [dr Dejan B. Stojanovic](http://www.ilfe.org/sr/doc-dr-dejan-stojanovi%C4%87) is a book which  guides you to the world of statistical programming with R in an informative and easy to follow way. The book is written in Serbian and you can access it from [rzanat.rs](http://rzanat.rs/)  
+
+-----------------------------
+© 2019 Tatjana Kecojevic
