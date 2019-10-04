@@ -19,7 +19,7 @@ weight: 2
 * R environment: record keeping
 * Data classification
 * Descriptive summary statistics
-* Basic principles of effective data visualization
+* Basic principles of effective data visualisation
 
 
 
