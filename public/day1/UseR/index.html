@@ -12,20 +12,20 @@
     <title>How to use R? :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1570098744" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1570098744" rel="stylesheet">
-    <link href="/css/hybrid.css?1570098744" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1570098744" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1570098744" rel="stylesheet">
-    <link href="/css/auto-complete.css?1570098744" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1570098744" rel="stylesheet">
-    <link href="/css/theme.css?1570098744" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1570098744" rel="stylesheet">
+    <link href="/css/nucleus.css?1570182426" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1570182426" rel="stylesheet">
+    <link href="/css/hybrid.css?1570182426" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1570182426" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1570182426" rel="stylesheet">
+    <link href="/css/auto-complete.css?1570182426" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1570182426" rel="stylesheet">
+    <link href="/css/theme.css?1570182426" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1570182426" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1570098744" rel="stylesheet">
+      <link href="/css/theme-pink.css?1570182426" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1570098744"></script>
+    <script src="/js/jquery-3.3.1.min.js?1570182426"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1570098744"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1570098744"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1570182426"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1570182426"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1570098744"></script>
+<script type="text/javascript" src="/js/search.js?1570182426"></script>
 
     
   </div>
@@ -257,33 +257,7 @@
         
         ">
       <a href="/day1/installr/">
-          Install R/RStudio
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/day1/git-and-github/" title="Git and GitHub" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/day1/git-and-github/">
-          Git and GitHub
+          Install R
           
             <i class="fas fa-check read-icon"></i>
           
@@ -414,6 +388,32 @@
         ">
       <a href="/day1/importexport/">
           Import Data inot R
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/day1/principles-of-visualisation/" title="Introduction to Visualization Principles" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/day1/principles-of-visualisation/">
+          Principles of Visualisation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -645,7 +645,10 @@ setwd(&quot;C:/Documents/MyR_Project&quot;)
 setwd(&quot;~/documents/MyR_Project&quot;)
 </code></pre>
 
-<p>🤓💡: Make sure you fully adopt the correct syntax in terms of slashes and quotation marks.</p>
+
+<div class="notices warning" ><p>🤓💡: Make sure you fully adopt the correct syntax in terms of slashes and quotation marks.</p>
+</div>
+
 
 <p>Note that the current working directory is displayed by RStudio within the title region of the Console. You can also setup your working directory by:</p>
 
@@ -681,7 +684,10 @@ setwd(&quot;~/documents/MyR_Project&quot;)
 
 <p><img src="/day1/UseR/images/Packages.png?width=20pc" alt="Red variant" /></p>
 
-<p>🤓💡: Note that you can call the dialog window to install a package from <strong>Packages panel</strong>! Have you spotted the <em>Install</em> icon yet?</p>
+
+<div class="notices note" ><p>💡: Note that you can call the dialog window to install a package from <strong>Packages panel</strong>! Have you spotted the <em>Install</em> icon yet?</p>
+</div>
+
 
 <h2 id="calculate-in-r">Calculate in R</h2>
 
@@ -717,7 +723,10 @@ setwd(&quot;~/documents/MyR_Project&quot;)
 
 <p>The code you type and want to be executed can be saved in scripts and R Markdown files. Scripts ending with .R file extension and R Markdown files, which mixes both R code and Markdown code, end with .Rmd.</p>
 
-<p>🤓💡: The code that you write just for quick exploration can be written in the console. Code we want to reuse and show off later should be saved as a script.</p>
+
+<div class="notices note" ><p>🤓💡: The code that you write just for quick exploration can be written in the console. Code we want to reuse and show off later should be saved as a script.</p>
+</div>
+
 
 <p>To create a new script go through the menu <strong>File | New File | R Script</strong> or through the green plus button on the top left.</p>
 
@@ -755,7 +764,10 @@ y &lt;- 6
 z
 </code></pre>
 
-<p>🤓💡 BUT, remember!!! <span style="color:red">Operator <strong>&lt;-</strong> is a composite made up from ‘less than’ and ‘minus’, with <strong>no space between them</strong>!!!!</span></p>
+
+<div class="notices warning" ><p>🤓💡 BUT, remember!!! <span style="color:red">Operator <strong>&lt;-</strong> is a composite made up from ‘less than’ and ‘minus’, with <strong>no space between them</strong>!!!!</span></p>
+</div>
+
 
 <p>Try to type the following</p>
 
@@ -809,7 +821,10 @@ p &lt;- abs(floor(log((100*x - y^2) / exp(z))))
 p
 </code></pre>
 
-<p>🤓💡 <span style="color:red">To obtain a description of a function</span> you need to type a question mark, <span style="color:red"><strong>?</strong></span>, in front of the name of the function. You might find this particularly useful when you start applying more complicated functions, as help will often provide you not only with the detailed description of the function’s input/output arguments, but practical illustrative examples on how the function can be used and applied. You should try to ask R for hlep for <code>lm()</code> function (can you tell what it is used for?)</p>
+
+<div class="notices info" ><p>🤓💡 <span style="color:red">To obtain a description of a function</span> you need to type a question mark, <span style="color:red"><strong>?</strong></span>, in front of the name of the function. You might find this particularly useful when you start applying more complicated functions, as help will often provide you not only with the detailed description of the function’s input/output arguments, but practical illustrative examples on how the function can be used and applied. You should try to ask R for hlep for <code>lm()</code> function (can you tell what it is used for?)</p>
+</div>
+
 
 <h4 id="vectors">Vectors</h4>
 
@@ -853,7 +868,10 @@ x
 </code></pre></li>
 </ul>
 
-<p><strong>Note💡</strong>: R can easily perform arithmetic with vectors as it does with scalars. Thus, just as we can use those operators over the scalars we can use them when dealing with the vectors and/or a combination of both.</p>
+
+<div class="notices note" ><p>💡: R can easily perform arithmetic with vectors as it does with scalars. Thus, just as we can use those operators over the scalars we can use them when dealing with the vectors and/or a combination of both.</p>
+</div>
+
 
 <pre><code class="language-r">x &lt;- rep(1,10)
 y &lt;- 1:10
@@ -934,7 +952,10 @@ x
 <pre><code>## [1] 2
 </code></pre>
 
-<p><strong>Note💡</strong>: In R you can evaluate functions over the entire vectors which helps to avoid looping.</p>
+
+<div class="notices note" ><p>💡: In R you can evaluate functions over the entire vectors which helps to avoid looping.</p>
+</div>
+
 
 <pre><code class="language-r">y &lt;- c(4, 1, 0, 8, 1, x)
 max(y)
@@ -973,7 +994,10 @@ max(y)
 <pre><code>##  [1]  4  5  5 13 14 23 26 33 35 44 46 47 52 56 62
 </code></pre>
 
-<p><strong>Note💡</strong>: Note that  <span style="color:red">missing values in R</span> are represented by the symbol  <span style="color:red"><strong>NA</strong> (not available)</span> or <span style="color:red"><strong>NaN</strong> (not a number)</span> for undefined mathematical operations.</p>
+
+<div class="notices note" ><p>💡: Note that  <span style="color:red">missing values in R</span> are represented by the symbol  <span style="color:red"><strong>NA</strong> (not available)</span> or <span style="color:red"><strong>NaN</strong> (not a number)</span> for undefined mathematical operations.</p>
+</div>
+
 
 <p>Here, NA would be shown if an index is out-of-range.</p>
 
@@ -1265,22 +1289,6 @@ ncol = 3, byrow = TRUE)</code></p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1300,6 +1308,22 @@ ncol = 3, byrow = TRUE)</code></p>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1369,19 +1393,19 @@ ncol = 3, byrow = TRUE)</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1570098744"></script>
-    <script src="/js/perfect-scrollbar.min.js?1570098744"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1570098744"></script>
-    <script src="/js/jquery.sticky.js?1570098744"></script>
-    <script src="/js/featherlight.min.js?1570098744"></script>
-    <script src="/js/highlight.pack.js?1570098744"></script>
+    <script src="/js/clipboard.min.js?1570182426"></script>
+    <script src="/js/perfect-scrollbar.min.js?1570182426"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1570182426"></script>
+    <script src="/js/jquery.sticky.js?1570182426"></script>
+    <script src="/js/featherlight.min.js?1570182426"></script>
+    <script src="/js/highlight.pack.js?1570182426"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1570098744"></script>
-    <script src="/js/learn.js?1570098744"></script>
-    <script src="/js/hugo-learn.js?1570098744"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1570182426"></script>
+    <script src="/js/learn.js?1570182426"></script>
+    <script src="/js/hugo-learn.js?1570182426"></script>
 
-    <link href="/mermaid/mermaid.css?1570098744" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1570098744"></script>
+    <link href="/mermaid/mermaid.css?1570182426" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1570182426"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
