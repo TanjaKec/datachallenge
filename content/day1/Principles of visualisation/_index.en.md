@@ -11,7 +11,7 @@ Graphical methods are commonly used for exploratory data analysis. Boxplots, sca
 
 1. to intended audience and the publication
 2. to help readers answer the questions your graphic is showing
-3. to understand easy without reading every single figure 
+3. to understand it easy without reading every single figure 
 
 [Periodic Table](https://www.rsc.org/periodic-table)
 
