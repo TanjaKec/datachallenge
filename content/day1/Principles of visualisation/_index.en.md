@@ -20,7 +20,7 @@ Graphical methods are commonly used for exploratory data analysis. Boxplots, sca
 ![Red variant](/day1/installR/images/.png?width=40pc)
 
 
-"Graphical perception is the visual decoding of the quantitativeand qualitative information encoded on graphs."
+"Graphical perception is the visual decoding of the quantitative and qualitative information encoded on graphs."
 [Cleveland W.S. and McGill R. *Graphical Perception and Graphical Methods for Analyzing Scientific Data*. American Association for the Advancement of Science, 1985. **229(4716)**: 828-833](https://pdfs.semanticscholar.org/565d/843c2c0e60915709268ac4224894469d82d5.pdf)
 
 {{% notice note %}}
