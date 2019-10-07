@@ -24,17 +24,47 @@ The above figure illustrates the order in which graphical forms could be placed 
 
 ![Red variant](/day1/PrinciplesVisualisation/images/choices_graphical_forms.png?width=20pc)
 
-There is not a specific methodology that is develop for choosing the most appropriate ways of encoding data. You never know if a visual form will work until you give it a try. It mostly depends on what your attributes are that you using in order to revel that special something from the data. However, there are some useful guidelines made by a few authors of which I would recommend to check [The Data Visualisation Catalogue](https://datavizcatalogue.com) by [Severino Ribecca](http://www.severinoribecca.one) and [Chart Chooser](https://depictdatastudio.com/charts/) by [Depict Data Studio](https://depictdatastudio.com) as a starting bench mark when creating a graph  
+There is not a specific methodology that is develop for choosing the most appropriate ways of encoding data. You never know if a visual form will work until you give it a try. It mostly depends on what your attributes are that you using in order to revel that special something from the data. However, there are some useful guidelines made by a few authors of which I would recommend to check:
+
+- [The Data Visualisation Catalogue](https://datavizcatalogue.com) by [Severino Ribecca](http://www.severinoribecca.one)
+- [Chart Chooser](https://depictdatastudio.com/charts/) by [Depict Data Studio](https://depictdatastudio.com) and 
+- [Visual Vocabulary](https://journalismcourses.org/courses/DE0618/Visual-vocabulary.pdf) by [by the Financial Times Visual Journalism Team](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary) 
+
+as a starting bench mark when creating a graph.  
 
 Often, the graphical display of the information created for answering a specific question will invite further exploration, which is why it is important to present them in a clear and truthful manner. We should not forget that the sole purpose of data analysis, thus visualisation is to inform and to improve the knowledge. So yes, we should consider very carefully aesthetic appeal and design of the graph we create that could effectively engage with the audience, but should do so by focusing above all on accuracy, depth and clarity of its conveying information.     
 
 ### Identify encoding
 
-Let us play the game ‘Identify encoding!’. Converse with each other and make a list of graphical forms and the type of encodings used in each of the following visualisation.
+Let us play the game ‘Identify encoding!’. Converse with each other and make a list of graphical forms and the type of encodings used in each of the following visualisation:
 
-[Periodic Table](https://www.rsc.org/periodic-table)
+1) Visualisation: [DESI](https://ec.europa.eu/digital-single-market/en/desi)
 
-[A Periodic Table of visualisation methods](http://www.visual-literacy.org/periodic_table/periodic_table.html)
+![Red variant](/day1/PrinciplesVisualisation/images/DESI.png?width=40pc)
+
+2) Visualisation: [DESI Report 2019 - Human Capital](https://ec.europa.eu/digital-single-market/en/human-capital) 
+
+![Red variant](/day1/PrinciplesVisualisation/images/DESI_Internet1.png?width=50pc)
+
+3) Visualisation: [DESI Report 2019 - Human Capital](https://ec.europa.eu/digital-single-market/en/human-capital) 
+
+![Red variant](/day1/PrinciplesVisualisation/images/DESI_ICT.png?width=40pc)
+
+4) Click on Visualisation: [Gapminder Bubble Chart](https://www.gapminder.org/tools/#$chart-type=bubbles)
+
+[![Red variant](/day1/PrinciplesVisualisation/images/Bubble_Chart.png?width=40pc)](https://www.gapminder.org/tools/#$chart-type=bubbles)
+
+5) Click on Visualisation: [Gapminder World Population](https://www.gapminder.org/tools/#$chart-type=map)
+
+[![Red variant](/day1/PrinciplesVisualisation/images/World_Pop.png?width=40pc)](https://www.gapminder.org/tools/#$chart-type=map)
+
+5) Click on Visualisation: [Periodic Table](https://www.rsc.org/periodic-table)
+
+[![Red variant](/day1/PrinciplesVisualisation/images/PeriodicTable.png?width=30pc)](https://www.rsc.org/periodic-table)
+
+6) Click on Visualisation: [A Periodic Table of visualisation methods](http://www.visual-literacy.org/periodic_table/periodic_table.html)
+
+![Red variant](/day1/PrinciplesVisualisation/images/World_Pop.png?width=40pc)
 
 {{% notice note %}}
 When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused. 
