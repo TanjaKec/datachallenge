@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Day 1 :: Show me youR Data</title>
+    <title>Introduction to Visualization Principles :: Show me youR Data</title>
 
     
     <link href="/css/nucleus.css?1570441885" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/day1/">
+  <body class="" data-url="/day1/principlesvisualisation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -198,7 +198,7 @@
     
     <li data-nav-id="/day1/" title="Day 1" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/day1/">
@@ -408,8 +408,8 @@
   
     
     <li data-nav-id="/day1/principlesvisualisation/" title="Introduction to Visualization Principles" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/day1/principlesvisualisation/">
@@ -498,7 +498,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/day1/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/day1/PrinciplesVisualisation/_index.en.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -513,6 +513,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -523,7 +525,13 @@
             
           
           
-            <a href='/'>data challenge with R</a> > Day 1
+            
+            
+          
+          
+            <a href='/'>data challenge with R</a> > <a href='/day1/'>Day 1</a> > Introduction to Visualization Principles
+          
+         
           
          
           
@@ -532,6 +540,24 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#designed-to-enable-exploration-discovery-communication">Designed to enable: exploration, discovery, communication</a>
+<ul>
+<li><a href="#graphical-forms-encoding">Graphical Forms::Encoding</a></li>
+<li><a href="#identify-encoding">Identify encoding</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -539,9 +565,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Introduction to Visualization Principles
+            </h1>
           
 
         
@@ -551,23 +580,51 @@
 
 	
 
-<h3 id="module-1">Module 1</h3>
+<h2 id="designed-to-enable-exploration-discovery-communication">Designed to enable: exploration, discovery, communication</h2>
 
-<h3 id="rstudio-ide-r-language-data-classification-and-summary-statistics-introduction-to-visualization-principles">RStudio IDE; R language; Data classification and summary statistics; Introduction to Visualization Principles</h3>
+<p>Graphical methods are commonly used for exploratory data analysis. Boxplots, scatterplot matrices, nonparametric smoothers and tree diagrams are just some of the mostly used graphical tools for data exploration. This part of the course will provide practical recommendation for choosing the best chart or graph type for creating good and clear graphics that would serve the purpose of communicating the key information</p>
 
-<h5 id="in-this-module-you-will-set-up-the-working-environment-and-pass-the-first-big-hurdle-of-importing-data-and-you-will-learn-how-to-do-it-in-the-proper-way-with-a-command-in-span-style-color-orangered-r-span-you-will-learn-how-to-use-span-style-color-orangered-rstudio-span-ide-for-r-from-its-installation-to-rstudio-customisation-and-files-navigation-you-will-learn-good-habits-and-practice-of-workflow-in-an-r-project-once-you-get-comfortable-with-the-rstudio-working-environment-you-will-move-on-to-mastering-the-key-features-of-r-language-and-you-will-be-introduced-to-fundamental-principles-behind-effective-data-visualisation">In this module you will set up the working environment and pass the first big hurdle of importing data and you will learn how to do it in the proper way with a command in <span style="color:orangered"><strong>R</strong></span>. You will learn how to use <span style="color:orangered"><strong>RStudio</strong></span> IDE for R from its installation to RStudio customisation and files navigation. You will learn good habits and practice of workflow in an R project. Once you get comfortable with the RStudio working environment you will move on to mastering the key features of R language and you will be introduced to fundamental principles behind effective data visualisation.</h5>
+<ol>
+<li>to intended audience and the publication</li>
+<li>to help readers answer the questions your graphic is showing</li>
+<li>to understand it easy without getting bewildered<br /></li>
+</ol>
 
-<h4 id="what-you-will-learn">What you will learn:</h4>
+<h3 id="graphical-forms-encoding">Graphical Forms::Encoding</h3>
 
-<ul>
-<li>Basic use of R/RStudio console</li>
-<li>Good habits for workflow</li>
-<li>Inputting and importing different data types</li>
-<li>R environment: record keeping</li>
-<li>Data classification</li>
-<li>Descriptive summary statistics</li>
-<li>Basic principles of effective data visualisation</li>
-</ul>
+<p>Good and clear graphics rely most of all on a reliable data. Thus, the first principle of an effective visualisation is that it represents reliable information. The type of the information that needs to be communicated and displayed will direct the choice of the most appropriate type of data encoding that would make relevant patterns become noticeable. It is therefore important to understand the problem you wish to communicate and the type of the data you need for its communication from the statistical perspective, ie. is it measured, categorical (ordinal or nominal), time (temporal dimension) and geographical location (spatial dimensions) in case of spatiotemporal data.</p>
+
+<p>Visual encoding of a data set depends on the number and characteristics of the available attributes ie. variables and on the analytical problem in question. Alberto Cairo on his blog <a href="http://www.thefunctionalart.com/2013/08/in-infographics-steal-what-you-need-but.html">The Functional Art</a> provides an effective list of the graphic forms used to encode data depending on the function of the display. The figure shows ranking of the elementary perception task according on how well they can be perceived based on the ground breaking work of Cleveland and McGill published in <a href="http://euclid.psych.yorku.ca/www/psy6135/papers/ClevelandMcGill1984.pdf">the paper</a> of <a href="https://amstat.tandfonline.com/toc/uasa20/current">JASA</a> while working in the famous AT&amp;T Bell Labs.
+<img src="/day1/PrinciplesVisualisation/images/FunctionalForms.png?width=30pc" alt="Red variant" /></p>
+
+<p>It illustrates the order in which graphical forms could be placed based on the accuracy of the conclusions which readers can draw about the given data from them. If, for example, the goal of the graphic is to facilitate precise comparisons, Alberto in his book <a href="http://ptgmedia.pearsoncmg.com/images/9780321834737/samplepages/0321834739.pdf">The Functional Art</a> provides an effective illustration of superiorities between possible choices of the graphical forms that could be used.</p>
+
+<p><img src="/day1/PrinciplesVisualisation/images/choices_graphical_forms.png?width=20pc" alt="Red variant" /></p>
+
+<p>There is not a specific methodology that is develop for choosing the most appropriate ways of encoding data. You never know if a visual form will work until you give it a try. It mostly depends on what your attributes are that you using in order to revel that special something from the data. However, there are some useful guidelines made by a few authors of which I would recommend to check ‘The Data Visualisation Catalogue’ by Severino Ribecca as a starting bench mark when creating a graph (<a href="https://datavizcatalogue.com">https://datavizcatalogue.com</a>) and <a href="https://depictdatastudio.com/charts/">https://depictdatastudio.com/charts/</a></p>
+
+<p>Often, the graphical display of the information created for answering a specific question will invite further exploration, which is why it is important to present them in a clear and truthful manner. We should not forget that the sole purpose of data analysis, thus visualisation is to inform and to improve the knowledge. So yes, we should consider very carefully aesthetic appeal and design of the graph we create that could effectively engage with the audience, but should do so by focusing above all on accuracy, depth and clarity of its conveying information.</p>
+
+<h3 id="identify-encoding">Identify encoding</h3>
+
+<p>Let us play the game ‘Identify encoding!’. Converse among your each other and make a list of graphical forms and the type of encodings used in each of the following visualisation.</p>
+
+<p><a href="https://www.rsc.org/periodic-table">Periodic Table</a></p>
+
+<p><a href="http://www.visual-literacy.org/periodic_table/periodic_table.html">A Periodic Table of visualisation methods</a></p>
+
+
+<div class="notices note" ><p>When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused.</p>
+</div>
+
+
+<p>&ldquo;Graphical perception is the visual decoding of the quantitative and qualitative information encoded on graphs.&rdquo;
+<a href="https://pdfs.semanticscholar.org/565d/843c2c0e60915709268ac4224894469d82d5.pdf">Cleveland W.S. and McGill R. <em>Graphical Perception and Graphical Methods for Analyzing Scientific Data</em>. American Association for the Advancement of Science, 1985. <strong>229(4716)</strong>: 828-833</a></p>
+
+
+<div class="notices note" ><p>ghjghjk</p>
+</div>
+
 
 <hr />
 
@@ -581,8 +638,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -814,6 +869,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -837,7 +893,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/general/syllabus/" title="Indicative Syllabus"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/day1/importexport/" title="Import Data inot R"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/day1/whatisr/" title="What is R?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
