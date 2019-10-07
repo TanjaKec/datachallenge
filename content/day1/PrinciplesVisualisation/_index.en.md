@@ -34,7 +34,7 @@ as a starting bench mark when creating a graph.
 
 Often, the graphical display of the information created for answering a specific question will invite further exploration, which is why it is important to present them in a clear and truthful manner. We should not forget that the sole purpose of data analysis, thus visualisation is to inform and to improve the knowledge. So yes, we should consider very carefully aesthetic appeal and design of the graph we create that could effectively engage with the audience, but should do so by focusing above all on accuracy, depth and clarity of its conveying information.     
 
-### Identify encoding
+#### Identify encoding
 
 Let us play the game ‘Identify encoding!’. Converse with each other and make a list of graphical forms and the type of encodings used in each of the following visualisation:
 
@@ -58,13 +58,53 @@ Let us play the game ‘Identify encoding!’. Converse with each other and make
 
 [![Red variant](/day1/PrinciplesVisualisation/images/World_Pop.png?width=40pc)](https://www.gapminder.org/tools/#$chart-type=map)
 
-5) Click on Visualisation: [Periodic Table](https://www.rsc.org/periodic-table)
+6) Click on Visualisation: [Periodic Table](https://www.rsc.org/periodic-table)
 
 [![Red variant](/day1/PrinciplesVisualisation/images/PeriodicTable.png?width=30pc)](https://www.rsc.org/periodic-table)
 
-6) Click on Visualisation: [A Periodic Table of visualisation methods](http://www.visual-literacy.org/periodic_table/periodic_table.html)
+Click on this Visualisation too: [A Periodic Table of visualisation methods](http://www.visual-literacy.org/periodic_table/periodic_table.html)
 
-![Red variant](/day1/PrinciplesVisualisation/images/World_Pop.png?width=40pc)
+7) Click on Visualisation: [Clinton Email Network](https://rud.is/projects/clinton_emails_01.html)
+
+[![Red variant](/day1/PrinciplesVisualisation/images/ClintonEmails.png?width=30pc)](https://rud.is/projects/clinton_emails_01.html)
+
+### The Complexity: effective visual design
+
+The most important to remember when creating a graphical is to present data clearly and truthfully. The choice of the scale on the chart should show the differences in the data and communicates the range of values accurately. Any statistical summary displayed on the chart should be presented clearly with the source of information and statistics used to calculate the more complex figures. 
+
+Here are some most obvious issues you need to pay attention to when designing an effective graph:
+
+1)	**Choose a scale for your charts** that strikes a balance between demonstrating trends clearly and conveying the scale of the original dataset. The chart does not need to begin at 0 in order to establish a meaningful baseline if another logical starting point exists. 
+[Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
+
+![Red variant](/day1/PrinciplesVisualisation/images/scale1.png?width=40pc)
+![Red variant](/day1/PrinciplesVisualisation/images/scale2.png?width=40pc)
+
+The choice of scale should allow for better accuracy that reader can draw about the information displayed on the chart.
+
+Have a look at [What to consider when creating a line chart]( https://blog.datawrapper.de/line-charts/
+) blog post by [Lisa Charlotte Rost]( https://blog.datawrapper.de/), where you will also find links to some more interesting posts on this topic.  
+
+2)	Highlight the important data
+
+3)	Declutter the chart – keep it simple
+
+
+
+
+
+
+Choosing a Deficient Measure
+
+Taming the information from the visual display should not be difficult. 
+
+ability to make sense of and communicate it
+[Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
+
+
+[![Red variant](/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc)](http://cartonerd.blogspot.com/2018/03/dotty-election-map.html)
+
+
 
 {{% notice note %}}
 When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused. 
