@@ -77,13 +77,15 @@ Here are some most obvious issues you need to pay attention to when designing an
 1)	**Choose a scale for your charts** that strikes a balance between demonstrating trends clearly and conveying the scale of the original dataset. The chart does not need to begin at 0 in order to establish a meaningful baseline if another logical starting point exists. 
 [Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
 
-![Red variant](/day1/PrinciplesVisualisation/images/scale1.png?width=40pc)
-![Red variant](/day1/PrinciplesVisualisation/images/scale2.png?width=40pc)
+![Red variant](/day1/PrinciplesVisualisation/images/scale1.png?width=25pc)
+![Red variant](/day1/PrinciplesVisualisation/images/scale2.png?width=25pc)
 
 The choice of scale should allow for better accuracy that reader can draw about the information displayed on the chart.
 
+{{% notice tip %}}
 Have a look at [What to consider when creating a line chart]( https://blog.datawrapper.de/line-charts/
-) blog post by [Lisa Charlotte Rost]( https://blog.datawrapper.de/), where you will also find links to some more interesting posts on this topic.  
+) blog post by [Lisa Charlotte Rost]( https://blog.datawrapper.de/), where you will also find the links to some more interesting posts on this topic.  
+{{% /notice %}}
 
 2)	Highlight the important data
 
