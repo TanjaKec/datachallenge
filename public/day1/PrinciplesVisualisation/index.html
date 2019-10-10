@@ -12,20 +12,20 @@
     <title>Introduction to Visualization Principles :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1570541728" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1570541728" rel="stylesheet">
-    <link href="/css/hybrid.css?1570541728" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1570541728" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1570541728" rel="stylesheet">
-    <link href="/css/auto-complete.css?1570541728" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1570541728" rel="stylesheet">
-    <link href="/css/theme.css?1570541728" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1570541728" rel="stylesheet">
+    <link href="/css/nucleus.css?1570713281" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1570713281" rel="stylesheet">
+    <link href="/css/hybrid.css?1570713281" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1570713281" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1570713281" rel="stylesheet">
+    <link href="/css/auto-complete.css?1570713281" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1570713281" rel="stylesheet">
+    <link href="/css/theme.css?1570713281" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1570713281" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1570541728" rel="stylesheet">
+      <link href="/css/theme-pink.css?1570713281" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1570541728"></script>
+    <script src="/js/jquery-3.3.1.min.js?1570713281"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1570541728"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1570541728"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1570713281"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1570713281"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1570541728"></script>
+<script type="text/javascript" src="/js/search.js?1570713281"></script>
 
     
   </div>
@@ -553,6 +553,8 @@
 <li><a href="#identify-encoding">Identify encoding</a></li>
 </ul></li>
 <li><a href="#the-complexity-effective-visual-design">The Complexity: effective visual design</a></li>
+<li><a href="#going-beyond-obvious">Going beyond obvious</a></li>
+<li><a href="#graphical-displays-in-r-from-where-to-start">Graphical Displays in R: from where to start?</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -669,31 +671,71 @@
 </div>
 
 
-<p>2)  Highlight the important data</p>
+<p>2)  <strong>Emphasise what&rsquo;s important</strong>: Identify what is the key information you are trying to communicate and think of the most effective format to do so as graphs can help you to express complex data in a simple format. Displaying an important item in a different colour is an easy way to draw attention to a point-making value.</p>
 
-<p>3)  Declutter the chart – keep it simple</p>
+<p><img src="/day1/PrinciplesVisualisation/images/scatter.png?width=25pc" alt="Red variant" /></p>
 
-<p>Choosing a Deficient Measure</p>
+<p><img src="/day1/PrinciplesVisualisation/images/growth_chart.png?width=25pc" alt="Red variant" /></p>
 
-<p>Taming the information from the visual display should not be difficult.</p>
+<p>Sometimes it might be effective to pull the key information from a chart into a separathe graphs and to present them in parralell.</p>
 
-<p>ability to make sense of and communicate it
-<a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">Dual-Scaled Axes in Graphs</a></p>
+<p><img src="/day1/PrinciplesVisualisation/images/Spaghetti_Lines.png?width=35pc" alt="Red variant" /></p>
 
-<p><a href="http://cartonerd.blogspot.com/2018/03/dotty-election-map.html"><img src="/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc" alt="Red variant" /></a></p>
+
+<div class="notices warning" ><p>Keep in mind that taming the information from the visual display should not be difficult.</p>
+</div>
+
+
+<p>3)  <strong>Declutter the chart – keep it simple</strong> as effective visualisations show the data to tell the story. Keep the focus on the important points by reducing unnecessay visual stimulus.</p>
+
+<p><img src="/day1/PrinciplesVisualisation/images/3DBar.png?width=30pc" alt="Red variant" /></p>
+
+<p><img src="/day1/PrinciplesVisualisation/images/2Bar.png?width=30pc" alt="Red variant" /></p>
+
+<p>Integrate the text with the graphs only if necessary to help better convey information effigy.</p>
+
+<p><img src="/day1/PrinciplesVisualisation/images/Quantile.png?width=25pc" alt="Red variant" /></p>
+
+<p>In <a href="https://ec.europa.eu/eurostat/cros/system/files/Alberto%20Cairo%20BRUSSELS_NEW_VisualizationForEveryone.pdf">this presentation</a> <a href="http://albertocairo.com">Alberto Cairo</a> illustrates the importance of a good choice of the format used to visualy explain the main story: &ldquo;<strong>How</strong> Music Preferences <strong>Have Changed</strong> in Two Decades&rdquo;.</p>
+
+<p><img src="/day1/PrinciplesVisualisation/images/VisualFormat.png?width=35pc" alt="Red variant" /></p>
 
 
 <div class="notices note" ><p>When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused.</p>
 </div>
 
 
-<p>&ldquo;Graphical perception is the visual decoding of the quantitative and qualitative information encoded on graphs.&rdquo;
-<a href="https://pdfs.semanticscholar.org/565d/843c2c0e60915709268ac4224894469d82d5.pdf">Cleveland W.S. and McGill R. <em>Graphical Perception and Graphical Methods for Analyzing Scientific Data</em>. American Association for the Advancement of Science, 1985. <strong>229(4716)</strong>: 828-833</a></p>
+<h3 id="going-beyond-obvious">Going beyond obvious</h3>
+
+<p>ability to make sense of and communicate it
+<a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">Dual-Scaled Axes in Graphs</a></p>
+
+<p><a href="http://cartonerd.blogspot.com/2018/03/dotty-election-map.html"><img src="/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc" alt="Red variant" /></a></p>
+
+<h3 id="graphical-displays-in-r-from-where-to-start">Graphical Displays in R: from where to start?</h3>
+
+<p>R is a great tool for data visualisation not just for people who want to develop understanding about their data using graphs, but nayone with need to produce high-quality and effective graphics to enhance their reports, web pages, or other documents.</p>
+
+<p>Take a look at <a href="https://www.r-graph-gallery.com/">The R Graph Gallery</a> that provides an extensive collection of charts made in R together with the code.</p>
+
+<p>There are several clasic books on drwing graphics in R, such as:</p>
+
+<ul>
+<li><a href="http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf">ggplot2</a>[Wickham, 2009]</li>
+<li><a href="https://www.springer.com/gp/book/9780387759685">Lattice</a> [Sarkar, 2008] and</li>
+<li><a href="https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf">R Graphics</a>[Murrell, 2011].</li>
+</ul>
+
+<p>If you would like to get more serious and systematic in your learning about graphical data analysis with R <a href="http://www.gradaanwr.net/#a-a">Graphical Data Analysis with R</a> book by <a href="http://www.gradaanwr.net/author/">Antony Unwin</a> is a great place to start. The R code for every graphic and analysis in the book is available from the book&rsquo;s website.</p>
+
+<p>Back in 2012 there was a very engaging academic discussion between <a href="https://en.wikipedia.org/wiki/Andrew_Gelman">Andrew Gelman</a>, <a href="http://rosuda.org/~unwin/">Anthony Unwin</a>, <a href="https://www.stephen-few.com">Stephen Few</a>, <a href="https://www.stat.auckland.ac.nz/~paul/">Paul Murrell</a>, <a href="http://hadley.nz">Hadley Wickham</a> and <a href="https://research.tableau.com/user/robert-kosara">Robert Kosara</a> about visualisation and infographics. Robert compiles all the discussion posts in <a href="https://eagereyes.org/blog/2012/responses-gelman-unwin-convenient-posting">this blog post</a> that makes riveting reading.</p>
 
 
-<div class="notices note" ><p>ghjghjk</p>
+<div class="notices tip" ><p>Practise! Gaining experience in interpreting graphics and drawing your own data displays is the most effective way of becaming a data viz.</p>
 </div>
 
+
+<p><a href="https://visme.co/blog/types-of-graphs/">types of graphs</a></p>
 
 <hr />
 
@@ -975,19 +1017,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1570541728"></script>
-    <script src="/js/perfect-scrollbar.min.js?1570541728"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1570541728"></script>
-    <script src="/js/jquery.sticky.js?1570541728"></script>
-    <script src="/js/featherlight.min.js?1570541728"></script>
-    <script src="/js/highlight.pack.js?1570541728"></script>
+    <script src="/js/clipboard.min.js?1570713281"></script>
+    <script src="/js/perfect-scrollbar.min.js?1570713281"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1570713281"></script>
+    <script src="/js/jquery.sticky.js?1570713281"></script>
+    <script src="/js/featherlight.min.js?1570713281"></script>
+    <script src="/js/highlight.pack.js?1570713281"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1570541728"></script>
-    <script src="/js/learn.js?1570541728"></script>
-    <script src="/js/hugo-learn.js?1570541728"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1570713281"></script>
+    <script src="/js/learn.js?1570713281"></script>
+    <script src="/js/hugo-learn.js?1570713281"></script>
 
-    <link href="/mermaid/mermaid.css?1570541728" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1570541728"></script>
+    <link href="/mermaid/mermaid.css?1570713281" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1570713281"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

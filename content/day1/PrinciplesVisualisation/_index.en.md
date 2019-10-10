@@ -87,18 +87,42 @@ Have a look at [What to consider when creating a line chart]( https://blog.dataw
 ) blog post by [Lisa Charlotte Rost]( https://blog.datawrapper.de/), where you will also find the links to some more interesting posts on this topic.  
 {{% /notice %}}
 
-2)	Highlight the important data
+2)	**Emphasise what's important**: Identify what is the key information you are trying to communicate and think of the most effective format to do so as graphs can help you to express complex data in a simple format. Displaying an important item in a different colour is an easy way to draw attention to a point-making value.   
 
-3)	Declutter the chart – keep it simple
+![Red variant](/day1/PrinciplesVisualisation/images/scatter.png?width=25pc)
+
+![Red variant](/day1/PrinciplesVisualisation/images/growth_chart.png?width=25pc)
+
+Sometimes it might be effective to pull the key information from a chart into a separathe graphs and to present them in parralell.
+
+![Red variant](/day1/PrinciplesVisualisation/images/Spaghetti_Lines.png?width=35pc)
 
 
+{{% notice warning %}}
+Keep in mind that taming the information from the visual display should not be difficult. 
+{{% /notice %}}
+
+3)	**Declutter the chart – keep it simple** as effective visualisations show the data to tell the story. Keep the focus on the important points by reducing unnecessay visual stimulus. 
+
+![Red variant](/day1/PrinciplesVisualisation/images/3DBar.png?width=30pc)
+
+![Red variant](/day1/PrinciplesVisualisation/images/2Bar.png?width=30pc)
+
+Integrate the text with the graphs only if necessary to help better convey information effigy.
+
+![Red variant](/day1/PrinciplesVisualisation/images/Quantile.png?width=25pc)
+
+In [this presentation](https://ec.europa.eu/eurostat/cros/system/files/Alberto%20Cairo%20BRUSSELS_NEW_VisualizationForEveryone.pdf) [Alberto Cairo](http://albertocairo.com) illustrates the importance of a good choice of the format used to visualy explain the main story: "**How** Music Preferences **Have Changed** in Two Decades".
+
+![Red variant](/day1/PrinciplesVisualisation/images/VisualFormat.png?width=35pc)
+
+{{% notice note %}}
+When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused. 
+{{% /notice %}}
+
+### Going beyond obvious
 
 
-
-
-Choosing a Deficient Measure
-
-Taming the information from the visual display should not be difficult. 
 
 ability to make sense of and communicate it
 [Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
@@ -107,17 +131,31 @@ ability to make sense of and communicate it
 [![Red variant](/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc)](http://cartonerd.blogspot.com/2018/03/dotty-election-map.html)
 
 
+### Graphical Displays in R: from where to start? 
 
-{{% notice note %}}
-When creating a data visualisation, think about the specific information that you want your data to convey, or the outcome that you want to achieve. Keep it simple and remove any unnecessary elements that could convolute your central point, bombarding an audience with too much data will likely leave them doubtful and confused. 
+R is a great tool for data visualisation not just for people who want to develop understanding about their data using graphs, but nayone with need to produce high-quality and effective graphics to enhance their reports, web pages, or other documents.
+
+Take a look at [The R Graph Gallery](https://www.r-graph-gallery.com/) that provides an extensive collection of charts made in R together with the code.  
+
+There are several clasic books on drwing graphics in R, such as:
+
+- [ggplot2](http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf)[Wickham, 2009] 
+- [Lattice](https://www.springer.com/gp/book/9780387759685) [Sarkar, 2008] and 
+- [R Graphics](https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf)[Murrell, 2011].
+
+If you would like to get more serious and systematic in your learning about graphical data analysis with R [Graphical Data Analysis with R](http://www.gradaanwr.net/#a-a) book by [Antony Unwin](http://www.gradaanwr.net/author/) is a great place to start. The R code for every graphic and analysis in the book is available from the book's website.
+
+Back in 2012 there was a very engaging academic discussion between [Andrew Gelman](https://en.wikipedia.org/wiki/Andrew_Gelman), [Anthony Unwin](http://rosuda.org/~unwin/), [Stephen Few](https://www.stephen-few.com), [Paul Murrell]( https://www.stat.auckland.ac.nz/~paul/), [Hadley Wickham](http://hadley.nz) and [Robert Kosara]( https://research.tableau.com/user/robert-kosara) about visualisation and infographics. Robert compiles all the discussion posts in [this blog post](https://eagereyes.org/blog/2012/responses-gelman-unwin-convenient-posting) that makes riveting reading. 
+
+{{% notice tip %}}
+Practise! Gaining experience in interpreting graphics and drawing your own data displays is the most effective way of becaming a data viz.
 {{% /notice %}}
 
-"Graphical perception is the visual decoding of the quantitative and qualitative information encoded on graphs."
-[Cleveland W.S. and McGill R. *Graphical Perception and Graphical Methods for Analyzing Scientific Data*. American Association for the Advancement of Science, 1985. **229(4716)**: 828-833](https://pdfs.semanticscholar.org/565d/843c2c0e60915709268ac4224894469d82d5.pdf)
 
-{{% notice note %}}
-ghjghjk
-{{% /notice %}}
+
+
+[types of graphs](https://visme.co/blog/types-of-graphs/)
+
 
 -----------------------------
 © 2019 Tatjana Kecojevic
