@@ -102,7 +102,7 @@ Sometimes it might be effective to pull the key information from a chart into a 
 Keep in mind that taming the information from the visual display should not be difficult. 
 {{% /notice %}}
 
-3)	**Declutter the chart – keep it simple** as effective visualisations show the data to tell the story. Keep the focus on the important points by reducing unnecessay visual stimulus. 
+3)	**Declutter the chart – keep it simple** as effective visualisations show the data to tell the story. Graphs would not look better by piling on the information and bombarding on with fancy ‘viz’ skills. Effective data visualisation is a delicate balancing act between form and function. Keep the focus on the important points by reducing unnecessay visual stimulus.
 
 ![Red variant](/day1/PrinciplesVisualisation/images/3DBar.png?width=30pc)
 
