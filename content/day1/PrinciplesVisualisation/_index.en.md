@@ -122,8 +122,15 @@ When creating a data visualisation, think about the specific information that yo
 
 ### Going beyond obvious
 
+When creating a graphical display focus on best practices and explore your own personal style. Build a foundation of exploring and summurising a set of numbers and identifying the key feature within the data that would help you in presenting you visual data story.  
 
+There is a belief that charts with two different y-axes make it hard for most people to read and to intuitively make right conclusions about two data sets. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assumed correlation when there is none.
+[Stephen Few]( https://www.perceptualedge.com/about.php), however, has wrote a well-argued [paper](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) in which he carefully presents issues one needs to take into consideration when wanting to use them. ![Red variant](/day1/PrinciplesVisualisation/images/DualScaled.png?width=30pc)
+You need to judge for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format. 
+ 
+Interactivity allows the viewer to engage with your data in ways impossible by static graphs
 
+The main challenge with a secondary y-axis is that there's always some questioning up front about which data to read against which axis.
 ability to make sense of and communicate it
 [Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
 
@@ -139,7 +146,7 @@ Take a look at [The R Graph Gallery](https://www.r-graph-gallery.com/) that prov
 
 There are several clasic books on drwing graphics in R, such as:
 
-- [ggplot2](http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf)[Wickham, 2009] 
+- [ggplot2](http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf) [Wickham, 2009] 
 - [Lattice](https://www.springer.com/gp/book/9780387759685) [Sarkar, 2008] and 
 - [R Graphics](https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf)[Murrell, 2011].
 
