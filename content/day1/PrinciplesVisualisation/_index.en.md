@@ -17,6 +17,8 @@ Graphical methods are commonly used for exploratory data analysis. Boxplots, sca
 
 Good and clear graphics rely most of all on a reliable data. Thus, the first principle of an effective visualisation is that it represents reliable information. The type of the information that needs to be communicated and displayed will direct the choice of the most appropriate type of data encoding that would make relevant patterns become noticeable. It is therefore important to understand the problem you wish to communicate and the type of the data you need for its communication from the statistical perspective, ie. is it measured, categorical (ordinal or nominal), time (temporal dimension) and geographical location (spatial dimensions) in case of spatiotemporal data. 
 
+[![Red variant](/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc)](http://cartonerd.blogspot.com/2018/03/dotty-election-map.html)
+
 Visual encoding of a data set depends on the number and characteristics of the available attributes ie. variables and on the analytical problem in question. [Alberto Cairo](http://albertocairo.com) on his blog [The Functional Art](http://www.thefunctionalart.com/2013/08/in-infographics-steal-what-you-need-but.html) provides an effective list of the graphic forms used to encode data depending on the function of the display. The figure shows ranking of the elementary perception task according on how well they can be perceived based on the ground breaking work of Cleveland and McGill published in [the paper](http://euclid.psych.yorku.ca/www/psy6135/papers/ClevelandMcGill1984.pdf) of [JASA](https://amstat.tandfonline.com/toc/uasa20/current) while working in the famous AT&T Bell Labs. 
 ![Red variant](/day1/PrinciplesVisualisation/images/FunctionalForms.png?width=30pc)
 
@@ -127,19 +129,16 @@ When creating a graphical display focus on best practices and explore your own p
 #####  Dual Axis Charts
 
 There is a belief that charts with two different y-axes make it hard for most people to read and to make right conclusions about two data sets. Having a secondary y-axis often creates a confusion as it is not clear which data to read against which axis. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assum correlation when there is none.
-[Stephen Few], however, ( https://www.perceptualedge.com/about.php) has wrote a well-argued [paper](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) in which he carefully presents issues one needs to take into consideration when wanting to use them. 
+[Stephen Few]( https://www.perceptualedge.com/about.php) however, has wrote a well-argued [paper](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) in which he carefully presents issues one needs to take into consideration when wanting to use them. 
 You need to judge for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format. 
+
+![Red variant](/day1/PrinciplesVisualisation/images/DualScaled.png?width=30pc)
 
 #####  Interactive Charts 
 
 Interactivity allows the viewer to engage with data in ways impossible by static graphs. One of the key benefits of interactive data visualizations is their flexibility in allowing further manipulation and exploration of the data used. By enabling concentrated focus by ‘zoom in’ facility it makes discovery of the seemingly small facts in a big story easy and engaging as users are invited to pose additional questions and come up to the new findings. Interactive graphical story telling is a rich and powerful tool for displaying data features as it enables viewers to dive into the data story as little or as much as they’re interested.
 
-ability to make sense of and communicate it
-[Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
-
-
-[![Red variant](/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc)](http://cartonerd.blogspot.com/2018/03/dotty-election-map.html)
-
+[![Red variant](/day1/PrinciplesVisualisation/images/TrafficAccidentsBG.png?width=45pc)](https://tatjana.shinyapps.io/TrafficAccidents/)
 
 ### Graphical Displays in R: from where to start? 
 
@@ -162,12 +161,6 @@ Back in 2012 there was a very engaging academic discussion between [Andrew Gelma
 {{% notice tip %}}
 Practise! Gaining experience in interpreting graphics and drawing your own data displays is the most effective way of becaming a data viz.
 {{% /notice %}}
-
-
-
-
-[types of graphs](https://visme.co/blog/types-of-graphs/)
-
 
 -----------------------------
 © 2019 Tatjana Kecojevic
