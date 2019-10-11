@@ -124,13 +124,16 @@ When creating a data visualisation, think about the specific information that yo
 
 When creating a graphical display focus on best practices and explore your own personal style. Build a foundation of exploring and summurising a set of numbers and identifying the key feature within the data that would help you in presenting you visual data story.  
 
-There is a belief that charts with two different y-axes make it hard for most people to read and to intuitively make right conclusions about two data sets. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assumed correlation when there is none.
-[Stephen Few]( https://www.perceptualedge.com/about.php), however, has wrote a well-argued [paper](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) in which he carefully presents issues one needs to take into consideration when wanting to use them. ![Red variant](/day1/PrinciplesVisualisation/images/DualScaled.png?width=30pc)
-You need to decide for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format. 
- 
-Interactivity allows the viewer to engage with your data in ways impossible by static graphs
+#####  Dual Axis Charts
 
-The main challenge with a secondary y-axis is that there's always some questioning up front about which data to read against which axis.
+There is a belief that charts with two different y-axes make it hard for most people to read and to make right conclusions about two data sets. Having a secondary y-axis often creates a confusion as it is not clear which data to read against which axis. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assum correlation when there is none.
+[Stephen Few], however, ( https://www.perceptualedge.com/about.php) has wrote a well-argued [paper](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) in which he carefully presents issues one needs to take into consideration when wanting to use them. 
+You need to judge for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format. 
+
+#####  Interactive Charts 
+
+Interactivity allows the viewer to engage with data in ways impossible by static graphs. One of the key benefits of interactive data visualizations is their flexibility in allowing further manipulation and exploration of the data used. By enabling concentrated focus by ‘zoom in’ facility it makes discovery of the seemingly small facts in a big story easy and engaging as users are invited to pose additional questions and come up to the new findings. Interactive graphical story telling is a rich and powerful tool for displaying data features as it enables viewers to dive into the data story as little or as much as they’re interested.
+
 ability to make sense of and communicate it
 [Dual-Scaled Axes in Graphs](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)
 
@@ -151,6 +154,8 @@ There are several clasic books on drwing graphics in R, such as:
 - [R Graphics](https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf)[Murrell, 2011].
 
 If you would like to get more serious and systematic in your learning about graphical data analysis with R [Graphical Data Analysis with R](http://www.gradaanwr.net/#a-a) book by [Antony Unwin](http://www.gradaanwr.net/author/) is a great place to start. The R code for every graphic and analysis in the book is available from the book's website.
+
+[Data Visualization with R](https://rkabacoff.github.io/datavis/) by [Rob Kabacoff](https://rkabacoff.com/) is another good book about graphical displayes in R. It gives a systematic overview for creating graphical display in R starting with a brief introduction to R and following by a comprehensive list of graphical forms commanly used in statistical modelling, geospatial mapping and finishing with interactive plots. 
 
 Back in 2012 there was a very engaging academic discussion between [Andrew Gelman](https://en.wikipedia.org/wiki/Andrew_Gelman), [Anthony Unwin](http://rosuda.org/~unwin/), [Stephen Few](https://www.stephen-few.com), [Paul Murrell]( https://www.stat.auckland.ac.nz/~paul/), [Hadley Wickham](http://hadley.nz) and [Robert Kosara]( https://research.tableau.com/user/robert-kosara) about visualisation and infographics. Robert compiles all the discussion posts in [this blog post](https://eagereyes.org/blog/2012/responses-gelman-unwin-convenient-posting) that makes riveting reading. 
 

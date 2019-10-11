@@ -12,20 +12,20 @@
     <title>Introduction to Visualization Principles :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1570737543" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1570737543" rel="stylesheet">
-    <link href="/css/hybrid.css?1570737543" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1570737543" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1570737543" rel="stylesheet">
-    <link href="/css/auto-complete.css?1570737543" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1570737543" rel="stylesheet">
-    <link href="/css/theme.css?1570737543" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1570737543" rel="stylesheet">
+    <link href="/css/nucleus.css?1570796988" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1570796988" rel="stylesheet">
+    <link href="/css/hybrid.css?1570796988" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1570796988" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1570796988" rel="stylesheet">
+    <link href="/css/auto-complete.css?1570796988" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1570796988" rel="stylesheet">
+    <link href="/css/theme.css?1570796988" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1570796988" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1570737543" rel="stylesheet">
+      <link href="/css/theme-pink.css?1570796988" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1570737543"></script>
+    <script src="/js/jquery-3.3.1.min.js?1570796988"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1570737543"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1570737543"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1570796988"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1570796988"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1570737543"></script>
+<script type="text/javascript" src="/js/search.js?1570796988"></script>
 
     
   </div>
@@ -553,7 +553,14 @@
 <li><a href="#identify-encoding">Identify encoding</a></li>
 </ul></li>
 <li><a href="#the-complexity-effective-visual-design">The Complexity: effective visual design</a></li>
-<li><a href="#going-beyond-obvious">Going beyond obvious</a></li>
+<li><a href="#going-beyond-obvious">Going beyond obvious</a>
+<ul>
+<li>
+<ul>
+<li><a href="#dual-axis-charts">Dual Axis Charts</a></li>
+<li><a href="#interactive-charts">Interactive Charts</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#graphical-displays-in-r-from-where-to-start">Graphical Displays in R: from where to start?</a></li>
 </ul></li>
 </ul></li>
@@ -709,14 +716,17 @@
 
 <p>When creating a graphical display focus on best practices and explore your own personal style. Build a foundation of exploring and summurising a set of numbers and identifying the key feature within the data that would help you in presenting you visual data story.</p>
 
-<p>There is a belief that charts with two different y-axes make it hard for most people to read and to intuitively make right conclusions about two data sets. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assumed correlation when there is none.
-<a href="https://www.perceptualedge.com/about.php">Stephen Few</a>, however, has wrote a well-argued <a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">paper</a> in which he carefully presents issues one needs to take into consideration when wanting to use them. <img src="/day1/PrinciplesVisualisation/images/DualScaled.png?width=30pc" alt="Red variant" />
-You need to decide for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format.</p>
+<h5 id="dual-axis-charts">Dual Axis Charts</h5>
 
-<p>Interactivity allows the viewer to engage with your data in ways impossible by static graphs</p>
+<p>There is a belief that charts with two different y-axes make it hard for most people to read and to make right conclusions about two data sets. Having a secondary y-axis often creates a confusion as it is not clear which data to read against which axis. The main danger of dual axis charts is that they’re not intuitive. There are many people who are opposing them as they often create confusion and assum correlation when there is none.
+[Stephen Few], however, ( <a href="https://www.perceptualedge.com/about.php">https://www.perceptualedge.com/about.php</a>) has wrote a well-argued <a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">paper</a> in which he carefully presents issues one needs to take into consideration when wanting to use them.
+You need to judge for yourself if you are going to be fun or not of dual y-axis charts. It should certainly depend on your judgment of its suitability for conveying your graphical story telling as with any other graphical format.</p>
 
-<p>The main challenge with a secondary y-axis is that there&rsquo;s always some questioning up front about which data to read against which axis.
-ability to make sense of and communicate it
+<h5 id="interactive-charts">Interactive Charts</h5>
+
+<p>Interactivity allows the viewer to engage with data in ways impossible by static graphs. One of the key benefits of interactive data visualizations is their flexibility in allowing further manipulation and exploration of the data used. By enabling concentrated focus by ‘zoom in’ facility it makes discovery of the seemingly small facts in a big story easy and engaging as users are invited to pose additional questions and come up to the new findings. Interactive graphical story telling is a rich and powerful tool for displaying data features as it enables viewers to dive into the data story as little or as much as they’re interested.</p>
+
+<p>ability to make sense of and communicate it
 <a href="https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf">Dual-Scaled Axes in Graphs</a></p>
 
 <p><a href="http://cartonerd.blogspot.com/2018/03/dotty-election-map.html"><img src="/day1/PrinciplesVisualisation/images/USA2016ElectionMap.jpg?width=30pc" alt="Red variant" /></a></p>
@@ -736,6 +746,8 @@ ability to make sense of and communicate it
 </ul>
 
 <p>If you would like to get more serious and systematic in your learning about graphical data analysis with R <a href="http://www.gradaanwr.net/#a-a">Graphical Data Analysis with R</a> book by <a href="http://www.gradaanwr.net/author/">Antony Unwin</a> is a great place to start. The R code for every graphic and analysis in the book is available from the book&rsquo;s website.</p>
+
+<p><a href="https://rkabacoff.github.io/datavis/">Data Visualization with R</a> by <a href="https://rkabacoff.com/">Rob Kabacoff</a> is another good book about graphical displayes in R. It gives a systematic overview for creating graphical display in R starting with a brief introduction to R and following by a comprehensive list of graphical forms commanly used in statistical modelling, geospatial mapping and finishing with interactive plots.</p>
 
 <p>Back in 2012 there was a very engaging academic discussion between <a href="https://en.wikipedia.org/wiki/Andrew_Gelman">Andrew Gelman</a>, <a href="http://rosuda.org/~unwin/">Anthony Unwin</a>, <a href="https://www.stephen-few.com">Stephen Few</a>, <a href="https://www.stat.auckland.ac.nz/~paul/">Paul Murrell</a>, <a href="http://hadley.nz">Hadley Wickham</a> and <a href="https://research.tableau.com/user/robert-kosara">Robert Kosara</a> about visualisation and infographics. Robert compiles all the discussion posts in <a href="https://eagereyes.org/blog/2012/responses-gelman-unwin-convenient-posting">this blog post</a> that makes riveting reading.</p>
 
@@ -1026,19 +1038,19 @@ ability to make sense of and communicate it
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1570737543"></script>
-    <script src="/js/perfect-scrollbar.min.js?1570737543"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1570737543"></script>
-    <script src="/js/jquery.sticky.js?1570737543"></script>
-    <script src="/js/featherlight.min.js?1570737543"></script>
-    <script src="/js/highlight.pack.js?1570737543"></script>
+    <script src="/js/clipboard.min.js?1570796988"></script>
+    <script src="/js/perfect-scrollbar.min.js?1570796988"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1570796988"></script>
+    <script src="/js/jquery.sticky.js?1570796988"></script>
+    <script src="/js/featherlight.min.js?1570796988"></script>
+    <script src="/js/highlight.pack.js?1570796988"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1570737543"></script>
-    <script src="/js/learn.js?1570737543"></script>
-    <script src="/js/hugo-learn.js?1570737543"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1570796988"></script>
+    <script src="/js/learn.js?1570796988"></script>
+    <script src="/js/hugo-learn.js?1570796988"></script>
 
-    <link href="/mermaid/mermaid.css?1570737543" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1570737543"></script>
+    <link href="/mermaid/mermaid.css?1570796988" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1570796988"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
