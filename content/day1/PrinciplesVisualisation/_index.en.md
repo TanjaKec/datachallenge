@@ -150,7 +150,7 @@ There are several clasic books on drwing graphics in R, such as:
 
 - [ggplot2](http://moderngraphics11.pbworks.com/f/ggplot2-Book09hWickham.pdf) [Wickham, 2009] 
 - [Lattice](https://www.springer.com/gp/book/9780387759685) [Sarkar, 2008] and 
-- [R Graphics](https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf)[Murrell, 2011].
+- [R Graphics](https://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf) [Murrell, 2011].
 
 If you would like to get more serious and systematic in your learning about graphical data analysis with R [Graphical Data Analysis with R](http://www.gradaanwr.net/#a-a) book by [Antony Unwin](http://www.gradaanwr.net/author/) is a great place to start. The R code for every graphic and analysis in the book is available from the book's website.
 
