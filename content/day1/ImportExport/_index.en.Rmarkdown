@@ -12,7 +12,7 @@ You are most likelly to have looked at, organised and examined your data files i
 
 Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You'll guess that it is possible to use **File | Import Dataset** menu option in RStudio to import your data, however we’re going to do it the proper way with a command.
 
-There are many packages that let R import all types of data, but with the restriction of time in this bootcamp we will focus on `CSV` files and you can try to explore the rest for yourself.
+There are many packages that let R import all types of data, and we will start by focus on `CSV` files as they are the most frequent tipe.
 
 Comma separated files are the most common way to save spreadsheets that don’t require a licenced, usually not free program to open. Importing `CSV` is part of base R and you can use `read.csv()` function to do so. 
 

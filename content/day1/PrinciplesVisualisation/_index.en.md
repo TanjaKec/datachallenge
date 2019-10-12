@@ -162,5 +162,9 @@ Back in 2012 there was a very engaging academic discussion between [Andrew Gelma
 Practise! Gaining experience in interpreting graphics and drawing your own data displays is the most effective way of becaming a data viz.
 {{% /notice %}}
 
+## YOUR TURN 👇
+
+1) Go to the portals with open data (global: gapminder, national: office of national statistics, or local) and see if you can find a data that is interesting for you to explore. Write down what interesting features you are expecting to see and suggest type of the visualistions that could be used to illustrate them.  
+
 -----------------------------
 © 2019 Tatjana Kecojevic
