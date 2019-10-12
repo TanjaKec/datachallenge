@@ -12,20 +12,20 @@
     <title>Import Data inot R :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1570890146" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1570890146" rel="stylesheet">
-    <link href="/css/hybrid.css?1570890146" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1570890146" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1570890146" rel="stylesheet">
-    <link href="/css/auto-complete.css?1570890146" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1570890146" rel="stylesheet">
-    <link href="/css/theme.css?1570890146" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1570890146" rel="stylesheet">
+    <link href="/css/nucleus.css?1570895999" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1570895999" rel="stylesheet">
+    <link href="/css/hybrid.css?1570895999" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1570895999" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1570895999" rel="stylesheet">
+    <link href="/css/auto-complete.css?1570895999" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1570895999" rel="stylesheet">
+    <link href="/css/theme.css?1570895999" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1570895999" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1570890146" rel="stylesheet">
+      <link href="/css/theme-pink.css?1570895999" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1570890146"></script>
+    <script src="/js/jquery-3.3.1.min.js?1570895999"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1570890146"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1570890146"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1570895999"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1570895999"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1570890146"></script>
+<script type="text/javascript" src="/js/search.js?1570895999"></script>
 
     
   </div>
@@ -555,9 +555,10 @@
 <li><a href="#read-csv"><code>read.csv()</code></a></li>
 <li><a href="#readr-read-csv">readr::read_csv()</a></li>
 </ul></li>
+<li><a href="#importing-data-using-data-table-fread">Importing data using <code>data.table::fread()</code></a></li>
 </ul></li>
 </ul></li>
-<li><a href="#your-turn">YOUR TURN 👇</a></li>
+<li><a href="#getting-data-from-an-online-source-https-www-r-bloggers-com-getting-data-from-an-online-source"><a href="https://www.r-bloggers.com/getting-data-from-an-online-source/">Getting Data From An Online Source</a></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -591,7 +592,28 @@
 
 <p>You are most likelly to have looked at, organised and examined your data files in Excel.</p>
 
-<p>Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You&rsquo;ll guess that it is possible to use <strong>File | Import Dataset</strong> menu option in RStudio to import your data, however we’re going to do it the proper way with a command.</p>
+<p>Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You&rsquo;ll guess that it is possible to use <strong>File | Import Dataset</strong> menu option in RStudio to import your data (to learn more see <a href="https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio">Importing Data with RStudio</a>), however we’re going to do it the proper way with a command.</p>
+
+<p>R can import all types of data:</p>
+
+<ul>
+<li>(Tab, Blank space) Delimited Text</li>
+<li>CSV files</li>
+<li>Excel files</li>
+<li>JSON</li>
+<li>SAS</li>
+<li>STATA</li>
+<li>MiniTab</li>
+<li>SPSS&hellip;</li>
+</ul>
+
+<p>The simplest data form is a <a href="https://en.wikipedia.org/wiki/Text_file">text file</a>. Text files can be read by any computer operating system and by almost all different kind of statistical programs. Saving data as a text file makes your data highly accessible. If you have a text data file you wish to use, you can easily import it with <strong>the R base</strong> functions <code>read.table()</code></p>
+
+<p>Reads a file in table format and creates a data frame from it</p>
+
+<pre><code># Read tabular data into R
+df_txt &lt;- read.table(file_name.txt, header = FALSE)
+</code></pre>
 
 <p>There are many packages that let R import all types of data, and we will start by focus on <code>CSV</code> files as they are the most frequent tipe.</p>
 
@@ -599,298 +621,33 @@
 
 <h5 id="read-csv"><code>read.csv()</code></h5>
 
-<p>Let us go to <a href="https://data.gov.rs/">https://data.gov.rs/</a> Serbian open data portal. In particular, let us try to access <a href="https://data.gov.rs/sr/datasets/podatsi-iz-oglasa-javnikh-nabavki-sa-portala-javnikh-nabavki/">&ldquo;Подаци из Огласа јавних набавки са Портала јавних набавки&rdquo;</a> and import this data to R.</p>
+<p>Let us go to <a href="https://data.gov.rs/">https://data.gov.rs/</a> Serbian open data portal. In particular, let us try to access <a href="https://data.gov.rs/sr/datasets/kvalitet-vazduha/">Kvalitet vazduha</a> and import this data to R.</p>
 
-<p>We are not going to download it onto our local computers, but rather we will import it to R directly from the web using the link.</p>
+<p>We are not going to download it onto our local computers, but rather we will import it to R directly from the web using the provided link.</p>
 
-<pre><code class="language-r">df_csv &lt;- read.csv(&quot;http://portal.ujn.gov.rs/OpenD/Tekuci_Mesec.csv&quot;, stringsAsFactors = FALSE)
+<pre><code class="language-r">df_csv &lt;- read.csv(&quot;https://data.gov.rs/sr/datasets/r/a8f71ec0-0a68-4d4f-8f37-ceabdcb98569&quot;, stringsAsFactors = FALSE)
 head(df_csv, 10)
 </code></pre>
 
-<pre><code>##    SifraNabavke
-## 1       2408810
-## 2       2445282
-## 3       2447521
-## 4       2453300
-## 5       2458195
-## 6       2468141
-## 7       2468533
-## 8       2479362
-## 9       2479757
-## 10      2479911
-##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      NazivDokumenta
-## 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Стручни надзор над извођењем 3 истражно-експлоатациона (ИЕ) бунара и техничка контола техничке документације неопходне за добијање експлоатационог права за потребе грејања одн. хлађења објеката социјалног и приступачног становања, у оквиру комплекса у Овчи
-## 2  Предмет набавке је услуга - брокерска услуга, у смислу Закона о извозу и увозу наоружања и војне опреме (&quot;Службени гласник РС&quot;, број 107/14), а ради спровођења послова уговарања и посредовања у уговарању, у вези са испоруком из увоза – опреме која је сходно Одлуци о утврђивању националне контролне листе наоружања и војне опреме («Сл.гласник РС» бр.42/18), категоризоване под редним бројем 11. «Електронска опрема, «свемирске летелице» и њихове компоненте које се не контролишу ни по једној другој основи на НКЛ НВО», тачка а) «Електронска опрема специјално пројектована за војну употребу и за њу специјално пројектоване компоненте» подтачка ј) &quot;Аутоматизовани системи за командовање и контролу» НКЛ НВО, ЈН број 90/18.
-## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Прехрамбени  производи
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Набавка добара - рачунарска опрема 10/2019
-## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Екскурзија ученика трећег, четвртог, шестог, седмог и осмог разреда и настава у природи ученика другог разреда
-## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Добра-набавка  школскoг намештаја (клупе и столице)
-## 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Набавка електричне енергије за јавну расвету
-## 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ЗАКУП АУТОДИЗАЛИЦЕ И АУТОПЛАТФОРМЕ, ПАРТИЈА 1 - ЗАКУП АУТОДИЗАЛИЦЕ M2019-18
-## 9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Ауто гуме
-## 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Ангажовање стручне куће за безбедност на раду и против пожарне заштите, ЈНМВ 41-2019
-##                                                               NazivNarucioca
-## 1                Град Београд - Градска управа - Секретаријат за инвестиције
-## 2  МИНИСТАРСТВО ОДБРАНЕ, СЕКТОР ЗА МАТЕРИЈАЛНЕ РЕСУРСЕ, УПРАВА ЗА СНАБДЕВАЊЕ
-## 3                                    Установа Геронтолошки центар Младеновац
-## 4                       Факултет инжењерских наука Универзитета у Крагујевцу
-## 5                                                     ОШ &quot;Доситеј Обрадовић&quot;
-## 6                                                 Основна школа &quot;Свети Сава&quot;
-## 7                                                           Општинска управа
-## 8                                            ЈКП Зеленило и гробља Смедерево
-## 9                                       ЈАВНО КОМУНАЛНО ПРЕДУЗЕЋЕ &quot;СТАНДАРД&quot;
-## 10                                                  Здравствени центар Врање
-##    MaticniBroj       PIB IdMesto IdOpstina IdVrstaPostupka
-## 1     17565800 100065430  791105     70246               4
-## 2      7093608 102116082  791091     70220               4
-## 3     17413805 101477704  704458     70173               1
-## 4      7151314 101576499  718980     70645               1
-## 5      7141106 101521949  733083     70947               1
-## 6      7130139 100499692  706418     70327               7
-## 7      7175221 102156105  713325     70483               1
-## 8     20782633 107333843  740527     71099               7
-## 9      7208324 100630696  717657     70602               7
-## 10     7205805 100548147  711306     70432               7
-##                                                                                                                                                                            PredmetNabavke
-## 1  архитектонске услуге; инжењерске услуге; услуге урбанистичког планирања и пејзажне архитектуре; услуге техничког тестирања и анализа; услуге енергентског прегледа и енергетске услуге
-## 2                                                                                                                                                                            друге услуге
-## 3                                                                                                                                                                        храна, намирнице
-## 4                                                                                                                                             рачунарска опрема (хардверска и софтверска)
-## 5                              услуге копненог саобраћаја (осим услуга железничког саобраћаја ), укључујући и услуге превоза у оклопљеним возилима и курирске услуге (осим превоза поште)
-## 6                                                                                                                                                                             друга добра
-## 7                                                                                                                                                                             друга добра
-## 8                                                                                                   техничка опрема за обављање делатности (уређаји, машине, апарати, механизација и сл.)
-## 9                                                                                                                                                                             друга добра
-## 10                                                                                                                                                                           друге услуге
-##    VrstaPredmeta
-## 1         услуге
-## 2         услуге
-## 3          добра
-## 4          добра
-## 5         услуге
-## 6          добра
-## 7          добра
-## 8          добра
-## 9          добра
-## 10        услуге
-##                                                                                                                                                                       OpstiRecnikNabavki
-## 1                                                                                                       Надзор пројеката и документације (пројектантски надзор),Услуге техничког надзора
-## 2                                                                                                                                                                      Одбрамбене услуге
-## 3  Свеже живинско месо,Месни производи,Припремљена и конзервисана риба,Животињска или биљна уља и масти,Млеко,Млинарски производи, скроб и скробни производи,Разни прехрамбени производи
-## 4                                                                                                                                                          Рачунарска опрема и материјал
-## 5                                                                                                                                                           Услуге организације путовања
-## 6                                                                                                                                                                       Школски намештај
-## 7                                                                                                                                                                    Електрична енергија
-## 8                                                                                                                                                    Изнајмљивање дизалица са оператером
-## 9                                                                                                                                                            Гуме за тешка и лака возила
-## 10                                                                                                                                              Услуге у области здравства и безбедности
-##                                   KontaktOsoba                Telefon
-## 1                               Ана Крсмановић           011/321-6037
-## 2                               Мишо Симоновић 011/2059-168, 2059-019
-## 3                              Новаковић Ђорђе             0118230865
-## 4  Марија Петровић, службеник за јавне набавке            034/330-196
-## 5                           Весна Димитријевић              012223371
-## 6                                Мирјана Лазић              030421688
-## 7     Дејан Вељовић  начелник Општинске управе            032-713-528
-## 8                                  Милица Бера            064-8476886
-## 9                                Tasić Emilija            019/731-112
-## 10                            Весна Стојановић              017427832
-##    DatumPoslednjeIzmene IdDelatnost IdOblikOrg IdOblikSvoj IdKategorija
-## 1   2019-10-04 14:21:07        8411         73           5            8
-## 2   2019-10-09 15:23:26        8422         71           5            1
-## 3   2019-10-01 13:14:13        8730         85           5            6
-## 4   2019-10-01 09:03:04        8542         85           5            5
-## 5   2019-10-01 11:16:50        8520         85           5            5
-## 6   2019-10-09 13:28:30        8520         85           5            5
-## 7   2019-10-08 11:20:40        8411         71           5            8
-## 8   2019-10-01 12:39:21        9603         17           5            7
-## 9   2019-10-01 13:35:25        3600         17           5            7
-## 10  2019-10-02 08:33:48        8610         85           5            3
-##    PozivZaPodnosenjePonuda PozivZaPodnosenjePrijava
-## 1                        1                        0
-## 2                        0                        0
-## 3                        1                        0
-## 4                        1                        0
-## 5                        1                        0
-## 6                        1                        0
-## 7                        1                        0
-## 8                        2                        0
-## 9                        1                        0
-## 10                       1                        0
-##    ObavestenjeOSistemuDinamickeNabavke PozivZaUcesceNaKonkursZaDizajn
-## 1                                    0                              0
-## 2                                    0                              0
-## 3                                    0                              0
-## 4                                    0                              0
-## 5                                    0                              0
-## 6                                    0                              0
-## 7                                    0                              0
-## 8                                    0                              0
-## 9                                    0                              0
-## 10                                   0                              0
-##    ObavestenjeOPriznavanjuKvalifikacije
-## 1                                     0
-## 2                                     0
-## 3                                     0
-## 4                                     0
-## 5                                     0
-## 6                                     0
-## 7                                     0
-## 8                                     0
-## 9                                     0
-## 10                                    0
-##    ObavestenjeOPriznavanjuKvalifikacijeURestriktivnomPostupku
-## 1                                                           0
-## 2                                                           0
-## 3                                                           0
-## 4                                                           0
-## 5                                                           0
-## 6                                                           0
-## 7                                                           0
-## 8                                                           0
-## 9                                                           0
-## 10                                                          0
-##    PodaciOObjaviIDodeliUgovora ObavestenjeOZakljucenomOkvirnomSporazumu
-## 1                            0                                        0
-## 2                            0                                        0
-## 3                            0                                        0
-## 4                            0                                        0
-## 5                            0                                        0
-## 6                            0                                        0
-## 7                            0                                        0
-## 8                            0                                        0
-## 9                            0                                        0
-## 10                           0                                        0
-##    ObavestenjeOZakljucenomUgovoru ObavestenjeORezultatuKonkursa
-## 1                               1                             0
-## 2                               0                             0
-## 3                               0                             0
-## 4                               0                             0
-## 5                               0                             0
-## 6                               1                             0
-## 7                               0                             0
-## 8                               0                             0
-## 9                               1                             0
-## 10                              0                             0
-##    ObavestenjeOObustaviPostupkaJavneNabavke
-## 1                                         1
-## 2                                         0
-## 3                                         0
-## 4                                         2
-## 5                                         0
-## 6                                         0
-## 7                                         0
-## 8                                         1
-## 9                                         0
-## 10                                        0
-##    PodaciOIzmeniUgovoraOJavnojNabavci KonkursnaDokumentacija
-## 1                                   0                      1
-## 2                                   0                      0
-## 3                                   0                      1
-## 4                                   0                      1
-## 5                                   0                      1
-## 6                                   0                      1
-## 7                                   0                      1
-## 8                                   0                      1
-## 9                                   0                      1
-## 10                                  0                      1
-##    ObavestenjeOProduzenjuRoka PregovarackiBezPonuda
-## 1                           0                     0
-## 2                           0                     0
-## 3                           0                     0
-## 4                           0                     0
-## 5                           1                     0
-## 6                           0                     0
-## 7                           0                     0
-## 8                           0                     0
-## 9                           0                     0
-## 10                          0                     0
-##    ObavestenjeOZastitiPrava MisljenjeUpraveJN
-## 1                         0                 0
-## 2                         0                 0
-## 3                         0                 0
-## 4                         0                 0
-## 5                         0                 0
-## 6                         0                 0
-## 7                         0                 0
-## 8                         0                 0
-## 9                         0                 0
-## 10                        0                 0
-##    OdlukaOPriznavanjuKvalifikacije OdlukaOIskljucenjuKandidata
-## 1                                0                           0
-## 2                                0                           0
-## 3                                0                           0
-## 4                                0                           0
-## 5                                0                           0
-## 6                                0                           0
-## 7                                0                           0
-## 8                                0                           0
-## 9                                0                           0
-## 10                               0                           0
-##    OdlukaODodeliUgovora OdlukaODodeliOkvirnogSporazuma
-## 1                     2                              0
-## 2                     0                              0
-## 3                     7                              0
-## 4                     0                              0
-## 5                     2                              0
-## 6                     1                              0
-## 7                     1                              0
-## 8                     0                              0
-## 9                     1                              0
-## 10                    1                              0
-##    ObavestenjeOPonistenjuPostupka OdlukaOObustaviPostupka
-## 1                               0                       1
-## 2                               0                       0
-## 3                               0                       0
-## 4                               0                       1
-## 5                               0                       0
-## 6                               0                       0
-## 7                               0                       0
-## 8                               0                       1
-## 9                               0                       0
-## 10                              0                       0
-##    OdlukaONastavkuPostupka OdlukaKomisijeOZakljucenjuUgovora
-## 1                        0                                 0
-## 2                        0                                 0
-## 3                        0                                 0
-## 4                        0                                 0
-## 5                        0                                 0
-## 6                        0                                 0
-## 7                        0                                 0
-## 8                        0                                 0
-## 9                        0                                 0
-## 10                       0                                 0
-##    ObavestenjeOPriznavanjuKvalifikacijeOpste
-## 1                                          0
-## 2                                          0
-## 3                                          0
-## 4                                          0
-## 5                                          0
-## 6                                          0
-## 7                                          0
-## 8                                          0
-## 9                                          0
-## 10                                         0
-##                                                                Link
-## 1  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2408810
-## 2  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2445282
-## 3  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2447521
-## 4  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2453300
-## 5  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2458195
-## 6  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2468141
-## 7  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2468533
-## 8  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2479362
-## 9  http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2479757
-## 10 http://portal.ujn.gov.rs/Dokumenti/JavnaNabavka.aspx?idd=2479911
+<pre><code>##              date_time station_id component_id      value
+## 1  2019-07-04 00:00:00          1            1 10.7889226
+## 2  2019-07-04 00:00:00          1            7 54.7527750
+## 3  2019-07-04 00:00:00          1           10  0.2714411
+## 4  2019-07-04 00:00:00          2            1  4.2429135
+## 5  2019-07-04 00:00:00          2            8 46.2188522
+## 6  2019-07-04 00:00:00          2            9 52.4963523
+## 7  2019-07-04 00:00:00          2           10  0.3323848
+## 8  2019-07-04 00:00:00          2           38  4.0268800
+## 9  2019-07-04 00:00:00          3            1  3.1265395
+## 10 2019-07-04 00:00:00          3            7 98.2703750
 </code></pre>
 
 <p>The other way is to download it and to save it to your working directory.</p>
 
-<p>Let us download <a href="https://data.gov.rs/s/resources/registar-povlashtshenikh-proizvodjacha-elektrichne-energije/20170221-142908/povlasceni.csv">&ldquo;Регистар повлачћених произвођача електричне енергије&rdquo;</a> and save it on your computers.</p>
+<p>Let us download <a href="https://data.gov.rs/sr/datasets/r/0b6a7aa5-9b13-4a7c-8a80-f964e1c67bc3">&ldquo;Kvalitet vazduha po stanicama&rdquo;</a>
+Make sure you save the file into your R-Project working directory before you ask R to execute the following</p>
 
-<p>Make sure you save the file into your R-Project working directory before you ask R to execute the following</p>
-
-<pre><code>df_csv &lt;- read.csv(&quot;poslodavci.csv&quot;, stringsAsFactors = FALSE)
+<pre><code>df_csv &lt;- read.csv(&quot;air_quality_by_station.csv&quot;, stringsAsFactors = FALSE)
 </code></pre>
 
 <p>What do you think about this dataset?</p>
@@ -906,17 +663,19 @@ df_csv &lt;- read_csv(&quot;poslodavci.csv&quot;)
 df_csv
 </code></pre>
 
+<h4 id="importing-data-using-data-table-fread">Importing data using <code>data.table::fread()</code></h4>
+
+<p><code>fread()</code> is a powerful data import function that is similar to <code>read.table()</code> but faster and is a function of the <code>data.table</code> package.</p>
+
+<p>You should only pass to the <code>fread()</code> funtion the name of the data file you want to import, and <code>fread()</code> will try to work out the appropriate way to import the data.</p>
+
 <p>You can use R with appropriate packages to access other data formats. For example <code>jsonlite</code> package for <code>json</code> files or <code>foreign</code> package for <code>SPSS</code> data files. Try to look through the help of the packages you&rsquo;ve been introduced to and discover other options.</p>
 
-<h2 id="your-turn">YOUR TURN 👇</h2>
+<p><a href="https://data.gov.rs/sr/datasets/kontsentratsije-polena-u-vazdukhu/">polen</a>
+<a href="https://data.gov.rs/sr/datasets/podatsi-o-saobratshajnim-nezgodama-po-politsijskim-upravama-i-opshtinama/">saobracaj</a>
+<a href="https://data.gov.rs/sr/datasets/kvalitet-vazduha/">vazduh</a></p>
 
-<p>1)  Open source software such as R and Git are extensively used in data science. Can you research the tools that are available for data science, both open and closed source. Write a short brief about the pros and cons for both types of software.</p>
-
-<p>2)  Investigate the importance of open source data and identify where open source data can readily be found on the Internet.</p>
-
-<p>3) Write an explanation of the benefits of open source models for policy makings by local authorities and governments in general.</p>
-
-<hr />
+<h2 id="getting-data-from-an-online-source-https-www-r-bloggers-com-getting-data-from-an-online-source"><a href="https://www.r-bloggers.com/getting-data-from-an-online-source/">Getting Data From An Online Source</a></h2>
 
 <p>© 2019 Tatjana Kecojevic</p>
 
@@ -1199,19 +958,19 @@ df_csv
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1570890146"></script>
-    <script src="/js/perfect-scrollbar.min.js?1570890146"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1570890146"></script>
-    <script src="/js/jquery.sticky.js?1570890146"></script>
-    <script src="/js/featherlight.min.js?1570890146"></script>
-    <script src="/js/highlight.pack.js?1570890146"></script>
+    <script src="/js/clipboard.min.js?1570895999"></script>
+    <script src="/js/perfect-scrollbar.min.js?1570895999"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1570895999"></script>
+    <script src="/js/jquery.sticky.js?1570895999"></script>
+    <script src="/js/featherlight.min.js?1570895999"></script>
+    <script src="/js/highlight.pack.js?1570895999"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1570890146"></script>
-    <script src="/js/learn.js?1570890146"></script>
-    <script src="/js/hugo-learn.js?1570890146"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1570895999"></script>
+    <script src="/js/learn.js?1570895999"></script>
+    <script src="/js/hugo-learn.js?1570895999"></script>
 
-    <link href="/mermaid/mermaid.css?1570890146" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1570890146"></script>
+    <link href="/mermaid/mermaid.css?1570895999" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1570895999"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
