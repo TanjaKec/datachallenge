@@ -12,20 +12,20 @@
     <title>Data Visualisation :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571049911" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571049911" rel="stylesheet">
-    <link href="/css/hybrid.css?1571049911" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571049911" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571049911" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571049911" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571049911" rel="stylesheet">
-    <link href="/css/theme.css?1571049911" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571049911" rel="stylesheet">
+    <link href="/css/nucleus.css?1571061610" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1571061610" rel="stylesheet">
+    <link href="/css/hybrid.css?1571061610" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1571061610" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1571061610" rel="stylesheet">
+    <link href="/css/auto-complete.css?1571061610" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1571061610" rel="stylesheet">
+    <link href="/css/theme.css?1571061610" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1571061610" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571049911" rel="stylesheet">
+      <link href="/css/theme-pink.css?1571061610" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571049911"></script>
+    <script src="/js/jquery-3.3.1.min.js?1571061610"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571049911"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571049911"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1571061610"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1571061610"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571049911"></script>
+<script type="text/javascript" src="/js/search.js?1571061610"></script>
 
     
   </div>
@@ -744,7 +744,10 @@ geom_point(col =&quot;red&quot;)
 
 <p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" /></p>
 
-<p>🤓💡 <strong>Tip</strong>: You can use the following code template to make graphs with <strong>ggplot2</strong>:</p>
+
+<div class="notices tip" ><p>🤓💡 <strong>Tip</strong>: You can use the following code template to make graphs with <strong>ggplot2</strong>:</p>
+</div>
+
 
 <pre><code>ggplot(data = &lt;DATA&gt;, (mapping = aes(&lt;MAPPINGS&gt;)) + &lt;GEOM_FUNCTION&gt;()
 </code></pre>
@@ -825,18 +828,18 @@ Is the relationship linear? What conclusion(s) can you draw?</p>
 </code></pre>
 
 <pre><code>## # A tibble: 30 x 6
-##    country       continent  year lifeExp      pop gdpPercap
-##    &lt;fct&gt;         &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Iraq          Asia       1962    51.5  7240260     8342.
-##  2 Austria       Europe     1972    70.6  7544201    16662.
-##  3 Cote d'Ivoire Africa     1977    52.4  7459574     2518.
-##  4 Vietnam       Asia       1992    67.7 69940728      989.
-##  5 Swaziland     Africa     1967    46.6   420690     2613.
-##  6 Australia     Oceania    1987    76.3 16257249    21889.
-##  7 Netherlands   Europe     1987    76.8 14665278    23651.
-##  8 Ecuador       Americas   1977    61.3  7278866     6680.
-##  9 Tanzania      Africa     2002    49.7 34593779      899.
-## 10 Tunisia       Africa     1987    66.9  7724976     3810.
+##    country                continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;                  &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Gambia                 Africa     2007    59.4  1688359      753.
+##  2 Trinidad and Tobago    Americas   1977    68.3  1039009     7900.
+##  3 Burundi                Africa     1957    40.5  2667518      380.
+##  4 France                 Europe     1997    78.6 58623428    25890.
+##  5 Bosnia and Herzegovina Europe     1982    70.7  4172693     4127.
+##  6 Uganda                 Africa     1977    50.4 11457758      844.
+##  7 Swaziland              Africa     1952    41.4   290243     1148.
+##  8 Mali                   Africa     1952    33.7  3838168      452.
+##  9 Albania                Europe     1987    72    3075321     3739.
+## 10 Finland                Europe     1977    72.5  4738902    15605.
 ## # … with 20 more rows
 </code></pre>
 
@@ -1259,19 +1262,19 @@ summary(my.model)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571049911"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571049911"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571049911"></script>
-    <script src="/js/jquery.sticky.js?1571049911"></script>
-    <script src="/js/featherlight.min.js?1571049911"></script>
-    <script src="/js/highlight.pack.js?1571049911"></script>
+    <script src="/js/clipboard.min.js?1571061610"></script>
+    <script src="/js/perfect-scrollbar.min.js?1571061610"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1571061610"></script>
+    <script src="/js/jquery.sticky.js?1571061610"></script>
+    <script src="/js/featherlight.min.js?1571061610"></script>
+    <script src="/js/highlight.pack.js?1571061610"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571049911"></script>
-    <script src="/js/learn.js?1571049911"></script>
-    <script src="/js/hugo-learn.js?1571049911"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1571061610"></script>
+    <script src="/js/learn.js?1571061610"></script>
+    <script src="/js/hugo-learn.js?1571061610"></script>
 
-    <link href="/mermaid/mermaid.css?1571049911" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571049911"></script>
+    <link href="/mermaid/mermaid.css?1571061610" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1571061610"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -37,9 +37,10 @@ install.packages("DT", repos = "http://cran.us.r-project.org")
 # have a look at the data through a table
 DT::datatable(head(gapminder::gapminder, 10))
 ```
+
 {{% notice note %}}
 💡 Note thet there are 6 columns, each of which we call a variable.
-{{% notice }}
+{{% /notice %}}
 
 **Description**: Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country.
 

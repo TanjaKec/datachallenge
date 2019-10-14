@@ -63,7 +63,9 @@ ggplot(gapminder_pipe, aes(x = pop_e6, y = lifeExp)) +
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" />
 
+{{% notice tip %}}
 🤓💡 **Tip**: You can use the following code template to make graphs with **ggplot2**:
+{{% /notice %}}
 
 ```
 ggplot(data = <DATA>, (mapping = aes(<MAPPINGS>)) + <GEOM_FUNCTION>()
@@ -150,18 +152,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country       continent  year lifeExp      pop gdpPercap
-##    <fct>         <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Iraq          Asia       1962    51.5  7240260     8342.
-##  2 Austria       Europe     1972    70.6  7544201    16662.
-##  3 Cote d'Ivoire Africa     1977    52.4  7459574     2518.
-##  4 Vietnam       Asia       1992    67.7 69940728      989.
-##  5 Swaziland     Africa     1967    46.6   420690     2613.
-##  6 Australia     Oceania    1987    76.3 16257249    21889.
-##  7 Netherlands   Europe     1987    76.8 14665278    23651.
-##  8 Ecuador       Americas   1977    61.3  7278866     6680.
-##  9 Tanzania      Africa     2002    49.7 34593779      899.
-## 10 Tunisia       Africa     1987    66.9  7724976     3810.
+##    country                continent  year lifeExp      pop gdpPercap
+##    <fct>                  <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Gambia                 Africa     2007    59.4  1688359      753.
+##  2 Trinidad and Tobago    Americas   1977    68.3  1039009     7900.
+##  3 Burundi                Africa     1957    40.5  2667518      380.
+##  4 France                 Europe     1997    78.6 58623428    25890.
+##  5 Bosnia and Herzegovina Europe     1982    70.7  4172693     4127.
+##  6 Uganda                 Africa     1977    50.4 11457758      844.
+##  7 Swaziland              Africa     1952    41.4   290243     1148.
+##  8 Mali                   Africa     1952    33.7  3838168      452.
+##  9 Albania                Europe     1987    72    3075321     3739.
+## 10 Finland                Europe     1977    72.5  4738902    15605.
 ## # … with 20 more rows
 ```
 

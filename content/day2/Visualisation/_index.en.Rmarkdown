@@ -60,7 +60,9 @@ ggplot(gapminder_pipe, aes(x = pop_e6, y = lifeExp)) +
   geom_point(col ="red")
 ```
 
+{{% notice tip %}}
 🤓💡 **Tip**: You can use the following code template to make graphs with **ggplot2**:
+{{% /notice %}}
 
 ```
 ggplot(data = <DATA>, (mapping = aes(<MAPPINGS>)) + <GEOM_FUNCTION>()
