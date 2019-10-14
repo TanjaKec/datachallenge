@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/day2/datawrangling/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/general/whatlearn/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -14,6 +19,11 @@
   
   <url>
     <loc>/general/</loc>
+  </url>
+  
+  <url>
+    <loc>/day2/visualisation/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
@@ -33,6 +43,10 @@
   <url>
     <loc>/general/syllabus/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/day2/</loc>
   </url>
   
   <url>

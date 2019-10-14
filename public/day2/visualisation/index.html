@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Meet the Instructor :: Show me youR Data</title>
+    <title>Data Visualisation :: Show me youR Data</title>
 
     
     <link href="/css/nucleus.css?1571049911" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/general/instructor/">
+  <body class="" data-url="/day2/visualisation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/general/" title="About the course" class="dd-item 
-        parent
+        
         
         
         ">
@@ -138,8 +138,8 @@
   
     
     <li data-nav-id="/general/instructor/" title="Meet the Instructor" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/general/instructor/">
@@ -441,7 +441,7 @@
   
     
     <li data-nav-id="/day2/" title="Day 2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -496,8 +496,8 @@
   
     
     <li data-nav-id="/day2/visualisation/" title="Data Visualisation" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/day2/visualisation/">
@@ -586,7 +586,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/general/Instructor/_index.en.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/day2/Visualisation/_index.en.markdown" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -617,7 +617,7 @@
             
           
           
-            <a href='/'>data challenge with R</a> > <a href='/general/'>About the course</a> > Meet the Instructor
+            <a href='/'>data challenge with R</a> > <a href='/day2/'>Day 2</a> > Data Visualisation
           
          
           
@@ -630,7 +630,35 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#grammar-of-graphics">Grammar of Graphics</a>
+<ul>
+<li><a href="#ggplot2">ggplot2</a>
+<ul>
+<li><a href="#span-style-color-red-ggplot-span-gallery"><span style="color:red">ggplot()</span> gallery</a></li>
+<li><a href="#confer-with-your-neighbours">🗣👥 Confer with your neighbours:</a></li>
+<li><a href="#practice-use-gapminder-data">👉 Practice ⏰💻: Use gapminder data.</a></li>
+<li><a href="#solution-code-q1-sample">😃🙌 Solution: code Q1; sample</a></li>
+<li><a href="#solution-code-q2-plot-the-data">😃🙌 Solution: code Q2; Plot the data;</a></li>
+<li><a href="#solution-code-q3-simple-regression-model">😃🙌 Solution: code Q3; simple regression model</a></li>
+</ul></li>
+<li><a href="#adding-layers-to-your-span-style-color-red-ggplot-span">Adding layers to your <span style="color:red"><code>ggplot()</code></span></a></li>
+<li><a href="#there-is-a-challenge">💪 There is a challenge:</a>
+<ul>
+<li><a href="#solution-code">😃🙌 Solution: code</a></li>
+<li><a href="#solution-graph">😃🙌 Solution: graph</a></li>
+<li><a href="#useful-links">useful links:</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -646,7 +674,7 @@
           
             <h1>
               
-              Meet the Instructor
+              Data Visualisation
             </h1>
           
 
@@ -655,9 +683,251 @@
 
 
 
-	<p>The instructor is <strong>Dr Tatjana Kecojević</strong> who is a longtime <strong>R</strong> user with a doctorate in Statistics from <a href="https://www.manchester.ac.uk/">the University of Manchester</a>. She spent many years working in the U.K. university sector as a senior lecturer and has published an extensive number of articles and papers in the field of quantile regression. Tatjana is the founder and co-organizer of <a href="https://rladies.org">R-Ladies</a> Manchester, Belgrade and Novi Sad Chapters, leader of the <a href="https://forwards.github.io">R Forwards</a> team and recently invited to become an ambassador for Women in DS (<a href="https://www.widsconference.org">WiDS</a>) ambassador. She is currently the founder and director of <a href="https://sisteranalyst.org">SisterAnalyst.org</a>, an organisation aiming to empower women from a diverse range of backgrounds through data literacy. Unsurprisingly, Tatjana is a enthusiastic R user and in addition to her involvement supporting women in STEM related activities, she is dedicated to creating an inclusive culture by developing initiatives supporting all underrepresented groups within the DS community.</p>
+	
 
-<p><img src="/general/Instructor/images/IMG_0232.jpg?width=40pc" alt="Red variant" /></p>
+<p>Most of you, if not all, would be familiar with creating the graphs in Excel. Software such as Excel has a predefined set of menu options for plotting the data that is the focus of the end result: &ldquo;pretty graph&rdquo;. Those types of menus assume data to be in a format ready for plotting, which when you get raw data is hardly the case. You are probably going to have to organse and wrangle your data to make it ready for effective visualisation.</p>
+
+<h3 id="grammar-of-graphics">Grammar of Graphics</h3>
+
+<p>The <a href="http://vita.had.co.nz/papers/layered-grammar.html">grammer of graphics</a> enables a structured way of creating a plot by adding the components as layers, making it look effective and attractive.</p>
+
+<p>It enables you to specify building blocks of a plot and to combine them to create the graphical display that you want. There are 8 building blocks:</p>
+
+<ul>
+<li><p>data</p></li>
+
+<li><p>aesthetic mapping</p></li>
+
+<li><p>geometric object</p></li>
+
+<li><p>statistical transformations</p></li>
+
+<li><p>scales</p></li>
+
+<li><p>coordinate system</p></li>
+
+<li><p>position adjustments</p></li>
+
+<li><p>faceting</p></li>
+</ul>
+
+<p>Imagine talking about baking a cake and adding a cherry on the top. 🎂🍒 This philosophy has been built into the <a href="https://ggplot2.tidyverse.org/reference/"><code>ggplot</code></a> package by <a href="http://hadley.nz">Hadle Wickham</a> for creating elegant and complex plots in R.</p>
+
+<h4 id="ggplot2">ggplot2</h4>
+
+<p>Learning how to use the <code>ggplot2</code> package can be challenging, but the results are highly rewarding and just like R itself, it becomes easier the more you use it.</p>
+
+<p>The best way to master it is by practising. So let us create a first <code>ggplot</code>. 😃
+What we need to do is the following:</p>
+
+<ol>
+<li>Wrangle the data in the format suitable for visualisation.</li>
+<li>&ldquo;Initialise&rdquo; a plot with <code>ggplot()</code></li>
+
+<li><p>Add layers with <code>geom_</code> functions</p>
+
+<pre><code class="language-r"># load the packages
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(gapminder))
+suppressPackageStartupMessages(library(ggplot2))
+
+# wrangle the data (Can you remember what this code do?)
+gapminder_pipe &lt;- gapminder %&gt;%
+filter(continent == &quot;Europe&quot; &amp; year ==  2007) %&gt;%
+mutate(pop_e6 = pop / 1000000)
+
+# plot the data
+ggplot(gapminder_pipe, aes(x = pop_e6, y = lifeExp)) +
+geom_point(col =&quot;red&quot;)
+</code></pre></li>
+</ol>
+
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" /></p>
+
+<p>🤓💡 <strong>Tip</strong>: You can use the following code template to make graphs with <strong>ggplot2</strong>:</p>
+
+<pre><code>ggplot(data = &lt;DATA&gt;, (mapping = aes(&lt;MAPPINGS&gt;)) + &lt;GEOM_FUNCTION&gt;()
+</code></pre>
+
+<h5 id="span-style-color-red-ggplot-span-gallery"><span style="color:red">ggplot()</span> gallery</h5>
+
+<p>Run the following code to see what graphs it will produce.</p>
+
+<pre><code class="language-r">ggplot(data = gapminder, mapping = aes(x = lifeExp), binwidth = 10) +
+  geom_histogram()
+#
+ggplot(data = gapminder, mapping = aes(x = lifeExp)) +
+  geom_density()
+#
+ggplot(data = gapminder, mapping = aes(x = continent, color = continent)) +
+  geom_bar()
+#
+ggplot(data = gapminder, mapping = aes(x = continent, fill = continent)) +
+  geom_bar()
+</code></pre>
+
+<h5 id="confer-with-your-neighbours">🗣👥 Confer with your neighbours:</h5>
+
+<p>Does the life expectancy depend upon the population size?</p>
+
+<p><code>y = b_0 + b_1 x + e</code></p>
+
+<p>Run this code in your console to fit the model <code>pop</code> vs <code>lifeExp</code>.</p>
+
+<p>Pay attention to spelling, capitalization, and parentheses!</p>
+
+<pre><code class="language-r">m1 &lt;- lm(gapminder_pipe$lifeExp ~ gapminder_pipe$pop_e6)
+summary(m1)
+</code></pre>
+
+<p><strong>Can you answer the question using the output of the fitted model?</strong></p>
+
+<pre><code class="language-r">m1 &lt;- lm(gapminder_pipe$lifeExp ~ gapminder_pipe$pop_e6)
+summary(m1)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = gapminder_pipe$lifeExp ~ gapminder_pipe$pop_e6)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -6.324 -2.562  1.007  2.245  4.277 
+## 
+## Coefficients:
+##                        Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)           77.477421   0.721723 107.351   &lt;2e-16 ***
+## gapminder_pipe$pop_e6  0.008762   0.023779   0.368    0.715    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.025 on 28 degrees of freedom
+## Multiple R-squared:  0.004826,	Adjusted R-squared:  -0.03072 
+## F-statistic: 0.1358 on 1 and 28 DF,  p-value: 0.7153
+</code></pre>
+
+<h5 id="practice-use-gapminder-data">👉 Practice ⏰💻: Use gapminder data.</h5>
+
+<p>Does the life expectancy depend upon the GDP per capita?</p>
+
+<p>1) Have a glance at the data. (tip: <code>sample_n(df, n)</code>)</p>
+
+<p>2) Produce a scatter plot: what does it tell you?</p>
+
+<p>3) Fit a regression model: is there a relationship? How strong is it?
+Is the relationship linear? What conclusion(s) can you draw?</p>
+
+<p>4) What are the other questions you could ask; could you provide the answers to them?</p>
+
+<h5 id="solution-code-q1-sample">😃🙌 Solution: code Q1; sample</h5>
+
+<pre><code class="language-r">sample_n(gapminder, 30)
+</code></pre>
+
+<pre><code>## # A tibble: 30 x 6
+##    country       continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;         &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Iraq          Asia       1962    51.5  7240260     8342.
+##  2 Austria       Europe     1972    70.6  7544201    16662.
+##  3 Cote d'Ivoire Africa     1977    52.4  7459574     2518.
+##  4 Vietnam       Asia       1992    67.7 69940728      989.
+##  5 Swaziland     Africa     1967    46.6   420690     2613.
+##  6 Australia     Oceania    1987    76.3 16257249    21889.
+##  7 Netherlands   Europe     1987    76.8 14665278    23651.
+##  8 Ecuador       Americas   1977    61.3  7278866     6680.
+##  9 Tanzania      Africa     2002    49.7 34593779      899.
+## 10 Tunisia       Africa     1987    66.9  7724976     3810.
+## # … with 20 more rows
+</code></pre>
+
+<h5 id="solution-code-q2-plot-the-data">😃🙌 Solution: code Q2; Plot the data;</h5>
+
+<pre><code class="language-r">ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+    geom_point(alpha = 0.2, shape = 21, fill = &quot;blue&quot;, colour=&quot;black&quot;, size = 5) +
+  geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;maroon3&quot;) +
+  geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;limegreen&quot;) 
+</code></pre>
+
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" /></p>
+
+<h5 id="solution-code-q3-simple-regression-model">😃🙌 Solution: code Q3; simple regression model</h5>
+
+<pre><code class="language-r">my.model &lt;- lm(gapminder_pipe$lifeExp ~ gapminder_pipe$gdpPercap)
+summary(my.model)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = gapminder_pipe$lifeExp ~ gapminder_pipe$gdpPercap)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.79839 -1.30472  0.00807  1.33443  2.87766 
+## 
+## Coefficients:
+##                           Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)              7.227e+01  6.942e-01 104.113  &lt; 2e-16 ***
+## gapminder_pipe$gdpPercap 2.146e-04  2.514e-05   8.537  2.8e-09 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.598 on 28 degrees of freedom
+## Multiple R-squared:  0.7225,	Adjusted R-squared:  0.7125 
+## F-statistic: 72.88 on 1 and 28 DF,  p-value: 2.795e-09
+</code></pre>
+
+<h4 id="adding-layers-to-your-span-style-color-red-ggplot-span">Adding layers to your <span style="color:red"><code>ggplot()</code></span></h4>
+
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-8-1.png" width="768" style="display: block; margin: auto;" /></p>
+
+<h4 id="there-is-a-challenge">💪 There is a challenge:</h4>
+
+<ul>
+<li><p><code>dplyr</code>&rsquo;s <code>group_by()</code> function enables you to group your data. It allows you to create a separate df that splits the original df by a variable.</p></li>
+
+<li><p><code>boxplot()</code> function produces boxplot(s) of the given (grouped) values.</p></li>
+</ul>
+
+<p>Knowing about <code>group_by()</code> and <code>boxplot()</code> function, coud you compute the median life expectancy for year 2007 by continent and visualise your result?</p>
+
+<h5 id="solution-code">😃🙌 Solution: code</h5>
+
+<p>Let us look at the median life expectancy for each continent</p>
+
+<pre><code class="language-r">gapminder %&gt;%
+    group_by(continent) %&gt;%
+    summarise(lifeExp = median(lifeExp))
+</code></pre>
+
+<pre><code>## # A tibble: 5 x 2
+##   continent lifeExp
+##   &lt;fct&gt;       &lt;dbl&gt;
+## 1 Africa       47.8
+## 2 Americas     67.0
+## 3 Asia         61.8
+## 4 Europe       72.2
+## 5 Oceania      73.7
+</code></pre>
+
+<p><strong>We are lucky that we live in Serbia, ie. Europe!!!</strong> 😅</p>
+
+<h5 id="solution-graph">😃🙌 Solution: graph</h5>
+
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" /></p>
+
+<h5 id="useful-links">useful links:</h5>
+
+<p><a href="https://www.rstudio.com/resources/webinars/tidyverse-visualization-and-manipulation-basics/">tidyverse, visualization, and manipulation basics</a></p>
+
+<p><a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html#introduction">Introduction to R graphics with ggplot2</a></p>
+
+<p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf"><code>gglopt</code> cheat sheet</a></p>
+
+<p><a href="https://www.data-to-viz.com/">from Data to Viz</a></p>
+
+<p><a href="http://johnburnmurdoch.github.io/slides/r-ggplot/#/">An example from Financial Times</a></p>
+
+<p><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></p>
 
 <hr />
 
@@ -702,22 +972,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -726,17 +980,15 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
             
                 
-                    
                     
                 
                 
@@ -754,8 +1006,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -922,6 +1187,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -936,6 +1202,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -952,6 +1221,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -976,10 +1246,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/general/whatlearn/" title="General Overview"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/day2/datawrangling/" title="Data Wrangling"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/general/syllabus/" title="Indicative Syllabus" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/day2/datawrangling/" title="Data Wrangling" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
