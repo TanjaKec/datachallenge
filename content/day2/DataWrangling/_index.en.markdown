@@ -677,7 +677,7 @@ library(forcats)
 new_no2 <- no2 %>%
   gather("place", "no2", -Datum, factor_key = TRUE) %>% # stack all columns apart from `Datum`
   mutate(place = fct_recode(place, 
-                            "NS_Spense" = "Novi.Sad.SPENS.NO2",
+                            "NS_Spens" = "Novi.Sad.SPENS.NO2",
                             "BG_Most" = "Beograd.Mostar.NO2",
                             "BG_Vracar" = "Beograd.Vraèar.NO2", 
                             "BG_ZelenoBrdo" = "Beograd.Zeleno.brdo.NO2", 
@@ -691,7 +691,7 @@ glimpse(new_no2)
 ## Observations: 2,555
 ## Variables: 3
 ## $ Datum <chr> "01.01.2017", "02.01.2017", "03.01.2017", "04.01.2017", "0…
-## $ place <fct> NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_…
+## $ place <fct> NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens…
 ## $ no2   <dbl> 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…
 ```
 

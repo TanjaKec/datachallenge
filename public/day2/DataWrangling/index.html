@@ -12,20 +12,20 @@
     <title>Data Wrangling :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571324063" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571324063" rel="stylesheet">
-    <link href="/css/hybrid.css?1571324063" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571324063" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571324063" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571324063" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571324063" rel="stylesheet">
-    <link href="/css/theme.css?1571324063" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571324063" rel="stylesheet">
+    <link href="/css/nucleus.css?1571324238" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1571324238" rel="stylesheet">
+    <link href="/css/hybrid.css?1571324238" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1571324238" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1571324238" rel="stylesheet">
+    <link href="/css/auto-complete.css?1571324238" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1571324238" rel="stylesheet">
+    <link href="/css/theme.css?1571324238" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1571324238" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571324063" rel="stylesheet">
+      <link href="/css/theme-pink.css?1571324238" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571324063"></script>
+    <script src="/js/jquery-3.3.1.min.js?1571324238"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571324063"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571324063"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1571324238"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1571324238"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571324063"></script>
+<script type="text/javascript" src="/js/search.js?1571324238"></script>
 
     
   </div>
@@ -1433,7 +1433,7 @@ library(forcats)
 new_no2 &lt;- no2 %&gt;%
   gather(&quot;place&quot;, &quot;no2&quot;, -Datum, factor_key = TRUE) %&gt;% # stack all columns apart from `Datum`
   mutate(place = fct_recode(place, 
-                            &quot;NS_Spense&quot; = &quot;Novi.Sad.SPENS.NO2&quot;,
+                            &quot;NS_Spens&quot; = &quot;Novi.Sad.SPENS.NO2&quot;,
                             &quot;BG_Most&quot; = &quot;Beograd.Mostar.NO2&quot;,
                             &quot;BG_Vracar&quot; = &quot;Beograd.Vraèar.NO2&quot;, 
                             &quot;BG_ZelenoBrdo&quot; = &quot;Beograd.Zeleno.brdo.NO2&quot;, 
@@ -1446,7 +1446,7 @@ glimpse(new_no2)
 <pre><code>## Observations: 2,555
 ## Variables: 3
 ## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;0…
-## $ place &lt;fct&gt; NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_…
+## $ place &lt;fct&gt; NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens…
 ## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…
 </code></pre>
 
@@ -1816,19 +1816,19 @@ glimpse(new_no2)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571324063"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571324063"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571324063"></script>
-    <script src="/js/jquery.sticky.js?1571324063"></script>
-    <script src="/js/featherlight.min.js?1571324063"></script>
-    <script src="/js/highlight.pack.js?1571324063"></script>
+    <script src="/js/clipboard.min.js?1571324238"></script>
+    <script src="/js/perfect-scrollbar.min.js?1571324238"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1571324238"></script>
+    <script src="/js/jquery.sticky.js?1571324238"></script>
+    <script src="/js/featherlight.min.js?1571324238"></script>
+    <script src="/js/highlight.pack.js?1571324238"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571324063"></script>
-    <script src="/js/learn.js?1571324063"></script>
-    <script src="/js/hugo-learn.js?1571324063"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1571324238"></script>
+    <script src="/js/learn.js?1571324238"></script>
+    <script src="/js/hugo-learn.js?1571324238"></script>
 
-    <link href="/mermaid/mermaid.css?1571324063" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571324063"></script>
+    <link href="/mermaid/mermaid.css?1571324238" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1571324238"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
