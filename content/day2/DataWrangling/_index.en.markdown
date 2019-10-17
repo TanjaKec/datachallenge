@@ -152,7 +152,9 @@ glimpse(gapminder)
 ## $ gdpPercap <dbl> 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.…
 ```
 
+{{% notice note %}}
 🤓💡: Notice how we could prevent display of the messages that appear when uploading the packages by using, in this case, `suppressPackageStartupMessages()`!
+{{% /notice %}}
 
 Now we have the `dplyr` package uploaded, let us learn its verbs. 😇
 
@@ -407,9 +409,24 @@ arrange(gapminder, desc(lifeExp))
 
 <img src="images/summarise().png" width="450px" />
 
+The syntax of summarise() is simple and consistent with the other verbs included in the `dplyr` package.
+
 - uses the same syntax as `mutate()`, but the resulting dataset consists of a single row instead of an entire new column in the case of `mutate()`. 
 
 - builds a new dataset that contains only the summarising statistics.
+
+| Objective | Function                | Description                    |
+| --------- | ----------------------- | ------------------------------ |
+| basic     | `sum(x)`                | Sum of vector x                |
+| centre    | `mean(x)`               | Mean (average) of vector x     |
+|           | `median(x)`             | Median of vector x             | 
+| spread    | `sd(x)`                 | Standard deviation of vector x |
+|           | `quantile(x, probs)`    | Quantile of vector x           |
+|           | `range(x)`              | Range of vector x              |
+|           | `diff(range(x)))`       | Width of the range of vector x |
+|           | `min(x)`                | Min of vector x                |
+|           | `max(x)`                | Max of vector x                |
+|           | `abs(x)`                | Absolute value of a number x   | 
 
 ##### 👉 Practice ⏰💻: Use `summarise()`:
 
@@ -443,6 +460,45 @@ summarise(gapminder, mean_lifeExp = mean(lifeExp), mean_gdpPercap = mean(gdpPerc
 ## 1         59.5          7215.
 ```
 
+#### Subsetting: <span style="color:red">`group_by()`</span>
+
+dplyr's `group_by()` function enables you to group your data. It allows you to create a separate df that splits the original df by a variable.
+
+The function `summarise()` can be combined with `group_by()`.
+
+| Objective | Function                | Description                               |
+| --------- | ----------------------- | ----------------------------------------- |
+| Position	| first()	                | First observation of the group            |
+|           | last()	                | Last observation of the group             |
+|           | nth()	                  | n-th observation of the group             |
+| Count	    | n()	                    | Count the number of rows                  |
+|           | n_distinct()	          | Count the number of distinct observations |
+
+
+##### 👉 Practice ⏰💻: Subset your data
+
+1) Identify how many countries are given in gapminder data for each continent.
+
+##### 😃🙌 Solution: 
+
+
+```r
+gapminder %>%
+     group_by(continent) %>%
+     summarise(n_distinct(country))
+```
+
+```
+## # A tibble: 5 x 2
+##   continent `n_distinct(country)`
+##   <fct>                     <int>
+## 1 Africa                       52
+## 2 Americas                     25
+## 3 Asia                         33
+## 4 Europe                       30
+## 5 Oceania                       2
+```
+
 #### Let's `%>%` all up!
 
 You can try to get into a habit of using a shortcut for the pipe operator 
@@ -461,7 +517,193 @@ gapminder_pipe <- gapminder %>%
 plot(gapminder_pipe$pop_e6, gapminder_pipe$lifeExp, cex = 0.5, col = "red")
 ```
 
-<img src="/day2/DataWrangling/_index.en_files/figure-html/unnamed-chunk-22-1.png" width="576" style="display: block; margin: auto;" />
+<img src="/day2/DataWrangling/_index.en_files/figure-html/unnamed-chunk-23-1.png" width="576" style="display: block; margin: auto;" />
+
+#### `tidyr`
+
+The `tidyr` can help you to create **tidy data**. Tidy data is data where:
+
+- Every **column** is a **variable**
+- Every **row** is an **observation**
+- Every **cell** is a **single value**
+
+<img src="images/tidyr.png" width="450px" />
+
+`tidyr` package embraces the **principles of tidy data** and provides the standard key functionalities to organise data values within a dataset.
+
+[Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of data cleaning process and structuring datasets to facilitate data analysis.
+
+Real datasets, you most likely are going to download from <https://data.gov.rs/> or any other open source data platform, would often violate the three precepts of tidy data in all kind of different ways:
+
+- Variables would not have their names and column headers are values.
+-	A number of variables are stored in one column
+-	A single variable that is stored in several columns 
+-	Same information stored multiple times as different variables...
+ 
+to name a few.
+
+To illustrate this, let us go back onto <https://data.gov.rs/> and access [Kvalitet Vazduha 2017](https://data.gov.rs/sr/datasets/kvalitet-vazduha-2017/). In particular, we want to access [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data.
+
+
+```r
+## If you don't have tidyr installed yet, uncomment and run the line below
+#install.packeges("tidyr")
+library(tidyr)
+# access 2017-NO2.csv data
+no2 <- read.csv("http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv",
+                stringsAsFactors = FALSE, 
+                fileEncoding = "latin1")
+# have a look at the data
+glimpse(no2)
+```
+
+```
+## Observations: 365
+## Variables: 8
+## $ Datum                   <chr> "01.01.2017", "02.01.2017", "03.01.2017"…
+## $ Novi.Sad.SPENS.NO2      <dbl> 22.89, 32.94, 14.86, 22.73, 20.89, 10.47…
+## $ Beograd.Mostar.NO2      <dbl> 28.83, 39.12, 25.20, 28.48, 27.82, 41.91…
+## $ Beograd.Vraèar.NO2      <dbl> 182.84, 244.56, 147.49, 159.12, 124.16, …
+## $ Beograd.Zeleno.brdo.NO2 <dbl> 36.32, 36.68, 27.00, 35.15, 24.92, 8.27,…
+## $ Kragujevac..NO2         <dbl> 38.92, 43.50, 40.17, 45.44, 43.04, 34.55…
+## $ U.ice..NO2              <dbl> 49.84, 50.34, 36.35, 49.07, 33.33, 39.88…
+## $ Ni..IZJZ.Ni...NO2       <dbl> 18.61, 22.87, 15.68, 21.97, 21.68, 12.11…
+```
+
+It shows that this data set has `365` observations and `8` variables. Nonetheless, we need to consider what type of information do we have here:
+
+- `date` of NO2 measurment taken: given in a single column -> ✅ tidy🙂
+- `places` where the measure of NO2 was taken: given in several columns -> ❎ tidy🙁
+- `NO2` measurements: given in several columns -> ❎ tidy🙁
+
+Hmmm… 🤔 This doesn’t look tidy at all 😳
+
+This data is about measurement level of NO2(µg/m3) in several different towns/places, which means that NO2 is our main response variable. The way in which this variable is given in this data is certainly not tidy. It defeats the key principles of tidy data: **Every column is a variable** and furthermore, **Every row is <span style="color:orangered">NOT</span> an observation**.
+
+It appears that this data has `8` variables, but we have realised that there are only `3`: `date`, `place` and `no2`. To tidy it, we need to **stack it** by turning columns into rows. We are happy with the variable `date` and it should remain as a single column, the other `7` columns we want to convert into two variables: `place` and `no2`.
+
+To make *wide format* data into *tall format* we have toturn columns into rows using `gather()` function.
+
+<img src="images/gather.png" width="450px" />
+
+We will create variable `place` in which we will hold the headers as given in the columns 2:8. The values inside those columns will be saved in the new variable `no2`.
+
+
+```r
+new_no2 <- no2 %>%
+  gather("place", "no2", -Datum, factor_key = TRUE) # stack all columns apart from `Datum`
+glimpse(new_no2)
+```
+
+```
+## Observations: 2,555
+## Variables: 3
+## $ Datum <chr> "01.01.2017", "02.01.2017", "03.01.2017", "04.01.2017", "0…
+## $ place <fct> Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2…
+## $ no2   <dbl> 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…
+```
+
+Let us see the names of the places
+
+
+```r
+new_no2 %>%
+     group_by(place) %>%
+     summarise(n())
+```
+
+```
+## # A tibble: 7 x 2
+##   place                   `n()`
+##   <fct>                   <int>
+## 1 Novi.Sad.SPENS.NO2        365
+## 2 Beograd.Mostar.NO2        365
+## 3 Beograd.Vraèar.NO2        365
+## 4 Beograd.Zeleno.brdo.NO2   365
+## 5 Kragujevac..NO2           365
+## 6 U.ice..NO2                365
+## 7 Ni..IZJZ.Ni...NO2         365
+```
+
+Those names look very messy. We could use function from [`stringr`](https://stringr.tidyverse.org) package `str_sub()`. To begin with let's get rid off <span style="color:orangered">.NO2</span> at the end of each name.
+
+
+```r
+## If you don't have stringr installed yet, uncomment and run the line below
+#install.packeges("stringr")
+library(stringr)
+new_no2$place <- new_no2$place %>% 
+    str_sub(end = -5)
+glimpse(new_no2)
+```
+
+```
+## Observations: 2,555
+## Variables: 3
+## $ Datum <chr> "01.01.2017", "02.01.2017", "03.01.2017", "04.01.2017", "0…
+## $ place <chr> "Novi.Sad.SPENS", "Novi.Sad.SPENS", "Novi.Sad.SPENS", "Nov…
+## $ no2   <dbl> 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…
+```
+
+```r
+new_no2 %>%
+    group_by(place) %>%
+    summarise(n())
+```
+
+```
+## # A tibble: 7 x 2
+##   place               `n()`
+##   <chr>               <int>
+## 1 Beograd.Mostar        365
+## 2 Beograd.Vraèar        365
+## 3 Beograd.Zeleno.brdo   365
+## 4 Kragujevac.           365
+## 5 Ni..IZJZ.Ni..         365
+## 6 Novi.Sad.SPENS        365
+## 7 U.ice.                365
+```
+
+It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder why many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and more experience you gain the easier and less painful it gets.
+
+
+Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it could be easily done when using `forcats::fct_recode()` function.
+
+
+```r
+## If you don't have forcats installed yet, uncomment and run the line below
+#install.packages("forcats")
+library(forcats)
+new_no2 <- no2 %>%
+  gather("place", "no2", -Datum, factor_key = TRUE) %>% # stack all columns apart from `Datum`
+  mutate(place = fct_recode(place, 
+                            "NS_Spense" = "Novi.Sad.SPENS.NO2",
+                            "BG_Most" = "Beograd.Mostar.NO2",
+                            "BG_Vracar" = "Beograd.Vraèar.NO2", 
+                            "BG_ZelenoBrdo" = "Beograd.Zeleno.brdo.NO2", 
+                            "KG" = "Kragujevac..NO2", 
+                            "NI" = "Ni..IZJZ.Ni...NO2",
+                            "UZ" = "U.ice..NO2"))
+glimpse(new_no2)
+```
+
+```
+## Observations: 2,555
+## Variables: 3
+## $ Datum <chr> "01.01.2017", "02.01.2017", "03.01.2017", "04.01.2017", "0…
+## $ place <fct> NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_Spense, NS_…
+## $ no2   <dbl> 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…
+```
+
+{{% notice note %}}
+By now, you should have gained enough knowledge in using R that would give you that needed confidence to start exploring other functions of the [`tidyr`](https://tidyr.tidyverse.org/) package. You should not stop there, but go beyond and explore whole of the [`tidyverse`](https://www.tidyverse.org/) opinionated collection of R packages for data science. 😇🎶
+{{% /notice %}}
+
+To learn more about **tidy data in r** chgeck [Data Tidying](https://garrettgman.github.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
+
+{{% notice tip %}}
+Have you tried learning data science by posting your questions and discussing it with other people within the R community? 👥💻📊📈🗣 [RStudio Community](https://community.rstudio.com)
+{{% /notice %}}
 
 ## YOUR TURN 👇
 
@@ -483,10 +725,9 @@ Practise by doing the following set of exercises:
 
 ##### Useful Links
 
-[Data Wrangling cheat sheat](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+[Data Wrangling cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
-[Data Transformation with dplyr cheat sheat](https://ugoproto.github.io/ugo_r_doc/dplyr.pdf)
+[Data Transformation with dplyr cheat sheet](https://4.files.edl.io/b9e2/07/12/19/142839-a23788fb-1d3a-4665-9dc4-33bfd442c296.pdf)
 
-----------------------------
--
+-----------------------------
 © 2019 Tatjana Kecojevic

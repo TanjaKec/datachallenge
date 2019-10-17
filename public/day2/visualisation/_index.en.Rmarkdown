@@ -204,6 +204,7 @@ ggplot(gapminder, aes(x = continent, y = lifeExp)) +
 
 [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 
+<http://johnburnmurdoch.github.io/slides/r-ggplot/#/>
 
 -----------------------------
 © 2019 Tatjana Kecojevic

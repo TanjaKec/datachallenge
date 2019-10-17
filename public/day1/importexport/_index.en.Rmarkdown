@@ -132,7 +132,7 @@ names(polen)
 
 Note that the `polen$results` is a data frame with a list `concentrations` inside as its elemnt.
 
-Ouch! 😳 JSON files are not very neat 😱 They are more than often nested, chained -> you’ve got it: Very Messy! 😫 So, we will leave it there. 😬 If you do need to learn more about reading JSON files in R you can explore the functionality of the `jsonlite` package further by reading [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html). Blog post by [Kan Nishida](https://blog.exploratory.io/@kanaugust) provides a great example of how this data format can be used in R [Working with JSON data in very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) . 
+Ouch! 😳 JSON files are not very neat 😱 They are more than often nested, chained -> you’ve got it: Very Messy! 😫 So, we will leave it there. 😬 If you do need to learn more about reading JSON files in R you can explore the functionality of the `jsonlite` package further by reading [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html). Blog post [Working with JSON data in very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) by [Kan Nishida](https://blog.exploratory.io/@kanaugust) provides a great example of how this data format can be used in R. 
 
 ### Other data formats
 

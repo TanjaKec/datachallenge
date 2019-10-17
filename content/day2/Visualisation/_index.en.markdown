@@ -152,18 +152,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country                continent  year lifeExp      pop gdpPercap
-##    <fct>                  <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Gambia                 Africa     2007    59.4  1688359      753.
-##  2 Trinidad and Tobago    Americas   1977    68.3  1039009     7900.
-##  3 Burundi                Africa     1957    40.5  2667518      380.
-##  4 France                 Europe     1997    78.6 58623428    25890.
-##  5 Bosnia and Herzegovina Europe     1982    70.7  4172693     4127.
-##  6 Uganda                 Africa     1977    50.4 11457758      844.
-##  7 Swaziland              Africa     1952    41.4   290243     1148.
-##  8 Mali                   Africa     1952    33.7  3838168      452.
-##  9 Albania                Europe     1987    72    3075321     3739.
-## 10 Finland                Europe     1977    72.5  4738902    15605.
+##    country      continent  year lifeExp      pop gdpPercap
+##    <fct>        <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Hungary      Europe     1952    64.0  9504000     5264.
+##  2 Panama       Americas   1977    68.7  1839782     5352.
+##  3 Finland      Europe     1992    75.7  5041039    20647.
+##  4 Cambodia     Asia       1957    41.4  5322536      434.
+##  5 Iraq         Asia       1972    57.0 10061506     9576.
+##  6 Sierra Leone Africa     1997    39.9  4578212      575.
+##  7 New Zealand  Oceania    1982    73.8  3210650    17632.
+##  8 South Africa Africa     1972    53.7 23935810     7766.
+##  9 Oman         Asia       1962    43.2   628164     2925.
+## 10 Honduras     Americas   1957    44.7  1770390     2220.
 ## # … with 20 more rows
 ```
 
@@ -258,6 +258,7 @@ gapminder %>%
 
 [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 
+<http://johnburnmurdoch.github.io/slides/r-ggplot/#/>
 
 -----------------------------
 © 2019 Tatjana Kecojevic
