@@ -32,10 +32,24 @@ Before you can take a look at this data set first run the folowing code
 install.packages("dplyr", repos = "http://cran.us.r-project.org")
 install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 install.packages("gapminder", repos = "http://cran.us.r-project.org")
-install.packages("DT", repos = "http://cran.us.r-project.org")
-#
-# have a look at the data through a table
-DT::datatable(head(gapminder::gapminder, 10))
+```
+
+
+```r
+# have a look at the data 
+head(gapminder::gapminder)
+```
+
+```
+## # A tibble: 6 x 6
+##   country     continent  year lifeExp      pop gdpPercap
+##   <fct>       <fct>     <int>   <dbl>    <int>     <dbl>
+## 1 Afghanistan Asia       1952    28.8  8425333      779.
+## 2 Afghanistan Asia       1957    30.3  9240934      821.
+## 3 Afghanistan Asia       1962    32.0 10267083      853.
+## 4 Afghanistan Asia       1967    34.0 11537966      836.
+## 5 Afghanistan Asia       1972    36.1 13079460      740.
+## 6 Afghanistan Asia       1977    38.4 14880372      786.
 ```
 
 {{% notice note %}}
@@ -517,7 +531,7 @@ gapminder_pipe <- gapminder %>%
 plot(gapminder_pipe$pop_e6, gapminder_pipe$lifeExp, cex = 0.5, col = "red")
 ```
 
-<img src="/day2/DataWrangling/_index.en_files/figure-html/unnamed-chunk-23-1.png" width="576" style="display: block; margin: auto;" />
+<img src="/day2/DataWrangling/_index.en_files/figure-html/unnamed-chunk-24-1.png" width="576" style="display: block; margin: auto;" />
 
 #### `tidyr`
 

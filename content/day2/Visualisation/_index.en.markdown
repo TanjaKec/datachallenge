@@ -167,18 +167,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country               continent  year lifeExp       pop gdpPercap
-##    <fct>                 <fct>     <int>   <dbl>     <int>     <dbl>
-##  1 Kenya                 Africa     2002    51.0  31386842     1288.
-##  2 Sri Lanka             Asia       1957    61.5   9128546     1073.
-##  3 Canada                Americas   1952    68.8  14785584    11367.
-##  4 Burundi               Africa     1992    44.7   5809236      632.
-##  5 Sao Tome and Principe Africa     2007    65.5    199579     1598.
-##  6 Germany               Europe     1977    72.5  78160773    20513.
-##  7 Finland               Europe     1997    77.1   5134406    23724.
-##  8 France                Europe     1952    67.4  42459667     7030.
-##  9 Indonesia             Asia       1992    62.7 184816000     2383.
-## 10 United States         Americas   1997    76.8 272911760    35767.
+##    country        continent  year lifeExp      pop gdpPercap
+##    <fct>          <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Greece         Europe     1952    65.9  7733250     3531.
+##  2 United Kingdom Europe     1952    69.2 50430000     9980.
+##  3 United Kingdom Europe     1962    70.8 53292000    12477.
+##  4 Togo           Africa     1967    46.8  1735550     1478.
+##  5 Bulgaria       Europe     1997    70.3  8066057     5970.
+##  6 Korea, Rep.    Asia       1972    62.6 33505000     3031.
+##  7 Lesotho        Africa     1972    49.8  1116779      497.
+##  8 Jamaica        Americas   1972    69    1997616     7434.
+##  9 El Salvador    Americas   2002    70.7  6353681     5352.
+## 10 Swaziland      Africa     2002    43.9  1130269     4128.
 ## # … with 20 more rows
 ```
 
@@ -374,7 +374,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_text(x = 80000, y = 125, label = "regression line", col = "maroon3") + 
   geom_text(x = 90000, y = 75, label = "smooth line", col = "dodgerblue3") +
   
-  # Change breaks and label them 
+  # change breaks and label them 
   scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
 
   # change color palette
@@ -416,6 +416,32 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-12-1.png" width="768" style="display: block; margin: auto;" />
 
 You are ready to make a publication-ready data visualizations in R. 😎 You can go further and explore for yourself to see if you could produce BBC style ggplot charts like those used in the BBC's data journalism. Check out the [BBC Visual and Data Journalism cookbook for R graphics]( https://bbc.github.io/rcookbook/).
+
+##### Lay out panels in a grid
+
+  
+
+```r
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
+  geom_smooth(method = "lm", se = F, col = "darkred") + 
+  geom_smooth(method = "loess", se = F, col = "black") + 
+  labs (title= "Life Exp. vs. Population Size", 
+        x = "population", y = "Life Exp.") + 
+  theme(legend.position = "right", 
+        panel.border = element_rect(fill = NA, 
+                                    colour = "black",
+                                    size = .75),
+        plot.title=element_text(hjust=0.5)) + 
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
+  scale_colour_wsj() +
+  theme_wsj() +
+  
+  # forms a matrix of scatterplots for each continet
+  facet_grid(rows = vars(continent))
+```
+
+<img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" />
   
 #### 💪 There is a challenge: 
 
@@ -450,7 +476,7 @@ gapminder %>%
 
 ##### 😃🙌 Solution: graph 
 
-<img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-14-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" />
 ##### Case study: NO2 2017 😁
 
 Let's try compbine everything we have learnt so far and practice using well nown to us [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data. 
@@ -498,7 +524,7 @@ new_no2 %>%
           axis.ticks.x = element_blank()) # 
 ```
 
-<img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+<img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 
 ##### useful links: 

@@ -32,10 +32,11 @@ Before you can take a look at this data set first run the folowing code
 install.packages("dplyr", repos = "http://cran.us.r-project.org")
 install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 install.packages("gapminder", repos = "http://cran.us.r-project.org")
-install.packages("DT", repos = "http://cran.us.r-project.org")
-#
-# have a look at the data through a table
-DT::datatable(head(gapminder::gapminder, 10))
+```
+
+```{r}
+# have a look at the data 
+head(gapminder::gapminder)
 ```
 
 {{% notice note %}}

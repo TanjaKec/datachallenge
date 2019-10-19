@@ -12,20 +12,20 @@
     <title>Data Visualisation :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571503890" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571503890" rel="stylesheet">
-    <link href="/css/hybrid.css?1571503890" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571503890" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571503890" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571503890" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571503890" rel="stylesheet">
-    <link href="/css/theme.css?1571503890" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571503890" rel="stylesheet">
+    <link href="/css/nucleus.css?1571514963" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1571514963" rel="stylesheet">
+    <link href="/css/hybrid.css?1571514963" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1571514963" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1571514963" rel="stylesheet">
+    <link href="/css/auto-complete.css?1571514963" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1571514963" rel="stylesheet">
+    <link href="/css/theme.css?1571514963" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1571514963" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571503890" rel="stylesheet">
+      <link href="/css/theme-pink.css?1571514963" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571503890"></script>
+    <script src="/js/jquery-3.3.1.min.js?1571514963"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571503890"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571503890"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1571514963"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1571514963"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571503890"></script>
+<script type="text/javascript" src="/js/search.js?1571514963"></script>
 
     
   </div>
@@ -652,7 +652,10 @@
 <ul>
 <li><a href="#to-change-the-title-and-axis-labels-use-span-style-color-orangered-layer-labs-span">To change the title and axis labels use <span style="color:orangered">layer <strong>labs</strong></span></a></li>
 <li><a href="#change-the-colour-of-the-points-to-reflect-categories-of-another-third-variable">Change the colour of the points to reflect categories of another, third variable.</a></li>
-<li><a href="#adjust-the-x-and-y-axis-limits-and-chhange-the-x-axis-texts-and-its-ticks-location">Adjust the X and Y axis limits and chhange the X axis texts and its ticks&rsquo; location</a></li>
+<li><a href="#adjust-the-x-and-y-axis-limits-and-chhange-the-x-axis-texts-and-its-ticks-location">Adjust the X and Y axis limits and chhange the X axis texts and its ticks&rsquo; location</a>
+<ul>
+<li><a href="#lay-out-panels-in-a-grid">Lay out panels in a grid</a></li>
+</ul></li>
 <li><a href="#there-is-a-challenge">💪 There is a challenge:</a>
 <ul>
 <li><a href="#solution-code">😃🙌 Solution: code</a></li>
@@ -851,18 +854,18 @@ Is the relationship linear? What conclusion(s) can you draw?</p>
 </code></pre>
 
 <pre><code>## # A tibble: 30 x 6
-##    country               continent  year lifeExp       pop gdpPercap
-##    &lt;fct&gt;                 &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
-##  1 Kenya                 Africa     2002    51.0  31386842     1288.
-##  2 Sri Lanka             Asia       1957    61.5   9128546     1073.
-##  3 Canada                Americas   1952    68.8  14785584    11367.
-##  4 Burundi               Africa     1992    44.7   5809236      632.
-##  5 Sao Tome and Principe Africa     2007    65.5    199579     1598.
-##  6 Germany               Europe     1977    72.5  78160773    20513.
-##  7 Finland               Europe     1997    77.1   5134406    23724.
-##  8 France                Europe     1952    67.4  42459667     7030.
-##  9 Indonesia             Asia       1992    62.7 184816000     2383.
-## 10 United States         Americas   1997    76.8 272911760    35767.
+##    country        continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;          &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Greece         Europe     1952    65.9  7733250     3531.
+##  2 United Kingdom Europe     1952    69.2 50430000     9980.
+##  3 United Kingdom Europe     1962    70.8 53292000    12477.
+##  4 Togo           Africa     1967    46.8  1735550     1478.
+##  5 Bulgaria       Europe     1997    70.3  8066057     5970.
+##  6 Korea, Rep.    Asia       1972    62.6 33505000     3031.
+##  7 Lesotho        Africa     1972    49.8  1116779      497.
+##  8 Jamaica        Americas   1972    69    1997616     7434.
+##  9 El Salvador    Americas   2002    70.7  6353681     5352.
+## 10 Swaziland      Africa     2002    43.9  1130269     4128.
 ## # … with 20 more rows
 </code></pre>
 
@@ -1043,7 +1046,7 @@ summary(my.model)
   geom_text(x = 80000, y = 125, label = &quot;regression line&quot;, col = &quot;maroon3&quot;) + 
   geom_text(x = 90000, y = 75, label = &quot;smooth line&quot;, col = &quot;dodgerblue3&quot;) +
   
-  # Change breaks and label them 
+  # change breaks and label them 
   scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;10K&quot;, &quot;12K&quot;)) +
 
   # change color palette
@@ -1084,6 +1087,29 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 <p>You are ready to make a publication-ready data visualizations in R. 😎 You can go further and explore for yourself to see if you could produce BBC style ggplot charts like those used in the BBC&rsquo;s data journalism. Check out the <a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a>.</p>
 
+<h5 id="lay-out-panels-in-a-grid">Lay out panels in a grid</h5>
+
+<pre><code class="language-r">ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
+  geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;darkred&quot;) + 
+  geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;black&quot;) + 
+  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+        x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
+  theme(legend.position = &quot;right&quot;, 
+        panel.border = element_rect(fill = NA, 
+                                    colour = &quot;black&quot;,
+                                    size = .75),
+        plot.title=element_text(hjust=0.5)) + 
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;10K&quot;, &quot;12K&quot;)) +
+  scale_colour_wsj() +
+  theme_wsj() +
+  
+  # forms a matrix of scatterplots for each continet
+  facet_grid(rows = vars(continent))
+</code></pre>
+
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" /></p>
+
 <h4 id="there-is-a-challenge">💪 There is a challenge:</h4>
 
 <ul>
@@ -1117,7 +1143,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 <h5 id="solution-graph">😃🙌 Solution: graph</h5>
 
-<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-14-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" /></p>
 
 <h5 id="case-study-no2-2017">Case study: NO2 2017 😁</h5>
 
@@ -1162,7 +1188,7 @@ glimpse(new_no2)
           axis.ticks.x = element_blank()) # 
 </code></pre>
 
-<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 
 <h5 id="useful-links">useful links:</h5>
 
@@ -1510,19 +1536,19 @@ glimpse(new_no2)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571503890"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571503890"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571503890"></script>
-    <script src="/js/jquery.sticky.js?1571503890"></script>
-    <script src="/js/featherlight.min.js?1571503890"></script>
-    <script src="/js/highlight.pack.js?1571503890"></script>
+    <script src="/js/clipboard.min.js?1571514963"></script>
+    <script src="/js/perfect-scrollbar.min.js?1571514963"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1571514963"></script>
+    <script src="/js/jquery.sticky.js?1571514963"></script>
+    <script src="/js/featherlight.min.js?1571514963"></script>
+    <script src="/js/highlight.pack.js?1571514963"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571503890"></script>
-    <script src="/js/learn.js?1571503890"></script>
-    <script src="/js/hugo-learn.js?1571503890"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1571514963"></script>
+    <script src="/js/learn.js?1571514963"></script>
+    <script src="/js/hugo-learn.js?1571514963"></script>
 
-    <link href="/mermaid/mermaid.css?1571503890" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571503890"></script>
+    <link href="/mermaid/mermaid.css?1571514963" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1571514963"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

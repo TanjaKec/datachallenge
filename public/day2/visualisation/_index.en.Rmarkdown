@@ -281,7 +281,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_text(x = 80000, y = 125, label = "regression line", col = "maroon3") + 
   geom_text(x = 90000, y = 75, label = "smooth line", col = "dodgerblue3") +
   
-  # Change breaks and label them 
+  # change breaks and label them 
   scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
 
   # change color palette
@@ -318,6 +318,29 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 ```
 
 You are ready to make a publication-ready data visualizations in R. 😎 You can go further and explore for yourself to see if you could produce BBC style ggplot charts like those used in the BBC's data journalism. Check out the [BBC Visual and Data Journalism cookbook for R graphics]( https://bbc.github.io/rcookbook/).
+
+##### Lay out panels in a grid
+
+  
+```{r, echo = TRUE, warnings = FALSE, message = FALSE, fig.height = 6, fig.width = 8, fig.align = 'center'}
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
+  geom_smooth(method = "lm", se = F, col = "darkred") + 
+  geom_smooth(method = "loess", se = F, col = "black") + 
+  labs (title= "Life Exp. vs. Population Size", 
+        x = "population", y = "Life Exp.") + 
+  theme(legend.position = "right", 
+        panel.border = element_rect(fill = NA, 
+                                    colour = "black",
+                                    size = .75),
+        plot.title=element_text(hjust=0.5)) + 
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
+  scale_colour_wsj() +
+  theme_wsj() +
+  
+  # forms a matrix of scatterplots for each continet
+  facet_grid(rows = vars(continent))
+```
   
 #### 💪 There is a challenge: 
 
