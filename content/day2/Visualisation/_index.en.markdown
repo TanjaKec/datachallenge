@@ -167,18 +167,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country  continent  year lifeExp      pop gdpPercap
-##    <fct>    <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Burundi  Africa     1987    48.2  5126023      622.
-##  2 Uganda   Africa     2007    51.5 29170398     1056.
-##  3 Thailand Asia       1972    60.4 39276153     1524.
-##  4 Mexico   Americas   1982    67.4 71640904     9611.
-##  5 Reunion  Africa     1997    74.8   684810     6072.
-##  6 Panama   Americas   1967    64.1  1405486     4421.
-##  7 Angola   Africa     2002    41.0 10866106     2773.
-##  8 Finland  Europe     2002    78.4  5193039    28205.
-##  9 Ecuador  Americas   1982    64.3  8365850     7214.
-## 10 Jamaica  Americas   1992    71.8  2378618     7405.
+##    country             continent  year lifeExp      pop gdpPercap
+##    <fct>               <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Ghana               Africa     2002    58.5 20550751     1112.
+##  2 Trinidad and Tobago Americas   1992    69.9  1183669     7371.
+##  3 Nepal               Asia       1992    55.7 20326209      898.
+##  4 Chad                Africa     1972    45.6  3899068     1104.
+##  5 Thailand            Asia       1987    66.1 52910342     2983.
+##  6 Vietnam             Asia       2002    73.0 80908147     1764.
+##  7 Iraq                Asia       1952    45.3  5441766     4130.
+##  8 Mongolia            Asia       1992    61.3  2312802     1785.
+##  9 Djibouti            Africa     2002    53.4   447416     1908.
+## 10 Bahrain             Asia       1977    65.6   297410    19340.
 ## # … with 20 more rows
 ```
 
@@ -533,6 +533,21 @@ new_no2 %>%
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
+## YOUR TURN 👇
+
+Practise by doing the following set of exercises:
+
+1) Chose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend to help people get to know the dataset?
+
+2) Go back to NO2 2017 case study:
+
+  i)	What are the questions you can ask based on the available information within the dataset?
+
+  ii)	What plots would you recommend to use to help in answering those questions?
+
+  iii)	Create appropriate visualisations for i) & ii)
+
+
 
 ##### useful links: 
 
@@ -548,7 +563,7 @@ new_no2 %>%
 
 [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 
-<http://johnburnmurdoch.github.io/slides/r-ggplot/#/>
+[ggplot as a creativity engine](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
 
 -----------------------------
 © 2019 Tatjana Kecojevic

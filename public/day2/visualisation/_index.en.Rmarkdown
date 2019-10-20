@@ -421,6 +421,21 @@ new_no2 %>%
           axis.ticks.x = element_blank()) # 
 ```
 
+## YOUR TURN 👇
+
+Practise by doing the following set of exercises:
+
+1) Chose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend to help people get to know the dataset?
+
+2) Go back to NO2 2017 case study:
+
+  i)	What are the questions you can ask based on the available information within the dataset?
+
+  ii)	What plots would you recommend to use to help in answering those questions?
+
+  iii)	Create appropriate visualisations for i) & ii)
+
+
 
 ##### useful links: 
 
@@ -436,7 +451,7 @@ new_no2 %>%
 
 [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 
-<http://johnburnmurdoch.github.io/slides/r-ggplot/#/>
+[ggplot as a creativity engine](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
 
 -----------------------------
 © 2019 Tatjana Kecojevic
