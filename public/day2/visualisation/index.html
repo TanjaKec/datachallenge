@@ -12,20 +12,20 @@
     <title>Data Visualisation :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571514963" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571514963" rel="stylesheet">
-    <link href="/css/hybrid.css?1571514963" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571514963" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571514963" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571514963" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571514963" rel="stylesheet">
-    <link href="/css/theme.css?1571514963" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571514963" rel="stylesheet">
+    <link href="/css/nucleus.css?1571575215" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1571575215" rel="stylesheet">
+    <link href="/css/hybrid.css?1571575215" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1571575215" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1571575215" rel="stylesheet">
+    <link href="/css/auto-complete.css?1571575215" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1571575215" rel="stylesheet">
+    <link href="/css/theme.css?1571575215" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1571575215" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571514963" rel="stylesheet">
+      <link href="/css/theme-pink.css?1571575215" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571514963"></script>
+    <script src="/js/jquery-3.3.1.min.js?1571575215"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571514963"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571514963"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1571575215"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1571575215"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571514963"></script>
+<script type="text/javascript" src="/js/search.js?1571575215"></script>
 
     
   </div>
@@ -854,18 +854,18 @@ Is the relationship linear? What conclusion(s) can you draw?</p>
 </code></pre>
 
 <pre><code>## # A tibble: 30 x 6
-##    country        continent  year lifeExp      pop gdpPercap
-##    &lt;fct&gt;          &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Greece         Europe     1952    65.9  7733250     3531.
-##  2 United Kingdom Europe     1952    69.2 50430000     9980.
-##  3 United Kingdom Europe     1962    70.8 53292000    12477.
-##  4 Togo           Africa     1967    46.8  1735550     1478.
-##  5 Bulgaria       Europe     1997    70.3  8066057     5970.
-##  6 Korea, Rep.    Asia       1972    62.6 33505000     3031.
-##  7 Lesotho        Africa     1972    49.8  1116779      497.
-##  8 Jamaica        Americas   1972    69    1997616     7434.
-##  9 El Salvador    Americas   2002    70.7  6353681     5352.
-## 10 Swaziland      Africa     2002    43.9  1130269     4128.
+##    country  continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;    &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Burundi  Africa     1987    48.2  5126023      622.
+##  2 Uganda   Africa     2007    51.5 29170398     1056.
+##  3 Thailand Asia       1972    60.4 39276153     1524.
+##  4 Mexico   Americas   1982    67.4 71640904     9611.
+##  5 Reunion  Africa     1997    74.8   684810     6072.
+##  6 Panama   Americas   1967    64.1  1405486     4421.
+##  7 Angola   Africa     2002    41.0 10866106     2773.
+##  8 Finland  Europe     2002    78.4  5193039    28205.
+##  9 Ecuador  Americas   1982    64.3  8365850     7214.
+## 10 Jamaica  Americas   1992    71.8  2378618     7405.
 ## # … with 20 more rows
 </code></pre>
 
@@ -1089,6 +1089,8 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 <h5 id="lay-out-panels-in-a-grid">Lay out panels in a grid</h5>
 
+<p>Sometimes it might be hard to read one panel plot, like the one we have just created in which it is not very easy to see the points of each continent. To make it easier to follow and to understand the information you are trying to depict it would be more effective to present different categories of the same information in a clear set of multi-panel plots. This is easy to do by applying powerful faceting functions of the <code>ggplot2</code>: <code>facet_wrap()</code> and <code>facet_grid()</code>.</p>
+
 <pre><code class="language-r">ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;darkred&quot;) + 
@@ -1109,6 +1111,13 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 </code></pre>
 
 <p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" /></p>
+
+<p>The main difference between <code>facet_wrap()</code> and  <code>facet_grid()</code> is that the former can string together ggplots in different facets using a single variable, while the latter can do it for more than one.</p>
+
+
+<div class="notices warning" ><p>Try to explore the two functions for yourself and see where it would take you.</p>
+</div>
+
 
 <h4 id="there-is-a-challenge">💪 There is a challenge:</h4>
 
@@ -1536,19 +1545,19 @@ glimpse(new_no2)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571514963"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571514963"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571514963"></script>
-    <script src="/js/jquery.sticky.js?1571514963"></script>
-    <script src="/js/featherlight.min.js?1571514963"></script>
-    <script src="/js/highlight.pack.js?1571514963"></script>
+    <script src="/js/clipboard.min.js?1571575215"></script>
+    <script src="/js/perfect-scrollbar.min.js?1571575215"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1571575215"></script>
+    <script src="/js/jquery.sticky.js?1571575215"></script>
+    <script src="/js/featherlight.min.js?1571575215"></script>
+    <script src="/js/highlight.pack.js?1571575215"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571514963"></script>
-    <script src="/js/learn.js?1571514963"></script>
-    <script src="/js/hugo-learn.js?1571514963"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1571575215"></script>
+    <script src="/js/learn.js?1571575215"></script>
+    <script src="/js/hugo-learn.js?1571575215"></script>
 
-    <link href="/mermaid/mermaid.css?1571514963" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571514963"></script>
+    <link href="/mermaid/mermaid.css?1571575215" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1571575215"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

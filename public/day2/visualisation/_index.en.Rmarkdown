@@ -321,6 +321,7 @@ You are ready to make a publication-ready data visualizations in R. 😎 You can
 
 ##### Lay out panels in a grid
 
+Sometimes it might be hard to read one panel plot, like the one we have just created in which it is not very easy to see the points of each continent. To make it easier to follow and to understand the information you are trying to depict it would be more effective to present different categories of the same information in a clear set of multi-panel plots. This is easy to do by applying powerful faceting functions of the `ggplot2`: `facet_wrap()` and `facet_grid()`.
   
 ```{r, echo = TRUE, warnings = FALSE, message = FALSE, fig.height = 6, fig.width = 8, fig.align = 'center'}
 ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
@@ -341,7 +342,13 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   # forms a matrix of scatterplots for each continet
   facet_grid(rows = vars(continent))
 ```
-  
+ 
+The main difference between `facet_wrap()` and  `facet_grid()` is that the former can string together ggplots in different facets using a single variable, while the latter can do it for more than one.
+
+{{% notice warning %}}
+Try to explore the two functions for yourself and see where it would take you.
+{{% /notice %}}
+ 
 #### 💪 There is a challenge: 
 
 - `dplyr`'s `group_by()` function enables you to group your data. It allows you to create a separate df that splits the original df by a variable.

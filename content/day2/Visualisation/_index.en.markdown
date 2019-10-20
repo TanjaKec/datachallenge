@@ -167,18 +167,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country        continent  year lifeExp      pop gdpPercap
-##    <fct>          <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Greece         Europe     1952    65.9  7733250     3531.
-##  2 United Kingdom Europe     1952    69.2 50430000     9980.
-##  3 United Kingdom Europe     1962    70.8 53292000    12477.
-##  4 Togo           Africa     1967    46.8  1735550     1478.
-##  5 Bulgaria       Europe     1997    70.3  8066057     5970.
-##  6 Korea, Rep.    Asia       1972    62.6 33505000     3031.
-##  7 Lesotho        Africa     1972    49.8  1116779      497.
-##  8 Jamaica        Americas   1972    69    1997616     7434.
-##  9 El Salvador    Americas   2002    70.7  6353681     5352.
-## 10 Swaziland      Africa     2002    43.9  1130269     4128.
+##    country  continent  year lifeExp      pop gdpPercap
+##    <fct>    <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Burundi  Africa     1987    48.2  5126023      622.
+##  2 Uganda   Africa     2007    51.5 29170398     1056.
+##  3 Thailand Asia       1972    60.4 39276153     1524.
+##  4 Mexico   Americas   1982    67.4 71640904     9611.
+##  5 Reunion  Africa     1997    74.8   684810     6072.
+##  6 Panama   Americas   1967    64.1  1405486     4421.
+##  7 Angola   Africa     2002    41.0 10866106     2773.
+##  8 Finland  Europe     2002    78.4  5193039    28205.
+##  9 Ecuador  Americas   1982    64.3  8365850     7214.
+## 10 Jamaica  Americas   1992    71.8  2378618     7405.
 ## # … with 20 more rows
 ```
 
@@ -419,6 +419,7 @@ You are ready to make a publication-ready data visualizations in R. 😎 You can
 
 ##### Lay out panels in a grid
 
+Sometimes it might be hard to read one panel plot, like the one we have just created in which it is not very easy to see the points of each continent. To make it easier to follow and to understand the information you are trying to depict it would be more effective to present different categories of the same information in a clear set of multi-panel plots. This is easy to do by applying powerful faceting functions of the `ggplot2`: `facet_wrap()` and `facet_grid()`.
   
 
 ```r
@@ -442,7 +443,13 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 ```
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" />
-  
+ 
+The main difference between `facet_wrap()` and  `facet_grid()` is that the former can string together ggplots in different facets using a single variable, while the latter can do it for more than one.
+
+{{% notice warning %}}
+Try to explore the two functions for yourself and see where it would take you.
+{{% /notice %}}
+ 
 #### 💪 There is a challenge: 
 
 - `dplyr`'s `group_by()` function enables you to group your data. It allows you to create a separate df that splits the original df by a variable.
