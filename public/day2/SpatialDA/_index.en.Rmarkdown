@@ -121,6 +121,23 @@ ggplot(serbia_pop) +
 
 ### Interactive Maps: leaflet
 
+```{r}
+## If you don't have leaflet installed yet, uncomment and run the line below
+#install.packeges("leaflet")
+library(leaflet)
+# Initialize and assign us as the leaflet object
+us <- leaflet() %>%
+  # add tiles to the leaflet object
+  addTiles() %>%  
+  # setting the centre of the map and the zoom level
+  setView(lng = 20.41215, lat = 45.93362, zoom = 15) %>%
+  # add a popup marker 
+  addMarkers(lng = 20.407040, lat = 45.934230, popup = "<b>Ciao!</b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀</a>")
+
+us
+```
+
+
 {{% notice note %}}
 bilo sta
 {{% /notice %}}

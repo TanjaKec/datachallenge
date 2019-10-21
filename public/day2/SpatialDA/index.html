@@ -12,20 +12,20 @@
     <title>Spatial Data Analysis :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571666401" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571666401" rel="stylesheet">
-    <link href="/css/hybrid.css?1571666401" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571666401" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571666401" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571666401" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571666401" rel="stylesheet">
-    <link href="/css/theme.css?1571666401" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571666401" rel="stylesheet">
+    <link href="/css/nucleus.css?1571681432" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1571681432" rel="stylesheet">
+    <link href="/css/hybrid.css?1571681432" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1571681432" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1571681432" rel="stylesheet">
+    <link href="/css/auto-complete.css?1571681432" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1571681432" rel="stylesheet">
+    <link href="/css/theme.css?1571681432" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1571681432" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571666401" rel="stylesheet">
+      <link href="/css/theme-pink.css?1571681432" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571666401"></script>
+    <script src="/js/jquery-3.3.1.min.js?1571681432"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571666401"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571666401"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1571681432"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1571681432"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571666401"></script>
+<script type="text/javascript" src="/js/search.js?1571681432"></script>
 
     
   </div>
@@ -533,6 +533,35 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/day2/spatialda/images/mokrin/" title="" class="dd-item ">
+        <a href="/day2/spatialda/images/mokrin/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -612,7 +641,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/day2/SpatialDA/_index.en.markdown" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/day2/SpatialDA/_index.en.html" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -656,28 +685,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#static-maps-shape-file">Static Maps: Shape File</a></li>
-<li><a href="#interactive-maps-leaflet">Interactive Maps: leaflet</a></li>
-</ul></li>
-<li><a href="#your-turn">YOUR TURN 👇</a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#useful-links">useful links:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -703,65 +711,61 @@
 
 
 	
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+
 
 <p>R has a range of packages which provide functionality for handling spatial data and performing complex spatial analysis operations. Spatial data analysis is no longer reserved just for experts with expensive hardware and software. R has impressive geographic capabilities which anyone with the desire for exploration of the geospatial data can use.</p>
-
 <p>Before we get into geospatial maping in R, let us introduce some basic ideas about spatial data.</p>
-
 <p>Spatial data comprises of:</p>
-
 <ul>
 <li>coordinates of the object</li>
 <li>the coordinates relate to a physical location on Earth: <strong>coordinate reference system</strong> (<strong>CRS</strong>)</li>
 </ul>
-
 <p>There are <strong>two types of CRS</strong>:</p>
-
-<p>1) Geographical</p>
-
+<ol style="list-style-type: decimal">
+<li>Geographical</li>
+</ol>
 <ul>
 <li>specific locations on the surface is defined by three dimensional model of the Earth.</li>
 <li>longitude and latitude</li>
 </ul>
-
-<p>2) Projected</p>
-
+<ol start="2" style="list-style-type: decimal">
+<li>Projected</li>
+</ol>
 <ul>
 <li>A conversion of the three-dimensional grid onto a two-dimensional plane.</li>
 </ul>
-
 <p>According to the storing technique, spatial data is one of the two types:</p>
-
-<p>1)  <strong>Raster data</strong>: composed of grid cells identified by row and column. The whole geographic area is divided into groups of individual cells, which represent an image (satellite images)</p>
-
-<p>2)  <strong>Vector data</strong> are composed of points, polylines, and polygons. For example hospitals, houses etc. are represented by points, while rivers, roads,etc., are represented by polylines. Villages and towns are represented by polygons.</p>
-
+<ol style="list-style-type: decimal">
+<li><p><strong>Raster data</strong>: composed of grid cells identified by row and column. The whole geographic area is divided into groups of individual cells, which represent an image (satellite images)</p></li>
+<li><p><strong>Vector data</strong> are composed of points, polylines, and polygons. For example hospitals, houses etc. are represented by points, while rivers, roads,etc., are represented by polylines. Villages and towns are represented by polygons.</p></li>
+</ol>
 <p>When doing spatial analysis you will also deal with attribute data, which contain the relevant information about the spatial data. The analysis will be based on attribute data attached to geospatial data. Such data could be:</p>
-
 <ul>
 <li>nominal</li>
 <li>ordinal</li>
 <li>interval data</li>
 <li>ratio data,</li>
 </ul>
-
 <p>ie. attribute or measured type of the data.</p>
-
-<h3 id="static-maps-shape-file">Static Maps: Shape File</h3>
-
+<p>Static Maps: Shape File</p>
 <p>R has impressive geographic capabilities and can handle different kinds of spatial data file formats including geojson and KML. We will illustrate the use of the ESRI Shapefile format, which stores nontopological geometry and attribute information for the spatial features in a data set. A shapefile consists minimally of a main file, an index file, and a dBASE table.</p>
-
 <ul>
 <li>.shp - lists shape and vertices</li>
 <li>.shx - has index with offsets</li>
 <li>.dbf - relationship file between geometry and attributes (data)</li>
 </ul>
-
 <p>To import a ESRI shapefile into R correctly, all three files must be present in the directory and named the same (except for the file extension).</p>
-
 <p>Let us start by reading a shape file of Serbian districts boundaries avaliable from <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a>.</p>
-
-<pre><code>## If you don't have sf installed yet, uncomment and run the line below
+<pre><code>## If you don&#39;t have sf installed yet, uncomment and run the line below
 #install.packeges(&quot;sf&quot;)
 
 library(ggplot2)
@@ -778,14 +782,10 @@ View(serbia_districts)
 
 # plot the disstricts 
 ggplot(serbia_districts) + 
-  geom_sf()
-</code></pre>
-
-<p><img src="/day2/SpatialDA/images/serbia.png?width=40pc" alt="" /></p>
-
+  geom_sf()</code></pre>
+<p><img src="/day2/SpatialDA/images/serbia.png?width=40pc" /></p>
 <p>This looks good 😃 Note that plotting the boundaries using ggplot2 might take some time.
 Let us add some colour, ie. data to our map.</p>
-
 <pre><code>population &lt;- read.csv(&quot;Serbian_Pop.csv&quot;)
 View(population)
 
@@ -809,43 +809,42 @@ names(serbia_pop)
 ggplot(serbia_pop) +
   geom_sf(aes(fill=total_pop)) +
   scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
-  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;)
-</code></pre>
-
-<p><img src="/day2/SpatialDA/images/SR_pop_2017.png?width=40pc" alt="" /></p>
-
+  labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;)</code></pre>
+<p><img src="/day2/SpatialDA/images/SR_pop_2017.png?width=40pc" /></p>
 <pre><code>ggplot(serbia_pop) +
   geom_sf(aes(fill = total_pop)) +
   scale_fill_distiller(direction = 1, name = &quot;Population&quot;) +
   labs(title=&quot;Population of Serbia for 2017&quot;, caption=&quot;Source: Statisticki Zavod SR&quot;) +
-  facet_wrap(~NAME_1)
-</code></pre>
+  facet_wrap(~NAME_1)</code></pre>
+<p><img src="/day2/SpatialDA/images/facet_sr.png?width=40pc" /></p>
+<p>Interactive Maps: leaflet</p>
+<pre class="r"><code>## If you don&#39;t have leaflet installed yet, uncomment and run the line below
+#install.packeges(&quot;leaflet&quot;)
+library(leaflet)
+# Initialize and assign us as the leaflet object
+us &lt;- leaflet() %&gt;%
+  # add tiles to the leaflet object
+  addTiles() %&gt;%  
+  # setting the centre of the map and the zoom level
+  setView(lng = 20.41215, lat = 45.93362, zoom = 15) %&gt;%
+  # add a popup marker 
+  addMarkers(lng = 20.407040, lat = 45.934230, popup = &quot;&lt;b&gt;Ciao!&lt;/b&gt;&lt;br&gt;&lt;a href=&#39;https://www.mokrinhouse.com/&#39;&gt;Mokrin House! 😀&lt;/a&gt;&quot;)
 
-<p><img src="/day2/SpatialDA/images/facet_sr.png?width=40pc" alt="" /></p>
-
-<h3 id="interactive-maps-leaflet">Interactive Maps: leaflet</h3>
-
+us</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[45.93423,20.40704,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀<\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[45.93362,20.41215],15,[]],"limits":{"lat":[45.93423,45.93423],"lng":[20.40704,20.40704]}},"evals":[],"jsHooks":[]}</script>
 
 <div class="notices note" ><p>bilo sta</p>
 </div>
 
-
-<h2 id="your-turn">YOUR TURN 👇</h2>
-
+<p>YOUR TURN 👇</p>
 <p>Practise by doing the following set of exercises:</p>
-
-<h5 id="useful-links">useful links:</h5>
-
+<p>useful links:</p>
 <p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: a book on geographic data analysis, visualization and modeling.</p>
-
 <p><a href="https://gadm.org/download_country_v3.html">GADM maps and data</a></p>
-
-<p><a href="https://www.oipapio.com/question-5739445">https://www.oipapio.com/question-5739445</a></p>
-
-<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html">https://map-rfun.library.duke.edu/031_thematic_mapping.html</a></p>
-
+<p><a href="https://www.oipapio.com/question-5739445" class="uri">https://www.oipapio.com/question-5739445</a></p>
+<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html" class="uri">https://map-rfun.library.duke.edu/031_thematic_mapping.html</a></p>
 <hr />
-
 <p>© 2019 Tatjana Kecojevic</p>
 
 
@@ -1162,6 +1161,25 @@ ggplot(serbia_pop) +
                     
 
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1180,7 +1198,7 @@ ggplot(serbia_pop) +
 			<a class="nav nav-prev" href="/day2/visualisation/" title="Data Visualisation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/day2/datawrangling/" title="Data Wrangling" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/day2/spatialda/images/mokrin/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1190,19 +1208,19 @@ ggplot(serbia_pop) +
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571666401"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571666401"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571666401"></script>
-    <script src="/js/jquery.sticky.js?1571666401"></script>
-    <script src="/js/featherlight.min.js?1571666401"></script>
-    <script src="/js/highlight.pack.js?1571666401"></script>
+    <script src="/js/clipboard.min.js?1571681432"></script>
+    <script src="/js/perfect-scrollbar.min.js?1571681432"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1571681432"></script>
+    <script src="/js/jquery.sticky.js?1571681432"></script>
+    <script src="/js/featherlight.min.js?1571681432"></script>
+    <script src="/js/highlight.pack.js?1571681432"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571666401"></script>
-    <script src="/js/learn.js?1571666401"></script>
-    <script src="/js/hugo-learn.js?1571666401"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1571681432"></script>
+    <script src="/js/learn.js?1571681432"></script>
+    <script src="/js/hugo-learn.js?1571681432"></script>
 
-    <link href="/mermaid/mermaid.css?1571666401" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571666401"></script>
+    <link href="/mermaid/mermaid.css?1571681432" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1571681432"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

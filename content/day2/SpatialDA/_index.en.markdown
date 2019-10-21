@@ -121,6 +121,27 @@ ggplot(serbia_pop) +
 
 ### Interactive Maps: leaflet
 
+
+```r
+## If you don't have leaflet installed yet, uncomment and run the line below
+#install.packeges("leaflet")
+library(leaflet)
+# Initialize and assign us as the leaflet object
+us <- leaflet() %>%
+  # add tiles to the leaflet object
+  addTiles() %>%  
+  # setting the centre of the map and the zoom level
+  setView(lng = 20.41215, lat = 45.93362, zoom = 15) %>%
+  # add a popup marker 
+  addMarkers(lng = 20.407040, lat = 45.934230, popup = "<b>Ciao!</b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀</a>")
+
+us
+```
+
+<!--html_preserve--><div id="htmlwidget-f6920a36cc5472b8a547" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f6920a36cc5472b8a547">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[45.93423,20.40704,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀<\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[45.93362,20.41215],15,[]],"limits":{"lat":[45.93423,45.93423],"lng":[20.40704,20.40704]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+
 {{% notice note %}}
 bilo sta
 {{% /notice %}}
