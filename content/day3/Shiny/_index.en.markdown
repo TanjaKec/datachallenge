@@ -1,0 +1,28 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Shiny
+output: 
+  learnr::tutorial
+weight: 2
+---
+
+## Shiny: Creating Web Apps
+
+<img src="images/rmd_hugo_blogdown.png" width="600px" />
+
+#### What is Shiny App?
+
+- [R Markdown](https://rmarkdown.rstudio.com) <img src="https://www.rstudio.com/wp-content/uploads/2015/12/RStudio_Hex_rmarkdown.png" width="10%" align="right" />
+    
+### Building a Shiny App Step by Step
+
+#### 👉 Go to the following GitHub repo to download the material: <https://github.com/TanjaKec/S>
+
+##### From here on we will follow the steps given in Xaringan presentation available from [ 👉 here](https://tanjakec.github.io/BlogdownWS/Blogdown_WS_Slides/blogdown_workshop.html)
+
+### Happy R Programming! 📢 
+
+
+
+-----------------------------
+© 2019 Tatjana Kecojevic

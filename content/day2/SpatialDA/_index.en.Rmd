@@ -39,7 +39,7 @@ When doing spatial analysis you will also deal with attribute data, which contai
 
 ie. attribute or measured type of the data.
 
-Static Maps: Shape File 
+**Static Maps: Shape File** 
 
 R has impressive geographic capabilities and can handle different kinds of spatial data file formats including geojson and KML. We will illustrate the use of the ESRI Shapefile format, which stores nontopological geometry and attribute information for the spatial features in a data set. A shapefile consists minimally of a main file, an index file, and a dBASE table.
 
@@ -117,7 +117,7 @@ ggplot(serbia_pop) +
 
 ![](/day2/SpatialDA/images/facet_sr.png?width=40pc)
 
-Interactive Maps: leaflet
+**Interactive Maps: leaflet**
 
 ```{r}
 ## If you don't have leaflet installed yet, uncomment and run the line below
@@ -139,14 +139,14 @@ us
 bilo sta
 {{% /notice %}}
 
-YOUR TURN 👇
+**YOUR TURN 👇**
 
 Practise by doing the following set of exercises:
 
 
 
 
-useful links: 
+**useful links:** 
 
 [Geocomputation with R](https://geocompr.robinlovelace.net/): a book on geographic data analysis, visualization and modeling.
 
