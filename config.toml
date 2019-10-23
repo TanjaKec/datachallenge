@@ -22,8 +22,8 @@ defaultContentLanguageInSubdir= true
 url = "logo.jpg"
 
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
-#home = [ "HTML"]
+#home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML"]
 
 [Languages]
 [Languages.en]
