@@ -51,6 +51,7 @@ To import a ESRI shapefile into R correctly, all three files must be present in 
 
 Let us start by reading a shape file of Serbian districts boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html).
 
+First, download the files we will need from the following GitHub repository: <https://github.com/TanjaKec/gadm36_SRB_shp>. Make sure you save the file into your R-Project working directory before you ask R to execute the following
 
 ```
 ## If you don't have sf installed yet, uncomment and run the line below
@@ -75,8 +76,7 @@ ggplot(serbia_districts) +
 
 ![](/day2/SpatialDA/images/serbia.png?width=40pc)
 
-This looks good 😃 Note that plotting the boundaries using ggplot2 might take some time.
-Let us add some colour, ie. data to our map.
+This looks good 😃 Next, we want to add some data to it and do some 'colouring'. We will incorporate information about serbian polulation in 2017 given "Serbian_Pop.csv" file.  
 
 ```
 population <- read.csv("Serbian_Pop.csv")
@@ -107,6 +107,8 @@ ggplot(serbia_pop) +
 
 ![](/day2/SpatialDA/images/SR_pop_2017.png?width=40pc)
 
+Sometimes you might want to present regions in the plot as a set of multi-panel plots. Remember, you can use `facet` facility of `ggplot` library to do so.
+
 ```
 ggplot(serbia_pop) +
   geom_sf(aes(fill = total_pop)) +
@@ -119,6 +121,8 @@ ggplot(serbia_pop) +
 
 **Interactive Maps: leaflet**
 
+`Leaflet` is one of the most popular open-source JavaScript libraries for interactive maps that was integrated into R, by team of people from RStudio. We will illustrate how easy it is to plot a location map using leaflet package, butyou can learn more about this package from [Leaflet for R](https://rstudio.github.io/leaflet/) website.
+
 ```{r}
 ## If you don't have leaflet installed yet, uncomment and run the line below
 #install.packeges("leaflet")
@@ -130,7 +134,7 @@ us <- leaflet() %>%
   # setting the centre of the map and the zoom level
   setView(lng = 20.41215, lat = 45.93362, zoom = 15) %>%
   # add a popup marker 
-  addMarkers(lng = 20.407040, lat = 45.934230, popup = "<b>Ciao!</b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀</a>")
+  addMarkers(lng = 20.4223, lat = 45.9320, popup = "<b>Ciao!</b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀</a>")
 
 us
 ```
