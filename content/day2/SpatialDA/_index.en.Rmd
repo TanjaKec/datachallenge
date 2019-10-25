@@ -121,7 +121,7 @@ ggplot(serbia_pop) +
 
 **Interactive Maps: leaflet**
 
-`Leaflet` is one of the most popular open-source JavaScript libraries for interactive maps that was integrated into R, by team of people from RStudio. We will illustrate how easy it is to plot a location map using leaflet package, butyou can learn more about this package from [Leaflet for R](https://rstudio.github.io/leaflet/) website.
+`Leaflet` is one of the most popular open-source JavaScript libraries for interactive maps that was integrated into R, by a team of people from RStudio. We will illustrate how easy it is to plot a location map using the leaflet package, but you can learn more about this package from [Leaflet for R](https://rstudio.github.io/leaflet/) website.
 
 ```{r}
 ## If you don't have leaflet installed yet, uncomment and run the line below
