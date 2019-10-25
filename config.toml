@@ -23,7 +23,7 @@ url = "logo.jpg"
 
 [outputs]
 #home = [ "HTML", "RSS", "JSON"]
-home = [ "HTML"]
+home = ["HTML"]
 
 [Languages]
 [Languages.en]
