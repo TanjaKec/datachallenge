@@ -49,7 +49,7 @@ R has impressive geographic capabilities and can handle different kinds of spati
 
 To import a ESRI shapefile into R correctly, all three files must be present in the directory and named the same (except for the file extension).
 
-Let us start by reading a shape file of Serbian districts boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html).
+Let us start by reading a shape file of Serbian districts' boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html).
 
 First, download the files we will need from the following GitHub repository: <https://github.com/TanjaKec/gadm36_SRB_shp>. Make sure you save the file into your R-Project working directory before you ask R to execute the following
 
@@ -139,26 +139,34 @@ us <- leaflet() %>%
 us
 ```
 
+Here is an interesting website which introduces all kind of possibilities when creating maps with the ['leaflet'](https://maptimeboston.github.io/leaflet-intro/). You should check it out and explore further for yourself.
+
 {{% notice note %}}
-bilo sta
+From its original application as statistical programming language, R has come a long way and has become very powerful in supporting spatial analysis. All R packages include vignettes with the explanations of the functions’ syntaxes and often very helpful mini-tutorials that illustrate the practical uses of the functions around related problems. [CRAN Task View for Analysis of Spatial Data ](https://cran.r-project.org/web/views/Spatial.html) provides a list of available libraries in R for geographical mapping that are commonly used when undertaking spatial analysis and mapping projects in R. 
 {{% /notice %}}
+
 
 **YOUR TURN 👇**
 
 Practise by doing the following set of exercises:
 
+1)	Read a shape file of Serbian districts’ boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html) and plot population per square kilometre available form ‘Serbian_Pop.csv’ used in the exercise.
+
+2)	Create a map pointing out at your favourite hang-out place using the leaflet package.
 
 
 
 **useful links:** 
 
+[R for the analysis of spatial or spatio-temporal data (blog)](https://www.r-spatial.org/)
+
 [Geocomputation with R](https://geocompr.robinlovelace.net/): a book on geographic data analysis, visualization and modeling.
 
 [GADM maps and data](https://gadm.org/download_country_v3.html)
 
-<https://www.oipapio.com/question-5739445>
+[Creating Interactive Spatial Maps in R Using Leaflet](https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/)
 
-<https://map-rfun.library.duke.edu/031_thematic_mapping.html>
+[Thematic Mapping with tmap](https://map-rfun.library.duke.edu/031_thematic_mapping.html)
 
 -----------------------------
 © 2019 Tatjana Kecojevic

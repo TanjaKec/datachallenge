@@ -12,20 +12,20 @@
     <title>Spatial Data Analysis :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1571993046" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1571993046" rel="stylesheet">
-    <link href="/css/hybrid.css?1571993046" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1571993046" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1571993046" rel="stylesheet">
-    <link href="/css/auto-complete.css?1571993046" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1571993046" rel="stylesheet">
-    <link href="/css/theme.css?1571993046" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1571993046" rel="stylesheet">
+    <link href="/css/nucleus.css?1572007457" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1572007457" rel="stylesheet">
+    <link href="/css/hybrid.css?1572007457" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1572007457" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1572007457" rel="stylesheet">
+    <link href="/css/auto-complete.css?1572007457" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1572007457" rel="stylesheet">
+    <link href="/css/theme.css?1572007457" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1572007457" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1571993046" rel="stylesheet">
+      <link href="/css/theme-pink.css?1572007457" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1571993046"></script>
+    <script src="/js/jquery-3.3.1.min.js?1572007457"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1571993046"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1571993046"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1572007457"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1572007457"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1571993046"></script>
+<script type="text/javascript" src="/js/search.js?1572007457"></script>
 
     
   </div>
@@ -852,7 +852,7 @@
 <li>.dbf - relationship file between geometry and attributes (data)</li>
 </ul>
 <p>To import a ESRI shapefile into R correctly, all three files must be present in the directory and named the same (except for the file extension).</p>
-<p>Let us start by reading a shape file of Serbian districts boundaries avaliable from <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a>.</p>
+<p>Let us start by reading a shape file of Serbian districts’ boundaries avaliable from <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a>.</p>
 <p>First, download the files we will need from the following GitHub repository: <a href="https://github.com/TanjaKec/gadm36_SRB_shp" class="uri">https://github.com/TanjaKec/gadm36_SRB_shp</a>. Make sure you save the file into your R-Project working directory before you ask R to execute the following</p>
 <pre><code>## If you don&#39;t have sf installed yet, uncomment and run the line below
 #install.packeges(&quot;sf&quot;)
@@ -923,17 +923,23 @@ us &lt;- leaflet() %&gt;%
 us</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[45.932,20.4223,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀<\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[45.93362,20.41215],15,[]],"limits":{"lat":[45.932,45.932],"lng":[20.4223,20.4223]}},"evals":[],"jsHooks":[]}</script>
+<p>Here is an interesting website which introduces all kind of possibilities when creating maps with the <a href="https://maptimeboston.github.io/leaflet-intro/">‘leaflet’</a>. You should check it out and explore further for yourself.</p>
 
-<div class="notices note" ><p>bilo sta</p>
+<div class="notices note" ><p>From its original application as statistical programming language, R has come a long way and has become very powerful in supporting spatial analysis. All R packages include vignettes with the explanations of the functions’ syntaxes and often very helpful mini-tutorials that illustrate the practical uses of the functions around related problems. <a href="https://cran.r-project.org/web/views/Spatial.html">CRAN Task View for Analysis of Spatial Data</a> provides a list of available libraries in R for geographical mapping that are commonly used when undertaking spatial analysis and mapping projects in R.</p>
 </div>
 
 <p><strong>YOUR TURN 👇</strong></p>
 <p>Practise by doing the following set of exercises:</p>
+<ol style="list-style-type: decimal">
+<li><p>Read a shape file of Serbian districts’ boundaries avaliable from <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a> and plot population per square kilometre available form ‘Serbian_Pop.csv’ used in the exercise.</p></li>
+<li><p>Create a map pointing out at your favourite hang-out place using the leaflet package.</p></li>
+</ol>
 <p><strong>useful links:</strong></p>
+<p><a href="https://www.r-spatial.org/">R for the analysis of spatial or spatio-temporal data (blog)</a></p>
 <p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: a book on geographic data analysis, visualization and modeling.</p>
 <p><a href="https://gadm.org/download_country_v3.html">GADM maps and data</a></p>
-<p><a href="https://www.oipapio.com/question-5739445" class="uri">https://www.oipapio.com/question-5739445</a></p>
-<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html" class="uri">https://map-rfun.library.duke.edu/031_thematic_mapping.html</a></p>
+<p><a href="https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/">Creating Interactive Spatial Maps in R Using Leaflet</a></p>
+<p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html">Thematic Mapping with tmap</a></p>
 <hr />
 <p>© 2019 Tatjana Kecojevic</p>
 
@@ -1348,19 +1354,19 @@ us</code></pre>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1571993046"></script>
-    <script src="/js/perfect-scrollbar.min.js?1571993046"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1571993046"></script>
-    <script src="/js/jquery.sticky.js?1571993046"></script>
-    <script src="/js/featherlight.min.js?1571993046"></script>
-    <script src="/js/highlight.pack.js?1571993046"></script>
+    <script src="/js/clipboard.min.js?1572007457"></script>
+    <script src="/js/perfect-scrollbar.min.js?1572007457"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1572007457"></script>
+    <script src="/js/jquery.sticky.js?1572007457"></script>
+    <script src="/js/featherlight.min.js?1572007457"></script>
+    <script src="/js/highlight.pack.js?1572007457"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1571993046"></script>
-    <script src="/js/learn.js?1571993046"></script>
-    <script src="/js/hugo-learn.js?1571993046"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1572007457"></script>
+    <script src="/js/learn.js?1572007457"></script>
+    <script src="/js/hugo-learn.js?1572007457"></script>
 
-    <link href="/mermaid/mermaid.css?1571993046" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1571993046"></script>
+    <link href="/mermaid/mermaid.css?1572007457" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1572007457"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
