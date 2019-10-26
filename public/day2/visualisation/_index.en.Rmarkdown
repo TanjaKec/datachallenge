@@ -355,7 +355,7 @@ Try to explore the two functions for yourself and see where it would take you.
 
 - `boxplot()` function produces boxplot(s) of the given (grouped) values.
 
-Knowing about `group_by()` and `boxplot()` function, coud you compute the median life expectancy for year 2007 by continent and visualise your result?
+Knowing about `group_by()` and `boxplot()` function and using `gapminder` data, coud you compute the median life expectancy for year 2007 by continent and visualise your result?
 
 ##### 😃🙌 Solution: code
 

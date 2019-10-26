@@ -167,18 +167,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country             continent  year lifeExp      pop gdpPercap
-##    <fct>               <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Ghana               Africa     2002    58.5 20550751     1112.
-##  2 Trinidad and Tobago Americas   1992    69.9  1183669     7371.
-##  3 Nepal               Asia       1992    55.7 20326209      898.
-##  4 Chad                Africa     1972    45.6  3899068     1104.
-##  5 Thailand            Asia       1987    66.1 52910342     2983.
-##  6 Vietnam             Asia       2002    73.0 80908147     1764.
-##  7 Iraq                Asia       1952    45.3  5441766     4130.
-##  8 Mongolia            Asia       1992    61.3  2312802     1785.
-##  9 Djibouti            Africa     2002    53.4   447416     1908.
-## 10 Bahrain             Asia       1977    65.6   297410    19340.
+##    country          continent  year lifeExp      pop gdpPercap
+##    <fct>            <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Cameroon         Africa     1962    42.6  5793633     1400.
+##  2 Hong Kong, China Asia       1982    75.4  5264500    14561.
+##  3 Ethiopia         Africa     1952    34.1 20860941      362.
+##  4 Saudi Arabia     Asia       1967    49.9  5618198    16903.
+##  5 Ethiopia         Africa     1962    40.1 25145372      419.
+##  6 Bulgaria         Europe     1997    70.3  8066057     5970.
+##  7 France           Europe     2007    80.7 61083916    30470.
+##  8 Slovenia         Europe     2002    76.7  2011497    20660.
+##  9 Ecuador          Americas   1997    72.3 11911819     7429.
+## 10 Togo             Africa     1962    43.9  1528098     1068.
 ## # … with 20 more rows
 ```
 
@@ -456,7 +456,7 @@ Try to explore the two functions for yourself and see where it would take you.
 
 - `boxplot()` function produces boxplot(s) of the given (grouped) values.
 
-Knowing about `group_by()` and `boxplot()` function, coud you compute the median life expectancy for year 2007 by continent and visualise your result?
+Knowing about `group_by()` and `boxplot()` function and using `gapminder` data, coud you compute the median life expectancy for year 2007 by continent and visualise your result?
 
 ##### 😃🙌 Solution: code
 
