@@ -6,7 +6,7 @@ output:
 weight: 5
 ---
 
-The RStudio window has mutiple panes. [RStudio IDE Cheet Sheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf):
+The RStudio window has multiple panes. [RStudio IDE Cheet Sheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf):
 
 ![Red variant](/day1/UseR/images/RStudio1.png?width=40pc)
 
@@ -16,7 +16,7 @@ The RStudio window has mutiple panes. [RStudio IDE Cheet Sheet](https://www.rstu
 
 **Top Right -** <span style="color:blue">Environment</span>: lists the objects that you create, such as data sets;
 
-**Bottom Right -** <span style="color:blue">Help</span>: find out information about functions and packages. This same panel will have tabs for *showing plots* that you make, *view apps* and documents, show *files* in the folder, and *packages* used.
+**Bottom Right -** <span style="color:blue">Help</span>: find out information about functions and packages. This same pane will have tabs for *showing plots* that you make, *view apps* and documents, show *files* in the folder, and *packages* used.
 
 R is a scripting language, which means that it is just like writing an essay, or a math proof. We write a script to do specific tasks, that we can run again and again, or give to someone else to run. 
 
@@ -66,31 +66,31 @@ Use the **More | Set As Working Directory** menu
 
 ![Red variant](/day1/UseR/images/SetWD1.png?width=20pc)
 
-However, you should always start a fresh project (**File | New Project...**) that would automatically set up your working directory without having to point it out to it in your script file. You should read [Project-oriented workflow 💻🔥](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) article by [Jenny Bryan](https://jennybryan.org/) to convince yourself that this would be a good habit you should adopt. 
+However, you should always start a fresh project (**File | New Project...**) that would automatically set up your working directory without having to point to it in your script file. You should read [Project-oriented workflow 💻🔥](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) article by [Jenny Bryan](https://jennybryan.org/) to convince yourself that this would be a good habit you should adopt. 
 
 ## R Packages
 
 *"In R, the fundamental unit of shareable code is the package."* [Hadley Wickham, *R packages*](http://r-pkgs.had.co.nz/intro.html)
 
-R packages are collections of functions code, data sets, documentation and tests developed by the community, that are mostly made available on the <span style="color:red">C</span>omprehensive <span style="color:red">R</span> <span style="color:red">A</span>rchive <span style="color:red">N</span>etwork, or <span style="color:red">CRAN</span>, the public clearing house for R packages. Those pachages are developed by the experts in their fields and currently the CRAN package repository features over 14,000 of them. Many of the analyses that they offer are not even available in any of the standard data analysis software packages, which is one of the reasons that R is so successful.  
+R packages are collections of functions code, data sets, documentation and tests developed by the community, that are mostly made available on the <span style="color:red">C</span>omprehensive <span style="color:red">R</span> <span style="color:red">A</span>rchive <span style="color:red">N</span>etwork, or <span style="color:red">CRAN</span>, the public clearing house for R packages. These packages are developed by experts in their fields and currently the CRAN package repository features over 14,000 of them. Many of the analyses that they offer are not even available in any of the standard data analysis software packages, which is one of the reasons that R is so successful.  
 
-When you run R you will authomatically upload the [`package:base`](https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf), which is the system library, i.e. the package where all standard functions are defined. The rest of the so called *base packages* contain the basic statistical routines. Assuming that you are connected to the internet, you can install a package using `install.packages()`. From RStudio menu you can do it by sellecting **Tools | Install Packages...** and typing the name of the desired package in the dialogue window.
+When you run R you will authomatically upload the [`package:base`](https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf), which is the system library, i.e. the package where all standard functions are defined. The rest of the so called *base packages* contain the basic statistical routines. Assuming that you are connected to the internet, you can install a package using `install.packages()`. From the RStudio menu you can do it by sellecting **Tools | Install Packages...** and typing the name of the desired package in the dialogue window.
 
 ![Red variant](/day1/UseR/images/InstallPckg.png?width=20pc)
 
-Once installed, the package will apear in the list of the available packages in your **Packages panel**. To use it you have to load it to the system’s search path by simply typing the name of the package as an argument of the `library()` function, or by checking the box next to its name from the **Packages panel**.
+Once installed, the package will appear in the list of available packages in your **Packages pane**. To use it you have to load it to the system’s search path by simply typing the name of the package as an argument of the `library()` function, or by checking the box next to its name from the **Packages pane**.
 
 ![Red variant](/day1/UseR/images/Packages.png?width=20pc)
 
 {{% notice note %}}
-💡: Note that you can call the dialog window to install a package from **Packages panel**! Have you spotted the *Install* icon yet?
+💡: Note that you can call the dialog window to install a package from **Packages pane**! Have you spotted the *Install* icon yet?
 {{% /notice %}}
 
 ## Calculate in R
 
 To begin with, we can use R as a calculator. 😁
 
-In your console type in `2 + 2`. Note that you don’t have to type the equals sign and that answer has [1] in front. The [1] indicates that there is only one number in the answer. If the answer contains more than one number it uses numbering like this to indicate where in the ‘group’ of numbers each one is.
+In your console type in `2 + 2`. Note that you don’t have to type the equals sign and that the answer has [1] in front. The [1] indicates that there is only one number in the answer. If the answer contains more than one number it uses numbering like this to indicate where in the ‘group’ of numbers each one is.
 
 You see?! R is like a big calculator! 😲 
 
@@ -151,7 +151,7 @@ x <- 5
 y <- 6
 ```
 
-You can use objects in calculation in exactly the same way as as you have already seen numbers being used earlier:
+You can use objects in calculation in exactly the same way as you have already seen numbers being used earlier:
 
 ```
 x + y
@@ -180,7 +180,7 @@ After you’ve created some objects in R you can get a list of them using `ls()`
 ls()
 ```
 
-RStudio provides very comfortable working environment and enables you to monitor your list of objects in the **Environment** panel window in the top right corner. 
+RStudio provides a very comfortable working environment and enables you to monitor your list of objects in the **Environment** pane window in the top right corner. 
 
 ![Red variant](/day1/UseR/images/Environment_Panel.png?width=20pc)
 
@@ -223,7 +223,7 @@ p
 ```
 
 {{% notice info %}}
-🤓💡 <span style="color:red">To obtain a description of a function</span> you need to type a question mark, <span style="color:red">**?**</span>, in front of the name of the function. You might find this particularly useful when you start applying more complicated functions, as help will often provide you not only with the detailed description of the function’s input/output arguments, but practical illustrative examples on how the function can be used and applied. You should try to ask R for hlep for `lm()` function (can you tell what it is used for?)
+🤓💡 <span style="color:red">To obtain a description of a function</span> you need to type a question mark, <span style="color:red">**?**</span>, in front of the name of the function. You might find this particularly useful when you start applying more complicated functions, as help will often provide you not only with the detailed description of the function’s input/output arguments, but practical illustrative examples on how the function can be used and applied. You should try to ask R for help for `lm()` function (can you tell what it is used for?)
 {{% /notice %}}
 
 #### Vectors
@@ -242,7 +242,7 @@ x <- rep(1,10)
 x
 ```
 
-* generated by the user by using <span style="color:red">concatenation function **c**</span> that allows you to enter one number at a the time
+* generated by the user by using <span style="color:red">concatenation function **c**</span> that allows you to enter one number at a time
 
 ```{r}
 x <- c(2, 6, 4, 2, 3, 7, 1, 5, 9, 8)
@@ -347,7 +347,7 @@ ma1[1, ]
 ma1[ , 4]
 ```
 
-Standard scalar algebra, which deals with operations on single numbers, has a set of well established rules for handling manipulations involving addition, subtraction, multiplication and division. In a broadly similar fashion a set of rules has been developed to enable us to manipulate matrices. However, introducing those rules is beyond the scope of this bootcamp, but they are nicely covered on the [www.statisticshowto.com](http://www.statisticshowto.com/matrices-and-matrix-algebra/) website.
+Standard scalar algebra, which deals with operations on single numbers, has a set of well established rules for handling manipulations involving addition, subtraction, multiplication and division. In a broadly similar fashion, a set of rules has been developed to enable us to manipulate matrices. However, introducing those rules is beyond the scope of this course, but they are nicely covered on the [www.statisticshowto.com](http://www.statisticshowto.com/matrices-and-matrix-algebra/) website.
 
 
 ## YOUR TURN 👇

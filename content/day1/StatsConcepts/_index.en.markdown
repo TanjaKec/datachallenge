@@ -10,14 +10,14 @@ weight: 6
 In this section you will be introduced to a set of concepts that enable data to be explored with the **objective** 
 
 * of summarising and understanding the main features of the variables contained within the data and 
-* to investigate the nature of any linkages between the variables that may exist.
+* to investigate the nature of any linkages between the variables that may exist
 
 The starting point is to understand **what data is**.
 
 * What is the **population**?
 * Why do we use **samples**?
 
-Can you provide a formal definition about the population and the sample? 😁
+Can you provide a formal definition of the population and the sample? 😁
 
 *The population is the set of all people/objects of interest in the study being undertaken.*  
 
@@ -63,13 +63,13 @@ The way to proceed depends upon the type of variable being examined.
 
 The variables can be one of two broad types:
 
--	**Attribute variables**: is a variable that has its outcomes described in terms of its characteristics or attributes. 
+-	**Attribute variables**: are variables that have their outcomes described in terms of their characteristics or attributes. 
   * gender
   * days in a week
   
-A common way of handling attribute data is to give it a numerical code. Hence, we often referred to them as coded variables.
+A common way of handling attribute data is to give it a numerical code. Hence, we often refer to them as coded variables.
 
--	**Measured variables**: is a variable that has its outcomes taken from a numerical scale; the resulting outcome is expressed in numerical terms.  
+-	**Measured variables**: are  variables that have their outcomes taken from a numerical scale; the resulting outcome is expressed in numerical terms.  
   * weight
   * age
 
@@ -93,9 +93,9 @@ For an attribute variable the number of occurrences of each attribute is obtaine
 
 #### What does the distribution show?
 
-For an attribute variable it is very simple. We observe the frequency of occurance of each level of the attribute variable as shown in the barplot above.
+For an attribute variable it is very simple. We observe the frequency of occurrence of each level of the attribute variable as shown in the barplot above.
 
-For a measured variable the area under the curve from one value to another measures the relative proportion of the population having the oucome value in that range. 
+For a measured variable the area under the curve from one value to another measures the relative proportion of the population having the outcome value in that range. 
 
 A statistical distribution for a measured variable can be summarised using three key descriptions:
 
@@ -103,7 +103,7 @@ A statistical distribution for a measured variable can be summarised using three
 -	the <span style="color:red">width</span> of the distribution;
 -	the <span style="color:red">symmetry</span> of the distribution
 
-The  <span style="color:red">**common measures of the centre**</span> of a distribution are the **Mean** (artithmetic average) and the **Median**. The *median value* of the variable is defined to be the particular value of the variable such that half the data values are less than the median value and half are greater  
+The  <span style="color:red">**common measures of the centre**</span> of a distribution are the **Mean** (arithmetic average) and the **Median**. The *median value* of the variable is defined to be the particular value of the variable such that half the data values are less than the median value and half are greater.  
 
 The <span style="color:red">**common measures of the width**</span> of a distribution are the **Standard Deviation** and the **Inter-Quartile Range**. The <span style="color:red">Standard Deviation</span> is the square root of the average squared deviation from the mean. Ultimately the standard deviation is a relative measure of spread (width), the larger the standard deviation the wider the distribution.  The <span style="color:red">inter-quartile range</span> is the range over which the middle 50% of the data values varies.
 
@@ -137,7 +137,7 @@ An alternative measure of Skewness is the Quartile Measure of Skewness defined a
 	* an attribute variable 
   * a measured variable
 
-- The concept of a Statistical Distribution:
+- The concept of Statistical Distribution:
 	* As applied to an attribute variable
 	* As applied to a measured variable
 - Descriptive Statistics for a measured variable:
@@ -149,7 +149,7 @@ An alternative measure of Skewness is the Quartile Measure of Skewness defined a
 
 The descriptive statistics provide a numerical description of the key parameters of the distribution of a measured sample variable.
 
-### Investigating relationship between variables
+### Investigating the relationship between variables
 
 One of the key steps required of the Data Analyst is to investigate the relationship between variables. This requires a further **classification of the variables** contained within the data, as either a <span style="color:red">**response**</span> variable or an <span style="color:red">**explanatory**</span> variable.  
 
@@ -159,7 +159,7 @@ An **explanatory** variable is a variable that may influence the response variab
 
 #### Bivariate Relationships
 
-In general there are four different combinations of type of Response Variable and type of Explanatory Variable, these four combinations are shown below:
+In general there are four different combinations of type of Response Variable and type of Explanatory Variable. These four combinations are shown below:
 
 ![Red variant](/day1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
 
@@ -167,7 +167,7 @@ The starting point for any  <span style="color:red">investigation of the connect
 
 🤓💡: In large empirical investigations there may be a number of objectives and a number of response variables.
 
-The method for investigating the connection between a response variable and an explanatory variable depends on the type of variables. The methodology is different for combination as shown in the box above, and applying an inappropriate method causes problems. 💡⚡️😩  
+The method for investigating the connections between a response variable and an explanatory variable depends on the type of variables. The methodology is different for combination as shown in the box above, and applying an inappropriate method causes problems. 💡⚡️😩  
 
 ### DA Methodology
 
@@ -178,10 +178,12 @@ The next step is to <span style="color:red">*use some simple sample descriptive 
 If the Initial Data Analysis suggests that <span style="color:red">**Further Data Analysis**</span> (<span style="color:red">**FDA**</span>) is required, then this step seeks one of two conclusions:
 
 i)	The sample evidence is consistent with there being no link between the response variable and the explanatory variable.
+
 or
+
 ii)	The sample evidence is consistent with there being a link between the response variable and the explanatory variable.
 
-The outcome of the analysis is one of the two alternatives given above.  If the outcome is that there is no evidence of a connection, then no further action is required by the analyst since the analysis is now complete.
+The outcome of the analysis is one of the two alternatives given above. If the outcome is that there is no evidence of a connection, then no further action is required by the analyst since the analysis is now complete.
 
 If however the outcome of the analysis is that there is evidence of a connection, then the nature of the connection between the two variables needs to be described.
 
@@ -189,9 +191,12 @@ If however the outcome of the analysis is that there is evidence of a connection
 
 On the basis of the sample data is there evidence of a connection between the response variable and the explanatory variable?
  
-The outcome is one of two conclusions  
-i.	No evidence of a relationship
-ii	Yes there is evidence of a relationship, in which case the link needs to be described.
+The outcome is one of two conclusions 
+
+i)	No evidence of a relationship
+
+ii)	Yes there is evidence of a relationship, in which case the link needs to be described.
+
 This process can be represented diagrammatically as:
 
 ![Red variant](/day1/StatsConcepts/images/DAMethodology.png?width=40pc)
@@ -255,32 +260,32 @@ B.	Can 'The Total Variation in Y', 'Explained Variation' and the 'Unexplained Va
 
 What do these quantities tell us?  
 
-Maybe we can observe a propotion of the 'Explained Variation in Y' over the 'Total Variation in Y'.
+Maybe we can observe a proportion of the 'Explained Variation in Y' over the 'Total Variation in Y'.
 This ratio is always on the scale 0 to 1, but by convention is usually expressed as a percentage so is regarded as on the scale 0 to 100%.  It is called 'R Squared' and interpretation of this ratio is as follows:
 
   R_sq: 0% (no link) <--------------- 50% (Statistical Link) ---------------> 100% (Perfect Link) 
 
-The definition and interpretation of `R_sq` is a very important tool in the data analyst tool kit for tracking connections between a measures response variable and a measured explanatory variable.
+The definition and interpretation of `R_sq` is a very important tool in the data analyst's tool kit for tracking connections between a measured response variable and a measured explanatory variable.
 
 We can put those ideas into our DA Methodology frameworks as shown below.
 
 ![Red variant](/day1/StatsConcepts/images/MvMMethodology.png?width=40pc)
 
-🤓💡 Note that you will hardly ever be in the situation in which R_sq would be so close to zero that would make you conclude that on the base of the sample evidence used in IDA it is possible to conclude that there is no relationship between the two variables. If R_sq value is very small (for example around 2%) this would need to be further tested to conclude if it is statistically significant based on the sample evidence by applying FDA.
+🤓💡 Note that you will hardly ever be in the situation in which R_sq would be so close to zero that would make you conclude that on the basis of the sample evidence used in IDA it is possible to conclude that there is no relationship between the two variables. If R_sq value is very small (for example around 2%) this would need to be further tested to conclude if it is statistically significant based on the sample evidence by applying FDA.
 
 #### Further Data Analysis
 
 If the <span style="color:red">'**Initial Data Analysis**'</span> is <span style="color:red">*inconclusive*</span> then <span style="color:red">'**Further Data Analysis**'</span> is required. 
 
-The 'Further Data Analysis' is procedure that enables a decision to be made, based on the sample evidence, as to one of two outcomes:  
+The 'Further Data Analysis' is a procedure that enables a decision to be made, based on the sample evidence, as to one of two outcomes:  
 - There is no relationship
 -	There is a relationship
 
 These statistical procedures are called <span style="color:red">**hypothesis tests**</span>, which essentially <span style="color:red">*provide a decision rule for choosing between one of the two outcomes*</span>: "There is no relationship" or "There is a relationship" based on the sample evidence.
 
 All hypothesis tests are carried out in four stages:
-- Stage 1:		S
-pecifying the hypotheses.
+
+- Stage 1:		Specifying the hypotheses.
 
 - Stage 2:		Defining the test parameters and the decision rule.
 
@@ -298,11 +303,11 @@ pecifying the hypotheses.
   
   - One-Way ANOVA
   
-* Measures Response v Measured Explanatory Variable
+* Measured Response v Measured Explanatory Variable
   
   - Simple Regression Model
   
-* Measures Response v Measured Explanatory Variable**s**
+* Measured Response v Measured Explanatory Variable**s**
   - Multifactor Regression Model
 
 * Attribute Response v Attribute Explanatory Variable
