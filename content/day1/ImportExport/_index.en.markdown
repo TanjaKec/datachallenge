@@ -1,6 +1,6 @@
 ---
 date: "2016-04-09T16:50:16+02:00"
-title: Import Data inot R
+title: Import Data to R
 output: 
   learnr::tutorial
 weight: 8
@@ -8,9 +8,9 @@ weight: 8
 
 It’s the first big hurdle to dealing with data in R. 
 
-You are most likelly to have looked at, organised and examined your data files in Excel.
+You are most likely to have looked at, organised and examined your data files in Excel.
 
-Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You'll guess that it is possible to use **File | Import Dataset** menu option in RStudio to import your data (to learn more see [Importing Data with RStudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)), however we’re going to do it the proper way with a command.
+Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You'll guess that it is possible to use the **File | Import Dataset** menu option in RStudio to import your data (to learn more see [Importing Data with RStudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)), however we’re going to do it the proper way with a command.
 
 R can import all types of data:
 
@@ -23,20 +23,20 @@ R can import all types of data:
 - MiniTab
 - SPSS...
 
-In this section we will show you how to access most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find interesting exploring the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic `read` data functionality in R. 
+In this section we will show you how to access most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic `read` data functionality in R. 
 
 ### the R base
 
 The simplest data form is a [text file](https://en.wikipedia.org/wiki/Text_file). Text files can be read by any computer operating system and by almost all different kind of statistical programs. Saving data as a text file makes your data highly accessible. If you have a text data file you wish to use, you can easily import it with **the R base** functions `read.table()`
 
-Reads a file in table format and creates a data frame from it
+This reads a file in table format and creates a data frame from it
 
 ```
 # Read tabular data into R
 df_txt <- read.table(file_name.txt, header = FALSE)
 ```
 
-There are many packages that let R import all types of data, and we will start by focus on `CSV` files as they are the most frequent tipe.
+There are many packages that let R import all types of data, and we will start by focusing on `CSV` files as they are the most frequent type.
 
 Comma separated files are the most common way to save spreadsheets that don’t require a licenced, usually not free program to open. Importing `CSV` is part of base R and you can use `read.csv()` function to do so. 
 
@@ -45,7 +45,7 @@ Comma separated files are the most common way to save spreadsheets that don’t 
 
 Let us go to <https://data.gov.rs/> Serbian open data portal. In particular, let us try to access [Kvalitet vazduha 2017: pm2.5_2017.csv](https://data.gov.rs/sr/datasets/kvalitet-vazduha-2017/) and import this data to R.
 
-We are not going to download it onto our local computers, but rather we will import it to R directly from the web using the provided link.
+We are not going to download it onto our local computers, but rather we will import it to R directly from the web using the link provided.
 
 
 ```r
@@ -76,16 +76,16 @@ df_csv <- read.csv("2017-so2.csv", stringsAsFactors = FALSE, fileEncoding = "lat
 ```
 
 {{% notice info %}}
-Run the above code again, but remove `stringsAsFactors` argument from the `read.csv` function or set it to TRUE. Can you tell the difference between now and before? Why do you think we had to use `fileEncoding` arguent?
+Run the above code again, but remove `stringsAsFactors` argument from the `read.csv` function or set it to TRUE. Can you tell the difference between now and before? Why do you think we had to use `fileEncoding` argument?
 {{% /notice %}}
 
 What do you think about this dataset? 🤔
 
 #### Using readr::read_csv()
 
-`readr` is a package that read rectangular data quicker then when using **base R** `read.cdv()`. Another difference from the `read.csv()` function is that it assumes characters are strings and not factors by default.
+`readr` is a package that reads rectangular data more quickly than **base R** `read.cdv()`. Another difference from the `read.csv()` function is that it assumes characters are strings and not factors by default.
 
-Just so you can see how easy it is to use other packages for importing data into R the code below illustrates the use of read_csv().
+Just so you can see how easy it is to use other packages for importing data into R, the code below illustrates the use of read_csv().
 
 ```
 ## If you don't have readr installed yet, uncomment and run the line below
@@ -101,15 +101,15 @@ Check the `readr::read_delim()` function for more efficient delimited data file 
 
 ### Importing Excel files with `readxl`
 
-Importing Excel data file is not straight forward as it might contain multiple sheets. We will focus on using the `readxl` package as it is the most efficent so far.  
+Importing Excel data files is not straightforward as it might contain multiple sheets. We will focus on using the `readxl` package as it is the most efficient so far.  
 
 {{% notice warning %}}
 To access the data from an Excel sheet you can’t just copy and paste the URL for the file. You have to download the file first.
 {{% /notice %}}
 
-Let us download an Excel data file from [data.gov.rs](https://data.gov.rs/) about the traffic accidents [Подаци о саобраћајним незгодама до 31.08.2019. године за територију свих ПОЛИЦИЈСКИХ УПРАВА и ОПШТИНА](https://data.gov.rs/sr/datasets/r/134b2867-8a35-4f00-ac48-1610dca177ec). 
+Let us download an Excel data file from [data.gov.rs](https://data.gov.rs/) about traffic accidents [Подаци о саобраћајним незгодама до 31.08.2019. године за територију свих ПОЛИЦИЈСКИХ УПРАВА и ОПШТИНА](https://data.gov.rs/sr/datasets/r/134b2867-8a35-4f00-ac48-1610dca177ec). 
 
-If you are unable to open the file in Excel to examin how many sheets the file has, try to read the file in R accessing the first one by specifying it in `read_excel()` function as required. As previous, make sure you save the file into your R-Project working directory before you ask R to execute the following:
+If you are unable to open the file in Excel to examine how many sheets the file has, try to read the file in R accessing the first one by specifying it in the `read_excel()` function as required. As previously, make sure you save the file into your R-Project working directory before you ask R to execute the following:
 
 ```
 ## If you don't have readxl installed yet, uncomment the line below and run it 
@@ -121,10 +121,10 @@ df_xl <- read_excel("nez-opendata-20199-20190925.xlsx", sheet = 1)
 What do you think?
 
 {{% notice warning %}}
-People like to make their Excel spreadsheet looks 'pretty' with 'fancy' formatting, which could create difficulty when reading them in R.
+People like to make their Excel spreadsheets look 'pretty' with 'fancy' formatting, which could create difficulty when reading them in R.
 {{% /notice %}}
 
-Explore the arguments of `read_excel()` function, such as the `skip` argument through which you can specify a minimum number of rows to skip before reading anything.
+Explore the arguments of the `read_excel()` function, such as the `skip` argument through which you can specify a minimum number of rows to skip before reading anything.
 
 ### Importing data using `jsonlite`
 
@@ -148,7 +148,7 @@ str(polen)
 
 ```
 ## List of 4
-##  $ count   : int 25888
+##  $ count   : int 26132
 ##  $ next    : chr "http://polen.sepa.gov.rs/api/opendata/pollens/?page=2"
 ##  $ previous: NULL
 ##  $ results :'data.frame':	500 obs. of  4 variables:
@@ -266,15 +266,15 @@ names(polen)
 ## [1] "count"    "next"     "previous" "results"
 ```
 
-Note that the `polen$results` is a data frame with a list `concentrations` inside as its elemnt.
+Note that the `polen$results` is a data frame with a list `concentrations` inside as its element.
 
 Ouch! 😳 JSON files are not very neat 😱 They are more than often nested, chained -> you’ve got it: Very Messy! 😫 So, we will leave it there. 😬 If you do need to learn more about reading JSON files in R you can explore the functionality of the `jsonlite` package further by reading [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html). Blog post [Working with JSON data in very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) by [Kan Nishida](https://blog.exploratory.io/@kanaugust) provides a great example of how this data format can be used in R. 
 
 ### Other data formats
 
-To speed up the reading process od txt, csv data files you can use the `data.table::fread()` function. You should only pass to the funtion the name of the data file you want to import, and `fread()` will try to work out the appropriate data structure. Check out this blog post [Getting Data From An Online Source](https://www.r-bloggers.com/getting-data-from-an-online-source/) for some more ideas. 
+To speed up the reading process of txt, csv data files you can use the `data.table::fread()` function. You should only pass to the function the name of the data file you want to import, and `fread()` will try to work out the appropriate data structure. Check out this blog post [Getting Data From An Online Source](https://www.r-bloggers.com/getting-data-from-an-online-source/) for some more ideas. 
 
-You can use R with appropriate packages to access other data formats. The `haven` package provides functions for importing SAS, SPSS and Stata file formats or you can use `foreign` package for MiniTab portable worksheet data files. Try to look through the help of the packages you've been introduced to and discover other options.
+You can use R with appropriate packages to access other data formats. The `haven` package provides functions for importing SAS, SPSS and Stata file formats or you can use the `foreign` package for MiniTab portable worksheet data files. Try to look through the help section of the packages you've been introduced to and discover other options.
 
 
 ## YOUR TURN 👇

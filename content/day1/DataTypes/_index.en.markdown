@@ -6,7 +6,7 @@ output:
 weight: 7
 ---
 
-The examples we have used in 'How to Use R' section are all dealing with numbers (quantitative numerical data). Those of you familiar with programming will know that numerical objects can be classified as real, integer, double or complex. To check if an object is numeric and what type it is, you can use `mode()` and `class()` functions respectively.
+The examples we have used in the 'How to Use R' section are all dealing with numbers (quantitative numerical data). Those of you familiar with programming will know that numerical objects can be classified as real, integer, double or complex. To check if an object is numeric and what type it is, you can use the `mode()` and `class()` functions respectively.
 
 Let us go back into our R project and type the following into the open script file and run the code.😃
 
@@ -55,7 +55,7 @@ x
 ```
 
 {{% notice note %}}
-💡: Note that R codes the factor levels in their alphabetical order. However, attribute variables are usual coded and you would usually enter them as such.
+💡: Note that R codes the factor levels in their alphabetical order. However, attribute variables are usually coded and you would usually enter them as such.
 {{% /notice %}}
 
 
