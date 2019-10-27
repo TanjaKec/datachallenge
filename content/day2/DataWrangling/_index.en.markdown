@@ -10,14 +10,14 @@ weight: 1
 
 ![Red variant](/day2/DataWrangling/images/Program_HW.png?width=40pc)
 
-This diagram is taken from [R for Data Science](https://r4ds.had.co.nz/) book by [Garrett Grolemund](https://twitter.com/statgarrett
+This diagram is taken from the [R for Data Science](https://r4ds.had.co.nz/) book by [Garrett Grolemund](https://twitter.com/statgarrett
 ) and [Hadley Wickham](https://twitter.com/hadleywickham), which it is a great resource for learning R. There is a whole community built around it and you could join it and start learning together: [R4DS online learning community](https://www.rfordatasci.com/).
 
 ### Dataset
 
-To learn and practise how to organise a data we will use a `gapminder` data set available from `gapminder` package in R. This dataset is put into R by [Jennifer Bryan](https://jennybryan.org/) from a tank of data sets available from [Gapminder](https://www.gapminder.org).
+To learn and practise how to organise data we will use a `gapminder` data set available from the `gapminder` package in R. This dataset is put into R by [Jennifer Bryan](https://jennybryan.org/) from a tank of data sets available from [Gapminder](https://www.gapminder.org).
 
-[Gapminder](https://www.gapminder.org) is an independent Swedish foundation that helps to promote sustainable global development by collecting and analysiing relevant data and by developing and designing  teaching/learning tools. [Gapminder](https://en.wikipedia.org/wiki/Gapminder_Foundation) was founded in Sweden by [Hans Rosling](https://en.wikipedia.org/wiki/Hans_Rosling) who was a mastermind for distinctive and insightful storytelling about global development using visual animation.
+[Gapminder](https://www.gapminder.org) is an independent Swedish foundation that helps to promote sustainable global development by collecting and analysing relevant data and by developing and designing  teaching/learning tools. [Gapminder](https://en.wikipedia.org/wiki/Gapminder_Foundation) was founded in Sweden by [Hans Rosling](https://en.wikipedia.org/wiki/Hans_Rosling) who was a mastermind for distinctive and insightful storytelling about global development using visual animation.
 
 You can see Hans in action in this [BBC documentary](https://www.bbc.co.uk/programmes/p02q33dg) [The joy of Stats](https://www.youtube.com/watch?v=cdf0k545yDA) available on [YouTube](https://www.youtube.com).
 
@@ -53,7 +53,7 @@ head(gapminder::gapminder)
 ```
 
 {{% notice note %}}
-💡 Note thet there are 6 columns, each of which we call a variable.
+💡Note that there are 6 columns, each of which we call a variable.
 {{% /notice %}}
 
 **Description**: Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country.
@@ -167,7 +167,7 @@ glimpse(gapminder)
 ```
 
 {{% notice note %}}
-🤓💡: Notice how we could prevent display of the messages that appear when uploading the packages by using, in this case, `suppressPackageStartupMessages()`!
+🤓💡: Notice how we can prevent display of the messages that appear when uploading the packages by using, in this case, `suppressPackageStartupMessages()`!
 {{% /notice %}}
 
 Now we have the `dplyr` package uploaded, let us learn its verbs. 😇
@@ -543,16 +543,16 @@ The `tidyr` can help you to create **tidy data**. Tidy data is data where:
 
 <img src="images/tidyr.png" width="450px" />
 
-`tidyr` package embraces the **principles of tidy data** and provides the standard key functionalities to organise data values within a dataset.
+The `tidyr` package embraces the **principles of tidy data** and provides the standard key functionalities to organise data values within a dataset.
 
 [Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of data cleaning process and structuring datasets to facilitate data analysis.
 
-Real datasets, you most likely are going to download from <https://data.gov.rs/> or any other open source data platform, would often violate the three precepts of tidy data in all kind of different ways:
+Real datasets, that you are most likely to download from <https://data.gov.rs/> or any other open source data platform, would often violate the three precepts of tidy data in all kinds of different ways:
 
 - Variables would not have their names and column headers are values.
 -	A number of variables are stored in one column
 -	A single variable that is stored in several columns 
--	Same information stored multiple times as different variables...
+-	Same information stored multiple times as different variables
  
 to name a few.
 
@@ -584,10 +584,10 @@ glimpse(no2)
 ## $ Ni..IZJZ.Ni...NO2       <dbl> 18.61, 22.87, 15.68, 21.97, 21.68, 12.11…
 ```
 
-It shows that this data set has `365` observations and `8` variables. Nonetheless, we need to consider what type of information do we have here:
+It shows that this data set has `365` observations and `8` variables. Nonetheless, we need to consider what type of information we have here:
 
-- `date` of NO2 measurment taken: given in a single column -> ✅ tidy🙂
-- `places` where the measure of NO2 was taken: given in several columns -> ❎ tidy🙁
+- `date` NO2 measurement taken: given in a single column -> ✅ tidy🙂
+- `places` where NO2 measurement was taken: given in several columns -> ❎ tidy🙁
 - `NO2` measurements: given in several columns -> ❎ tidy🙁
 
 Hmmm… 🤔 This doesn’t look tidy at all 😳
@@ -596,7 +596,7 @@ This data is about measurement level of NO2(µg/m3) in several different towns/p
 
 It appears that this data has `8` variables, but we have realised that there are only `3`: `date`, `place` and `no2`. To tidy it, we need to **stack it** by turning columns into rows. We are happy with the variable `date` and it should remain as a single column, the other `7` columns we want to convert into two variables: `place` and `no2`.
 
-To make *wide format* data into *tall format* we have toturn columns into rows using `gather()` function.
+To make *wide format* data into *tall format* we have to turn columns into rows using `gather()` function.
 
 <img src="images/gather.png" width="450px" />
 
@@ -639,7 +639,7 @@ new_no2 %>%
 ## 7 Ni..IZJZ.Ni...NO2         365
 ```
 
-Those names look very messy. We could use function from [`stringr`](https://stringr.tidyverse.org) package `str_sub()`. To begin with let's get rid off <span style="color:orangered">.NO2</span> at the end of each name.
+Those names look very messy. We could use function from [`stringr`](https://stringr.tidyverse.org) package `str_sub()`. To begin with let's remove <span style="color:orangered">.NO2</span> at the end of each name.
 
 
 ```r
@@ -681,7 +681,7 @@ new_no2 %>%
 It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder why many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and more experience you gain the easier and less painful it gets.
 
 
-Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it could be easily done when using `forcats::fct_recode()` function.
+Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it could easily be done when using `forcats::fct_recode()` function.
 
 
 ```r
@@ -710,10 +710,10 @@ glimpse(new_no2)
 ```
 
 {{% notice note %}}
-By now, you should have gained enough knowledge in using R that would give you that needed confidence to start exploring other functions of the [`tidyr`](https://tidyr.tidyverse.org/) package. You should not stop there, but go beyond and explore whole of the [`tidyverse`](https://www.tidyverse.org/) opinionated collection of R packages for data science. 😇🎶
+By now, you should have gained enough knowledge in using R to give you the necessary confidence to start exploring other functions of the [`tidyr`](https://tidyr.tidyverse.org/) package. You should not stop there, but go beyond and explore the whole of the [`tidyverse`](https://www.tidyverse.org/) opinionated collection of R packages for data science. 😇🎶
 {{% /notice %}}
 
-To learn more about **tidy data in r** chgeck [Data Tidying](https://garrettgman.github.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
+To learn more about **tidy data in r** chgeck [Data Tidying](https://garrettgman.ithuthe b.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
 
 {{% notice tip %}}
 Have you tried learning data science by posting your questions and discussing it with other people within the R community? 👥💻📊📈🗣 [RStudio Community](https://community.rstudio.com)
