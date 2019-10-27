@@ -14,7 +14,7 @@ Let us take boring flat data and bring it to life through visualization."
 
 ![Red variant](/images/john_tukey.jpg?width=35pc)
 
-> **Open data** is data in digital format that is made available to everyone. To access it without the need for negotiation or obstruction at any time is a fundamental feature of the democratisation of digital data. In order for this to happen it requires public authorities to make data available to everyone, in particular those with the necessary skills and knowledge to reveal and interpret the story within complex details. A greater understanding of the data empowers citizens to make more informed decisions in processes that directly affect their lives.
+> **Open data** is data in digital format that is made available to everyone. To access it without the need for negotiation or obstruction at any time is a fundamental feature of the democratisation of digital data. In order for this to happen it requires public authorities to make data available to everyone, in particular those with the necessary skills and knowledge to reveal and interpret the story within complex details. A greater understanding of data empowers citizens to make more informed decisions in processes that directly affect their lives.
 
 ![Red variant](/images/ML.jpg?width=40pc)
 

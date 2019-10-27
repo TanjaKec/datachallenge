@@ -7,15 +7,15 @@ weight: 1
 
 About the Course
 
-##### This course is designed to give you an appreciation of R programming as a tool for data exploration. It focuses on packages that will help you do exploratory data analysis and visualization and communication in a dynamic and reproducible manner.
+##### This course is designed to give you an appreciation of R programming as a tool for data exploration. It focuses on packages that will help you do exploratory data analysis, visualisation and communication in a dynamic and reproducible manner.
 
 
 #### If you would like to:
 
-* Discover how to find and access data and prepare it for exploration and visualization
+* Discover how to find and access data and prepare it for exploration and visualistion
 * Learn to explore, visualize, and analyse data in a dynamic and reproducible manner
-* Gain experience in data wrangling, exploratory data analysis and data visualization, and effective communication of results;
-* Work on the case studies inspired by real problems and based on **open data**
+* Gain experience in data wrangling, exploratory data analysis and data visualisation, and effective communication of results
+* Work on case studies inspired by real problems and based on **open data**
 
 #### then this course is for you! 😀
 
