@@ -6,11 +6,11 @@ output:
 weight: 2
 ---
 
-Most of you, if not all, would be familiar with creating the graphs in Excel. Software such as Excel has a predefined set of menu options for plotting the data that is the focus of the end result: "pretty graph". Those types of menus assume data to be in a format ready for plotting, which when you get raw data is hardly the case. You are probably going to have to organse and wrangle your data to make it ready for effective visualisation. 
+Most of you, if not all, will be familiar with creating the graphs in Excel. Software such as Excel has a predefined set of menu options for plotting the data that is the focus of the end result: "pretty graph". Those types of menus assume data to be in a format ready for plotting, which when you get raw data is hardly the case. You are probably going to have to organise and wrangle your data to make it ready for effective visualisation. 
 
 ### Grammar of Graphics
 
-The [grammer of graphics](http://vita.had.co.nz/papers/layered-grammar.html) enables a structured way of creating a plot by adding the components as layers, making it look effective and attractive. 
+The [grammar of graphics](http://vita.had.co.nz/papers/layered-grammar.html) enables a structured way of creating a plot by adding the components as layers, making it look effective and attractive. 
 
 It enables you to specify building blocks of a plot and to combine them to create the graphical display that you want. There are 8 building blocks:
 
@@ -105,7 +105,7 @@ ggplot(data = gapminder, mapping = aes(x = continent, fill = continent)) +
 ```
 
 ##### 🗣👥 Confer with your neighbours: 
-Does the life expectancy depend upon the population size?
+Does life expectancy depend upon the population size?
 
 `y = b_0 + b_1 x + e`
 
@@ -167,22 +167,22 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country          continent  year lifeExp      pop gdpPercap
-##    <fct>            <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Cameroon         Africa     1962    42.6  5793633     1400.
-##  2 Hong Kong, China Asia       1982    75.4  5264500    14561.
-##  3 Ethiopia         Africa     1952    34.1 20860941      362.
-##  4 Saudi Arabia     Asia       1967    49.9  5618198    16903.
-##  5 Ethiopia         Africa     1962    40.1 25145372      419.
-##  6 Bulgaria         Europe     1997    70.3  8066057     5970.
-##  7 France           Europe     2007    80.7 61083916    30470.
-##  8 Slovenia         Europe     2002    76.7  2011497    20660.
-##  9 Ecuador          Americas   1997    72.3 11911819     7429.
-## 10 Togo             Africa     1962    43.9  1528098     1068.
+##    country      continent  year lifeExp      pop gdpPercap
+##    <fct>        <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Iraq         Asia       1987    65.0 16543189    11644.
+##  2 Myanmar      Asia       1962    45.1 23634436      388 
+##  3 Italy        Europe     1957    67.8 49182000     6249.
+##  4 Netherlands  Europe     2007    79.8 16570613    36798.
+##  5 Djibouti     Africa     1972    44.4   178848     3694.
+##  6 Iraq         Asia       1992    59.5 17861905     3746.
+##  7 South Africa Africa     1997    60.2 42835005     7479.
+##  8 El Salvador  Americas   1967    55.9  3232927     4359.
+##  9 Burkina Faso Africa     1957    34.9  4713416      617.
+## 10 Korea, Rep.  Asia       2002    77.0 47969150    19234.
 ## # … with 20 more rows
 ```
 
-We will add layers onto this scatterplot: `liveExp` vs `gdpPercap`. We want to superimpose regression line of the best fit and non-parametric loess line that depict possible relationship between the two variables. That means we will have:
+We will add layers onto this scatterplot: `liveExp` vs `gdpPercap`. We want to superimpose regression line of the best fit and non-parametric loess line that depict a possible relationship between the two variables. That means we will have:
 
 - 1st layer: **scatterplot**
 - 2nd layer: **line of the best fit**
@@ -296,11 +296,11 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" />
 
 {{% notice note %}}
-Note that the legend is added automatically. You can removed it by setting the **legend.position** to `none` from within a `theme()` function.
+Note that the legend is added automatically. You can remove it by setting the **legend.position** to `none` from within a `theme()` function.
 {{% /notice %}}
 
 
-#### Adjust the X and Y axis limits and chhange the X axis texts and its ticks' location
+#### Adjust the X and Y axis limits and change the X axis texts and its ticks' location
 
 
 ```r
@@ -339,19 +339,19 @@ Note that the legend is added automatically. You can removed it by setting the *
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" />
   
-Note that the regression and smooth lines have changed their shapes 😳… all those warning 😬 What’s going on?! 😲
+Note that the regression and smooth lines have changed their shapes 😳… all those warnings 😬 What’s going on?! 😲
   
 {{% notice warning %}}
 When using xlim() and ylim(), the points outside the specified range are deleted and are not considered while drawing the line using `geom_smooth()`. This feature might come in handy when you wish to know how the line of best fit would change when some extreme values or outliers are removed.
 {{% /notice %}}
   
-Thankfully, there is the other way to change the limits of the axis without deleting the points by simply zooming in to the region of interest. This is done using `coord_cartesian()`. You can try to replace `xlim()` and `ylim()` comands in the previous code chunk with the code below to see what would happen.
+Thankfully, there is another way to change the limits of the axis without deleting the points by simply zooming in to the region of interest. This is done using `coord_cartesian()`. You can try to replace `xlim()` and `ylim()` commands in the previous code chunk with the code below to see what would happen.
 
 ```
 coord_cartesian(xlim = c(0, 90000), ylim = c(25, 100))  # zooming in specified limits of the x & y axis
 ```
 
-You can set the breaks on the x axis and label them by using `scale_x_continuous()`. Similarly, you can do it for y axis too. 
+You can set the breaks on the x axis and label them by using `scale_x_continuous()`. Similarly, you can do it for the y axis? 
 
 Try to play with changing the colour palette. For more options check [Sequential, diverging and qualitative colour scales from colorbrewer.org](https://ggplot2.tidyverse.org/reference/scale_brewer.html).
 
@@ -386,7 +386,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" />
 
-There is a `ggthemes` library of themes that would help you create stylish ggplot charts used by different journals like Wall Street Journal or the Economist. See what are the other themes you can use by going to [this website]( https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)
+There is a `ggthemes` library of themes that willhelp you create stylish ggplot charts used by different journals like the Wall Street Journal or the Economist. See what other themes you can use by going to [this website]( https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)
 
 
 ```r
@@ -415,11 +415,11 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-12-1.png" width="768" style="display: block; margin: auto;" />
 
-You are ready to make a publication-ready data visualizations in R. 😎 You can go further and explore for yourself to see if you could produce BBC style ggplot charts like those used in the BBC's data journalism. Check out the [BBC Visual and Data Journalism cookbook for R graphics]( https://bbc.github.io/rcookbook/).
+You are ready to make publication-ready visualizations in R. 😎 You can go further and explore for yourself to see if you can produce BBC style ggplot charts like those used in the BBC's data journalism. Check out the [BBC Visual and Data Journalism cookbook for R graphics]( https://bbc.github.io/rcookbook/).
 
 ##### Lay out panels in a grid
 
-Sometimes it might be hard to read one panel plot, like the one we have just created in which it is not very easy to see the points of each continent. To make it easier to follow and to understand the information you are trying to depict it would be more effective to present different categories of the same information in a clear set of multi-panel plots. This is easy to do by applying powerful faceting functions of the `ggplot2`: `facet_wrap()` and `facet_grid()`.
+Sometimes it might be hard to read one panel plot, like the one we have just created in which it is not very easy to see the points of each continent. To make it easier to follow and to understand the information you are trying to depict, it would be more effective to present different categories of the same information in a clear set of multi-panel plots. This is easy to do by applying powerful faceting functions of the `ggplot2`: `facet_wrap()` and `facet_grid()`.
   
 
 ```r
@@ -447,7 +447,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 The main difference between `facet_wrap()` and  `facet_grid()` is that the former can string together ggplots in different facets using a single variable, while the latter can do it for more than one.
 
 {{% notice warning %}}
-Try to explore the two functions for yourself and see where it would take you.
+Try to explore the two functions for yourself and see where it will take you.
 {{% /notice %}}
  
 #### 💪 There is a challenge: 
@@ -456,7 +456,7 @@ Try to explore the two functions for yourself and see where it would take you.
 
 - `boxplot()` function produces boxplot(s) of the given (grouped) values.
 
-Knowing about `group_by()` and `boxplot()` function and using `gapminder` data, coud you compute the median life expectancy for year 2007 by continent and visualise your result?
+Knowing about `group_by()` and `boxplot()` function and using `gapminder` data, can you compute the median life expectancy for year 2007 by continent and visualise your result?
 
 ##### 😃🙌 Solution: code
 
@@ -486,7 +486,7 @@ gapminder %>%
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" />
 ##### Case study: NO2 2017 😁
 
-Let's try compbine everything we have learnt so far and practice using well nown to us [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data. 
+Let's try to compbine everything we have learnt so far and practise using well known to us [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data. 
 
 Remember this?
 
@@ -537,7 +537,7 @@ new_no2 %>%
 
 Practise by doing the following set of exercises:
 
-1) Chose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend to help people get to know the dataset?
+1) Chose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend using to help people get to know the dataset?
 
 2) Go back to NO2 2017 case study:
 
@@ -559,7 +559,7 @@ Practise by doing the following set of exercises:
 
 [from Data to Viz](https://www.data-to-viz.com/)
 
-[An example from Financial Times](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
+[An example from the Financial Times](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
 
 [BBC Visual and Data Journalism cookbook for R graphics](https://bbc.github.io/rcookbook/)
 
