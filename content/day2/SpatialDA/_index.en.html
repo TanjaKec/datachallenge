@@ -15,8 +15,8 @@ weight: 3
 <script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
 
 
-<p>R has a range of packages which provide functionality for handling spatial data and performing complex spatial analysis operations. Spatial data analysis is no longer reserved just for experts with expensive hardware and software. R has impressive geographic capabilities which anyone with the desire for exploration of the geospatial data can use.</p>
-<p>Before we get into geospatial maping in R, let us introduce some basic ideas about spatial data.</p>
+<p>R has a range of packages which provide functionality for handling spatial data and performing complex spatial analysis operations. Spatial data analysis is no longer reserved just for experts with expensive hardware and software. R has impressive geographic capabilities which anyone with the desire for exploration of geospatial data can use.</p>
+<p>Before we get into geospatial mapping in R, let us introduce some basic ideas about spatial data.</p>
 <p>Spatial data comprises of:</p>
 <ul>
 <li>coordinates of the object</li>
@@ -36,7 +36,7 @@ weight: 3
 <ul>
 <li>A conversion of the three-dimensional grid onto a two-dimensional plane.</li>
 </ul>
-<p>According to the storing technique, spatial data is one of the two types:</p>
+<p>According to the storing technique, spatial data is one of two types:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Raster data</strong>: composed of grid cells identified by row and column. The whole geographic area is divided into groups of individual cells, which represent an image (satellite images)</p></li>
 <li><p><strong>Vector data</strong> are composed of points, polylines, and polygons. For example hospitals, houses etc. are represented by points, while rivers, roads,etc., are represented by polylines. Villages and towns are represented by polygons.</p></li>
@@ -48,7 +48,7 @@ weight: 3
 <li>interval data</li>
 <li>ratio data,</li>
 </ul>
-<p>ie. attribute or measured type of the data.</p>
+<p>ie. attribute or measured type of data.</p>
 <p><strong>Static Maps: Shape File</strong></p>
 <p>R has impressive geographic capabilities and can handle different kinds of spatial data file formats including geojson and KML. We will illustrate the use of the ESRI Shapefile format, which stores nontopological geometry and attribute information for the spatial features in a data set. A shapefile consists minimally of a main file, an index file, and a dBASE table.</p>
 <ul>
@@ -78,7 +78,7 @@ View(serbia_districts)
 ggplot(serbia_districts) + 
   geom_sf()</code></pre>
 <p><img src="/day2/SpatialDA/images/serbia.png?width=40pc" /></p>
-<p>This looks good 😃 Next, we want to add some data to it and do some ‘colouring’. We will incorporate information about serbian polulation in 2017 given “Serbian_Pop.csv” file.</p>
+<p>This looks good 😃 Next, we want to add some data to it and do some ‘colouring’. We will incorporate information about the Serbian polulation in 2017 given “Serbian_Pop.csv” file.</p>
 <pre><code>population &lt;- read.csv(&quot;Serbian_Pop.csv&quot;)
 View(population)
 
@@ -130,17 +130,17 @@ us</code></pre>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[45.932,20.4223,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Ciao!<\/b><br><a href='https://www.mokrinhouse.com/'>Mokrin House! 😀<\/a>",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[45.93362,20.41215],15,[]],"limits":{"lat":[45.932,45.932],"lng":[20.4223,20.4223]}},"evals":[],"jsHooks":[]}</script>
 <p>Here is an interesting website which introduces all kind of possibilities when creating maps with the <a href="https://maptimeboston.github.io/leaflet-intro/">‘leaflet’</a>. You should check it out and explore further for yourself.</p>
 <p>{{% notice note %}}
-From its original application as statistical programming language, R has come a long way and has become very powerful in supporting spatial analysis. All R packages include vignettes with the explanations of the functions’ syntaxes and often very helpful mini-tutorials that illustrate the practical uses of the functions around related problems. <a href="https://cran.r-project.org/web/views/Spatial.html">CRAN Task View for Analysis of Spatial Data</a> provides a list of available libraries in R for geographical mapping that are commonly used when undertaking spatial analysis and mapping projects in R.
+From its original application as a statistical programming language, R has come a long way and has become very powerful in supporting spatial analysis. All R packages include vignettes with explanations of the functions’ syntaxes and often very helpful mini-tutorials that illustrate the practical uses of the functions around related problems. <a href="https://cran.r-project.org/web/views/Spatial.html">CRAN Task View for Analysis of Spatial Data</a> provides a list of available libraries in R for geographical mapping that are commonly used when undertaking spatial analysis and mapping projects in R.
 {{% /notice %}}</p>
 <p><strong>YOUR TURN 👇</strong></p>
 <p>Practise by doing the following set of exercises:</p>
 <ol style="list-style-type: decimal">
 <li><p>Read a shape file of Serbian districts’ boundaries avaliable from <a href="https://gadm.org/download_country_v3.html">GADM maps and data</a> and plot population per square kilometre available form ‘Serbian_Pop.csv’ used in the exercise.</p></li>
-<li><p>Create a map pointing out at your favourite hang-out place using the leaflet package.</p></li>
+<li><p>Create a map pointing out your favourite hang-out place using the leaflet package.</p></li>
 </ol>
 <p><strong>useful links:</strong></p>
 <p><a href="https://www.r-spatial.org/">R for the analysis of spatial or spatio-temporal data (blog)</a></p>
-<p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: a book on geographic data analysis, visualization and modeling.</p>
+<p><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>: a book on geographic data analysis, visualisation and modelling.</p>
 <p><a href="https://gadm.org/download_country_v3.html">GADM maps and data</a></p>
 <p><a href="https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/leaflet-r/">Creating Interactive Spatial Maps in R Using Leaflet</a></p>
 <p><a href="https://map-rfun.library.duke.edu/031_thematic_mapping.html">Thematic Mapping with tmap</a></p>

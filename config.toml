@@ -32,7 +32,7 @@ weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+name = "<i class='fab fa-fw fa-github'></i>GitHub"
 identifier = "ds"
 url = "https://github.com/TanjaKec"
 weight = 10

@@ -42,7 +42,7 @@ Have a look at [this 👉😎](https://tatjana.shinyapps.io/Gapminder/)
 
 [Rstudio Shiny tutorial](https://shiny.rstudio.com/tutorial/)
 
-Look for an inspiration at [rstudio shiny gallery](https://shiny.rstudio.com/gallery/)
+Look for inspiration at [rstudio shiny gallery](https://shiny.rstudio.com/gallery/)
 
 Getting Started with Shiny by [**CODING CLUB**](https://ourcodingclub.github.io)
 <https://ourcodingclub.github.io/2017/03/07/shiny.html>

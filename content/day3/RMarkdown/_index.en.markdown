@@ -11,7 +11,7 @@ R Markdown can help generate:
 - HTML documents
 - Notebooks in which you’ve run code chunks individually
 - PDFs that you can print out to follow along physically with the course
-- This entire R bootcamp website
+- This entire R course website
 
 It enables you to:
 
@@ -96,7 +96,7 @@ attributes;
 
 2) **Measured variable**: has the resulting outcome expressed in numerical terms.
 
-- Make word Knit in the following paragraph italic.
+- Make the word Knit in the following paragraph italic.
 
 
 #### Embedding the `R` code 
@@ -147,7 +147,7 @@ ggplot(gapminder, aes(x = continent, y = lifeExp)) +
 
 Finally, if you wish to add mathematical equations to your Markdown document you can easily embed [LaTeX]( LaTeX ) math equations into your report.
 
-To *display equation* **in its own line** it needs to be surrounded by double dollar symbol
+To *display equation* **in its own line** it needs to be surrounded by the double dollar symbol
 
 `$$` `y = a + bx` `$$`, 
 
@@ -161,7 +161,7 @@ or to *embed an equation* **in line within the text** you would use only one dol
 
 You would definitely find the following useful:
 
-- [RMarkdown cheatasheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+- [RMarkdown cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 
 - [The R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
