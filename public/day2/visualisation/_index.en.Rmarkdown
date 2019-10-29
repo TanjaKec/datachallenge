@@ -370,7 +370,7 @@ gapminder %>%
 
 ##### 😃🙌 Solution: graph 
 
-```{r, echo = FALSE, warnings=FALSE, message=FALSE, fig.height = 6, fig.width = 8, fig.align = 'center'}
+```{r, echo = TRUE, warnings=FALSE, message=FALSE, fig.height = 6, fig.width = 8, fig.align = 'center'}
 # visualise the information
 library("ggplot2")
 ggplot(gapminder, aes(x = continent, y = lifeExp)) +

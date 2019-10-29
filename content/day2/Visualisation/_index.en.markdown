@@ -167,18 +167,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country      continent  year lifeExp      pop gdpPercap
-##    <fct>        <fct>     <int>   <dbl>    <int>     <dbl>
-##  1 Iraq         Asia       1987    65.0 16543189    11644.
-##  2 Myanmar      Asia       1962    45.1 23634436      388 
-##  3 Italy        Europe     1957    67.8 49182000     6249.
-##  4 Netherlands  Europe     2007    79.8 16570613    36798.
-##  5 Djibouti     Africa     1972    44.4   178848     3694.
-##  6 Iraq         Asia       1992    59.5 17861905     3746.
-##  7 South Africa Africa     1997    60.2 42835005     7479.
-##  8 El Salvador  Americas   1967    55.9  3232927     4359.
-##  9 Burkina Faso Africa     1957    34.9  4713416      617.
-## 10 Korea, Rep.  Asia       2002    77.0 47969150    19234.
+##    country    continent  year lifeExp      pop gdpPercap
+##    <fct>      <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Jamaica    Americas   1957    62.6  1535090     4757.
+##  2 Liberia    Africa     1992    40.8  1912974      637.
+##  3 Iceland    Europe     1962    73.7   182053    10350.
+##  4 Peru       Americas   1957    46.3  9146100     4245.
+##  5 Madagascar Africa     1987    49.4 10568642     1155.
+##  6 Denmark    Europe     1982    74.6  5117810    21688.
+##  7 Tanzania   Africa     2007    52.5 38139640     1107.
+##  8 Cuba       Americas   1962    65.2  7254373     5181.
+##  9 Paraguay   Americas   1992    68.2  4483945     4196.
+## 10 Angola     Africa     1952    30.0  4232095     3521.
 ## # … with 20 more rows
 ```
 
@@ -482,6 +482,22 @@ gapminder %>%
 **We are lucky that we live in Serbia, ie. Europe!!!** 😅
 
 ##### 😃🙌 Solution: graph 
+
+
+```r
+# visualise the information
+library("ggplot2")
+ggplot(gapminder, aes(x = continent, y = lifeExp)) +
+  geom_boxplot(outlier.colour = "hotpink") +
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = .2) +
+  labs (title= "Life Exp. vs. Continent", 
+        x = "Continent", y = "Life Exp.") +
+  theme(legend.position = "none", 
+        panel.border = element_rect(fill = NA, 
+                                    colour = "black",
+                                    size = .75),
+        plot.title=element_text(hjust=0.5))
+```
 
 <img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" />
 ##### Case study: NO2 2017 😁

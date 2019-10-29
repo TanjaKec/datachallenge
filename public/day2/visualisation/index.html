@@ -12,20 +12,20 @@
     <title>Data Visualisation :: Show me youR Data</title>
 
     
-    <link href="/css/nucleus.css?1572369286" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1572369286" rel="stylesheet">
-    <link href="/css/hybrid.css?1572369286" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1572369286" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1572369286" rel="stylesheet">
-    <link href="/css/auto-complete.css?1572369286" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1572369286" rel="stylesheet">
-    <link href="/css/theme.css?1572369286" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1572369286" rel="stylesheet">
+    <link href="/css/nucleus.css?1572380836" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1572380836" rel="stylesheet">
+    <link href="/css/hybrid.css?1572380836" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1572380836" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1572380836" rel="stylesheet">
+    <link href="/css/auto-complete.css?1572380836" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1572380836" rel="stylesheet">
+    <link href="/css/theme.css?1572380836" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1572380836" rel="stylesheet">
     
-      <link href="/css/theme-pink.css?1572369286" rel="stylesheet">
+      <link href="/css/theme-pink.css?1572380836" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1572369286"></script>
+    <script src="/js/jquery-3.3.1.min.js?1572380836"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1572369286"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1572369286"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1572380836"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1572380836"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1572369286"></script>
+<script type="text/javascript" src="/js/search.js?1572380836"></script>
 
     
   </div>
@@ -1006,18 +1006,18 @@ Is the relationship linear? What conclusion(s) can you draw?</p>
 </code></pre>
 
 <pre><code>## # A tibble: 30 x 6
-##    country      continent  year lifeExp      pop gdpPercap
-##    &lt;fct&gt;        &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Iraq         Asia       1987    65.0 16543189    11644.
-##  2 Myanmar      Asia       1962    45.1 23634436      388 
-##  3 Italy        Europe     1957    67.8 49182000     6249.
-##  4 Netherlands  Europe     2007    79.8 16570613    36798.
-##  5 Djibouti     Africa     1972    44.4   178848     3694.
-##  6 Iraq         Asia       1992    59.5 17861905     3746.
-##  7 South Africa Africa     1997    60.2 42835005     7479.
-##  8 El Salvador  Americas   1967    55.9  3232927     4359.
-##  9 Burkina Faso Africa     1957    34.9  4713416      617.
-## 10 Korea, Rep.  Asia       2002    77.0 47969150    19234.
+##    country    continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;      &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Jamaica    Americas   1957    62.6  1535090     4757.
+##  2 Liberia    Africa     1992    40.8  1912974      637.
+##  3 Iceland    Europe     1962    73.7   182053    10350.
+##  4 Peru       Americas   1957    46.3  9146100     4245.
+##  5 Madagascar Africa     1987    49.4 10568642     1155.
+##  6 Denmark    Europe     1982    74.6  5117810    21688.
+##  7 Tanzania   Africa     2007    52.5 38139640     1107.
+##  8 Cuba       Americas   1962    65.2  7254373     5181.
+##  9 Paraguay   Americas   1992    68.2  4483945     4196.
+## 10 Angola     Africa     1952    30.0  4232095     3521.
 ## # … with 20 more rows
 </code></pre>
 
@@ -1303,6 +1303,20 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
 <p><strong>We are lucky that we live in Serbia, ie. Europe!!!</strong> 😅</p>
 
 <h5 id="solution-graph">😃🙌 Solution: graph</h5>
+
+<pre><code class="language-r"># visualise the information
+library(&quot;ggplot2&quot;)
+ggplot(gapminder, aes(x = continent, y = lifeExp)) +
+  geom_boxplot(outlier.colour = &quot;hotpink&quot;) +
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = .2) +
+  labs (title= &quot;Life Exp. vs. Continent&quot;, 
+        x = &quot;Continent&quot;, y = &quot;Life Exp.&quot;) +
+  theme(legend.position = &quot;none&quot;, 
+        panel.border = element_rect(fill = NA, 
+                                    colour = &quot;black&quot;,
+                                    size = .75),
+        plot.title=element_text(hjust=0.5))
+</code></pre>
 
 <p><img src="/day2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" /></p>
 
@@ -1796,19 +1810,19 @@ glimpse(new_no2)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1572369286"></script>
-    <script src="/js/perfect-scrollbar.min.js?1572369286"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1572369286"></script>
-    <script src="/js/jquery.sticky.js?1572369286"></script>
-    <script src="/js/featherlight.min.js?1572369286"></script>
-    <script src="/js/highlight.pack.js?1572369286"></script>
+    <script src="/js/clipboard.min.js?1572380836"></script>
+    <script src="/js/perfect-scrollbar.min.js?1572380836"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1572380836"></script>
+    <script src="/js/jquery.sticky.js?1572380836"></script>
+    <script src="/js/featherlight.min.js?1572380836"></script>
+    <script src="/js/highlight.pack.js?1572380836"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1572369286"></script>
-    <script src="/js/learn.js?1572369286"></script>
-    <script src="/js/hugo-learn.js?1572369286"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1572380836"></script>
+    <script src="/js/learn.js?1572380836"></script>
+    <script src="/js/hugo-learn.js?1572380836"></script>
 
-    <link href="/mermaid/mermaid.css?1572369286" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1572369286"></script>
+    <link href="/mermaid/mermaid.css?1572380836" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1572380836"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
