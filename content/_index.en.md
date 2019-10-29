@@ -3,7 +3,7 @@ title: data challenge with R
 ---
 # data challenge with R
 
-#### [Tatjana Kecojevic,](https://tanjakec.github.io) [SisterAnalyst](https://sisteranalyst.org)
+#### [Tatjana Kecojevic,](https://www.linkedin.com/in/tatjana-kecojevic-803704143/) [SisterAnalyst](https://sisteranalyst.org)
 
 ![Red variant](/images/datachallenge.png?width=40pc)
 
